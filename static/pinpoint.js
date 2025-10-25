@@ -256,3 +256,16 @@ function setupAutoShutdown() {
     }
   });
 }
+
+registerServiceWorker();
+
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) {
+    return;
+  }
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch((err) => {
+      console.error("Kunne ikke registrere service worker", err);
+    });
+  });
+}

@@ -16,6 +16,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-bottom: 3rem;
 }
 
 .top-nav {
@@ -25,6 +26,11 @@ body {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid #e0e7ff;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .nav-link {
@@ -253,5 +259,34 @@ dd {
 @media (max-width: 700px) {
   .hero {
     padding-top: 2rem;
+  }
+
+  body {
+    gap: 1.5rem;
+  }
+
+  .panel {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .card,
+  .result {
+    padding: 1.25rem;
+    box-shadow: none;
+  }
+
+  .country-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .button {
+    width: 100%;
   }
 }

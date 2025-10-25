@@ -12,6 +12,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background: #f4f6fb;
+  padding-bottom: 4rem;
 }
 
 .top-nav {
@@ -20,6 +21,8 @@ body {
   padding: 1rem 1.5rem;
   background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid #e2e8f0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-link {
@@ -237,7 +240,7 @@ body {
 }
 
 .card {
-  width: min(560px, 90vw);
+  width: min(560px, 100%);
   background: #fff;
   border-radius: 24px;
   box-shadow: 0 25px 70px rgba(15, 23, 42, 0.18);
@@ -294,6 +297,16 @@ body {
 .actions {
   display: flex;
   gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.actions .button {
+  min-width: 140px;
+}
+
+.actions .link-button {
+  flex: 1;
+  text-align: left;
 }
 
 .feedback {
@@ -328,8 +341,62 @@ body {
   }
 }
 
+.card {
+  margin: 0 auto;
+}
+
 .notes {
   color: #475569;
   font-size: 0.95rem;
   white-space: pre-line; /* <- dette gjør at "\n" faktisk blir til linjeskift visuelt */
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    padding: 1.25rem;
+  }
+
+  .practice-box,
+  .scorecard {
+    padding: 0.85rem;
+  }
+
+  .game {
+    padding: 1rem;
+  }
+
+  .card {
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: none;
+  }
+
+  .prompt {
+    font-size: 1.2rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .actions .button,
+  .actions .link-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  #answer-input {
+    font-size: 1rem;
+  }
+
+  .country-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 }

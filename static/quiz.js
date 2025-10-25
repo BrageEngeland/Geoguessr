@@ -439,3 +439,16 @@ function showRegionImage(regions) {
     regionImg.style.display = "block";
   };
 }
+
+registerServiceWorker();
+
+function registerServiceWorker() {
+  if (!("serviceWorker" in navigator)) {
+    return;
+  }
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch((err) => {
+      console.error("Kunne ikke registrere service worker", err);
+    });
+  });
+}

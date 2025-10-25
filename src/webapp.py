@@ -12,7 +12,8 @@ from flask import Flask, abort, jsonify, request, send_from_directory
 from loader import available_countries, load_country_data
 from quiz import matches_any
 
-STATIC_DIR = Path(__file__).resolve().parent.parent / "static"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+STATIC_DIR = PROJECT_ROOT / "static"
 DEFAULT_COUNTRY = "Russia"
 
 app = Flask(
@@ -250,6 +251,12 @@ def pinpoint_page():
 @app.get("/quiz")
 def quiz_page():
     return send_from_directory(STATIC_DIR, "quiz.html")
+
+
+@app.get("/sw.js")
+def service_worker():
+    # Serve the service worker from the project root so it can control the scope.
+    return send_from_directory(PROJECT_ROOT, "sw.js")
 
 
 def main():

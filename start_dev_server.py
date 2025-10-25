@@ -60,7 +60,8 @@ def main():
 
     logging.getLogger("werkzeug").setLevel(logging.WARNING)
 
-    flask_app.run(host="127.0.0.1", port=port, debug=True, use_reloader=False)
+    #flask_app.run(host="127.0.0.1", port=port, debug=True, use_reloader=False)
+    flask_app.run(host="0.0.0.0", port=port, debug=True, use_reloader=False)
 
 
 if __name__ == "__main__":

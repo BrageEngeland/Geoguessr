@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 import re
 
+
 def region_to_filename(region_name: str) -> str:
     """Samme logikk som i quiz.js: lager forventet bildefilnavn fra regionnavn."""
     name = region_name.lower()
@@ -10,12 +11,13 @@ def region_to_filename(region_name: str) -> str:
     name = re.sub(r"^_+|_+$", "", name)
     return f"{name}.png"
 
-def check_region_images(country_file="Russia.json"):
+
+def check_region_images(country_file="Kazakhstan.json"):
     # Finn prosjektroten (mappen over src/)
     base_dir = Path(__file__).resolve().parent.parent
 
     data_path = base_dir / "Telefonnummer" / country_file
-    img_dir = base_dir / "static" / "maps" / "russia"
+    img_dir = base_dir / "static" / "maps" / "Kazakhstan"
 
     print(f"--- DEBUG: Bilde-sjekk for {country_file} ---")
     print(f"📁 JSON-fil: {data_path}")
@@ -66,6 +68,7 @@ def check_region_images(country_file="Russia.json"):
         print("\n🎉 Alle regioner har tilhørende bilder!")
 
     print("--- SLUTT DEBUG ---")
+
 
 if __name__ == "__main__":
     check_region_images()

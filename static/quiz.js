@@ -68,19 +68,24 @@ function showRegionImage(regions) {
   }
 
   const imgFile = regionNameToImage(regions[0]);
-  const imgPath = `/static/maps/russia/${imgFile}`;
+
+  const folderName = state.country.toLowerCase();
+
+  const imgPath = `/static/maps/${folderName}/${imgFile}`;
 
   regionImg.style.display = "none";
   regionImg.src = imgPath;
   regionImg.alt = regions[0];
 
   regionImg.onerror = () => {
+    // hvis bildet ikke finnes for denne regionen enda, skjul bare feltet
     regionImg.style.display = "none";
   };
   regionImg.onload = () => {
     regionImg.style.display = "block";
   };
 }
+
 
 // ---------- last inn land / tegn grid ----------
 

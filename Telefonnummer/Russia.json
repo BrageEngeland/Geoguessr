@@ -1045,6 +1045,27 @@
       "has_autonomy": true
     },
     {
+      "code": "349",
+      "primary_cities": [
+        "Salekhard",
+        "Novy Urengoy",
+        "Noyabrsk"
+      ],
+      "alt_names": [
+        "Салехард",
+        "Новый Уренгой",
+        "Ноябрьск"
+      ],
+      "regions": [
+        "Yamalo-Nenets Autonomous Okrug"
+      ],
+      "region_group": "Ural",
+      "notes": "Autonomt okrug i Uralføderasjonsdistriktet. Rikt på naturressurser som gass og olje.",
+      "difficulty": "easy",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
       "code": "351",
       "primary_cities": [
         "Chelyabinsk"

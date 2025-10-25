@@ -141,9 +141,10 @@
       "has_autonomy": true
     },
     {
-      "code": "819",
+      "code": "821",
       "primary_cities": [
-        "Syktyvkar"
+        "Syktyvkar",
+        "Vorkuta"
       ],
       "alt_names": [
         "Сыктывкар"
@@ -243,7 +244,7 @@
       "has_autonomy": false
     },
     {
-      "code": "476",
+      "code": "486",
       "primary_cities": [
         "Orel"
       ],
@@ -260,7 +261,7 @@
       "has_autonomy": false
     },
     {
-      "code": "477",
+      "code": "487",
       "primary_cities": [
         "Tula"
       ],
@@ -347,16 +348,16 @@
     {
       "code": "484",
       "primary_cities": [
-        "Kostroma"
+        "Kaluga"
       ],
       "alt_names": [
-        "Кострома"
+        "Калу́га"
       ],
       "regions": [
-        "Kostroma Oblast"
+        "Kaluga Oblast"
       ],
       "region_group": "Central",
-      "notes": "Nordøst for Moskva ved Volga-elven.",
+      "notes": "SSE for Moskva.",
       "difficulty": "hard",
       "population_rank": "low",
       "has_autonomy": false
@@ -379,7 +380,7 @@
       "has_autonomy": false
     },
     {
-      "code": "486",
+      "code": "492",
       "primary_cities": [
         "Vladimir"
       ],
@@ -396,7 +397,7 @@
       "has_autonomy": false
     },
     {
-      "code": "487",
+      "code": "491",
       "primary_cities": [
         "Ryazan"
       ],
@@ -408,40 +409,6 @@
       ],
       "region_group": "Central",
       "notes": "Elveby sørøst for Moskva.",
-      "difficulty": "medium",
-      "population_rank": "medium",
-      "has_autonomy": false
-    },
-    {
-      "code": "491",
-      "primary_cities": [
-        "Kostroma"
-      ],
-      "alt_names": [
-        "Кострома"
-      ],
-      "regions": [
-        "Kostroma Oblast"
-      ],
-      "region_group": "Central",
-      "notes": "Småby ved Volga, nordøst for Moskva.",
-      "difficulty": "hard",
-      "population_rank": "low",
-      "has_autonomy": false
-    },
-    {
-      "code": "492",
-      "primary_cities": [
-        "Vladimir"
-      ],
-      "alt_names": [
-        "Владимир"
-      ],
-      "regions": [
-        "Vladimir Oblast"
-      ],
-      "region_group": "Central",
-      "notes": "Del av den historiske gyldne ringen.",
       "difficulty": "medium",
       "population_rank": "medium",
       "has_autonomy": false
@@ -737,23 +704,6 @@
       "has_autonomy": false
     },
     {
-      "code": "849",
-      "primary_cities": [
-        "Balakovo"
-      ],
-      "alt_names": [
-        "Балаково"
-      ],
-      "regions": [
-        "Saratov Oblast"
-      ],
-      "region_group": "Volga",
-      "notes": "Kjent for vannkraftverk og kjemisk industri.",
-      "difficulty": "hard",
-      "population_rank": "low",
-      "has_autonomy": false
-    },
-    {
       "code": "851",
       "primary_cities": [
         "Astrakhan"
@@ -767,23 +717,6 @@
       "region_group": "Volga",
       "notes": "Elve- og havneby ved Kaspihavet.",
       "difficulty": "medium",
-      "population_rank": "medium",
-      "has_autonomy": false
-    },
-    {
-      "code": "853",
-      "primary_cities": [
-        "Ulyanovsk (Outer)"
-      ],
-      "alt_names": [
-        "Ульяновск"
-      ],
-      "regions": [
-        "Ulyanovsk Oblast"
-      ],
-      "region_group": "Volga",
-      "notes": "Dekker forsteder og distrikter rundt byen.",
-      "difficulty": "hard",
       "population_rank": "medium",
       "has_autonomy": false
     },
@@ -958,7 +891,7 @@
       "has_autonomy": true
     },
     {
-      "code": "873",
+      "code": "878",
       "primary_cities": [
         "Cherkessk"
       ],
@@ -975,7 +908,7 @@
       "has_autonomy": true
     },
     {
-      "code": "877",
+      "code": "873",
       "primary_cities": [
         "Nazran"
       ],
@@ -992,7 +925,7 @@
       "has_autonomy": true
     },
     {
-      "code": "878",
+      "code": "847",
       "primary_cities": [
         "Elista"
       ],
@@ -1079,6 +1012,7 @@
     {
       "code": "346",
       "primary_cities": [
+        "Surgut",
         "Khanty-Mansiysk"
       ],
       "alt_names": [
@@ -1247,7 +1181,7 @@
       "has_autonomy": false
     },
     {
-      "code": "386",
+      "code": "388",
       "primary_cities": [
         "Gorno-Altaysk"
       ],
@@ -1264,7 +1198,7 @@
       "has_autonomy": true
     },
     {
-      "code": "387",
+      "code": "390",
       "primary_cities": [
         "Abakan"
       ],
@@ -1281,7 +1215,7 @@
       "has_autonomy": true
     },
     {
-      "code": "388",
+      "code": "394",
       "primary_cities": [
         "Kyzyl"
       ],
@@ -1298,26 +1232,10 @@
       "has_autonomy": true
     },
     {
-      "code": "390",
-      "primary_cities": [
-        "Krasnoyarsk"
-      ],
-      "alt_names": [
-        "Красноярск"
-      ],
-      "regions": [
-        "Krasnoyarsk Krai"
-      ],
-      "region_group": "Siberia",
-      "notes": "Stor industriby ved Jenisej-elven.",
-      "difficulty": "easy",
-      "population_rank": "high",
-      "has_autonomy": false
-    },
-    {
       "code": "391",
       "primary_cities": [
-        "Norilsk"
+        "Norilsk",
+        "Krasnoyarsk"
       ],
       "alt_names": [
         "Норильск"
@@ -1332,9 +1250,10 @@
       "has_autonomy": false
     },
     {
-      "code": "392",
+      "code": "395",
       "primary_cities": [
-        "Irkutsk"
+        "Irkutsk",
+        "Bratsk"
       ],
       "alt_names": [
         "Иркутск"
@@ -1349,7 +1268,7 @@
       "has_autonomy": false
     },
     {
-      "code": "394",
+      "code": "301",
       "primary_cities": [
         "Ulan-Ude"
       ],
@@ -1366,7 +1285,7 @@
       "has_autonomy": true
     },
     {
-      "code": "395",
+      "code": "302",
       "primary_cities": [
         "Chita"
       ],
@@ -1417,7 +1336,7 @@
       "has_autonomy": false
     },
     {
-      "code": "414",
+      "code": "427",
       "primary_cities": [
         "Anadyr"
       ],
@@ -1470,7 +1389,9 @@
     {
       "code": "421",
       "primary_cities": [
-        "Khabarovsk"
+        "Khabarovsk",
+        "Komsomolsk-on-Amur",
+        "Amursk"
       ],
       "alt_names": [
         "Хабаровск"
@@ -1482,23 +1403,6 @@
       "notes": "Storby i det russiske fjerne østen.",
       "difficulty": "medium",
       "population_rank": "high",
-      "has_autonomy": false
-    },
-    {
-      "code": "422",
-      "primary_cities": [
-        "Komsomolsk-on-Amur"
-      ],
-      "alt_names": [
-        "Комсомольск-на-Амуре"
-      ],
-      "regions": [
-        "Khabarovsk Krai"
-      ],
-      "region_group": "Far East",
-      "notes": "Industriell by ved Amur-elven.",
-      "difficulty": "hard",
-      "population_rank": "medium",
       "has_autonomy": false
     },
     {
@@ -1536,7 +1440,7 @@
       "has_autonomy": false
     },
     {
-      "code": "425",
+      "code": "426",
       "primary_cities": [
         "Birobidzhan"
       ],
@@ -1551,57 +1455,6 @@
       "difficulty": "hard",
       "population_rank": "low",
       "has_autonomy": true
-    },
-    {
-      "code": "426",
-      "primary_cities": [
-        "Amursk"
-      ],
-      "alt_names": [
-        "Амурск"
-      ],
-      "regions": [
-        "Khabarovsk Krai"
-      ],
-      "region_group": "Far East",
-      "notes": "Liten by nær Komsomolsk-on-Amur.",
-      "difficulty": "hard",
-      "population_rank": "low",
-      "has_autonomy": false
-    },
-    {
-      "code": "427",
-      "primary_cities": [
-        "Anadyr"
-      ],
-      "alt_names": [
-        "Анадырь"
-      ],
-      "regions": [
-        "Chukotka Autonomous Okrug"
-      ],
-      "region_group": "Far East",
-      "notes": "Repeteres for sekundær sone i Chukotka.",
-      "difficulty": "hard",
-      "population_rank": "low",
-      "has_autonomy": true
-    },
-    {
-      "code": "428",
-      "primary_cities": [
-        "Magadan (Outer)"
-      ],
-      "alt_names": [
-        "Магадан"
-      ],
-      "regions": [
-        "Magadan Oblast"
-      ],
-      "region_group": "Far East",
-      "notes": "Dekker distrikter rundt Magadan.",
-      "difficulty": "hard",
-      "population_rank": "low",
-      "has_autonomy": false
     },
     {
       "code": "401",
@@ -1622,4 +1475,3 @@
     }
   ]
 }
- 

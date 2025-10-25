@@ -21,16 +21,21 @@ def matches_any(user_answer, correct_list):
 
     if ua == "":
         return False
+    
+    if len(ua) < 3:
+        return False
 
     for item in correct_list:
         ci = normalize(item)
 
-        # eksakt match
-        if ua == ci:
+        last_word = ci.split(" ")[-1]
+        if ua == last_word:
             return True
 
-        # delvis match ("tatarstan" vs "republic of tatarstan")
-        if ua in ci:
+        # 3. eksakt likt et helt ord inni navnet
+        #    "yakutia" skal funke for "sakha (yakutia) republic"
+        words = re.findall(r"[a-zæøå]+", ci)
+        if ua in words:
             return True
 
     return False

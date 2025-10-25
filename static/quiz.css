@@ -235,3 +235,10 @@ body {
     padding: 1.5rem;
   }
 }
+
+.notes {
+  color: #475569;
+  font-size: 0.95rem;
+  white-space: pre-line; /* <- dette gjør at "\n" faktisk blir til linjeskift visuelt */
+}
+

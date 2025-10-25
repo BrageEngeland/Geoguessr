@@ -54,6 +54,12 @@ def main():
 
     app_module = import_module("src.webapp")
     flask_app = getattr(app_module, "app")
+
+    # 👇 demp request-logging ("GET /... 200 -")
+    import logging
+
+    logging.getLogger("werkzeug").setLevel(logging.WARNING)
+
     flask_app.run(host="127.0.0.1", port=port, debug=True, use_reloader=False)
 
 

@@ -24,10 +24,32 @@ const form = document.getElementById("answer-form");
 const inputEl = document.getElementById("answer-input");
 const skipBtn = document.getElementById("skip-btn");
 
+// NYE ELEMENTER
 const nextBtn = document.getElementById("next-btn");
 const regionImg = document.getElementById("region-img");
 
-let answered = false; // har vi allerede svart på nåværende spørsmål?
+const state = {
+  country: "Russia",
+  countries: [],
+  question: null,
+  questionType: "region",
+  score: 0,
+  asked: 0,
+  streak: 0,
+  waiting: false,
+  shutdownArmed: false,
+  answered: false, // har vi allerede svart på nåværende spørsmål?
+};
+
+init();
+
+async function init() {
+  await loadCountries();
+  await fetchQuestion();
+  setupAutoShutdown();
+}
+
+// ---------- helpers for bilde ----------
 
 function regionNameToImage(regionName) {
   // "Republic of Tatarstan" -> "republic_of_tatarstan.png"
@@ -48,40 +70,19 @@ function showRegionImage(regions) {
   const imgFile = regionNameToImage(regions[0]);
   const imgPath = `/static/maps/russia/${imgFile}`;
 
-  regionImg.style.display = "none"; // skjul først
+  regionImg.style.display = "none";
   regionImg.src = imgPath;
   regionImg.alt = regions[0];
 
   regionImg.onerror = () => {
-    // vi har ikke bilde for denne regionen ennå -> skjul
     regionImg.style.display = "none";
   };
-
   regionImg.onload = () => {
     regionImg.style.display = "block";
   };
 }
 
-
-const state = {
-  country: "Russia",
-  countries: [],
-  question: null,
-  questionType: "region",
-  score: 0,
-  asked: 0,
-  streak: 0,
-  waiting: false,
-  shutdownArmed: false,
-};
-
-init();
-
-async function init() {
-  await loadCountries();
-  await fetchQuestion();
-  setupAutoShutdown();
-}
+// ---------- last inn land / tegn grid ----------
 
 async function loadCountries() {
   try {
@@ -108,9 +109,10 @@ function renderCountryGrid() {
       button.classList.add("country-tile--active");
     }
     button.innerHTML = `
-      <span class="country-tile__flag">${COUNTRY_FLAGS[country.display_name] ||
-      COUNTRY_FLAGS[country.filename] ||
-      "🌍"
+      <span class="country-tile__flag">${
+        COUNTRY_FLAGS[country.display_name] ||
+        COUNTRY_FLAGS[country.filename] ||
+        "🌍"
       }</span>
       <span class="country-tile__name">${country.display_name}</span>
     `;
@@ -129,15 +131,21 @@ function renderCountryGrid() {
   });
 }
 
+// ---------- hente nytt spørsmål ----------
+
 async function fetchQuestion() {
-  // reset visuelle ting for nytt spørsmål
+  // reset UI for nytt spørsmål
   feedbackEl.textContent = "";
   feedbackEl.className = "feedback";
   notesEl.textContent = "";
+
   regionImg.style.display = "none";
   regionImg.src = "";
+
   nextBtn.style.display = "none";
-  answered = false;
+
+  state.answered = false;
+  state.waiting = false;
 
   state.question = null;
   inputEl.value = "";
@@ -151,20 +159,23 @@ async function fetchQuestion() {
     if (!res.ok) throw new Error("Spørsmål feilet");
     state.question = await res.json();
 
-    // "city" eller "region" spørsmål
     state.questionType = Math.random() < 0.5 ? "city" : "region";
 
-    codeEl.textContent = `${state.question.country_code || ""} ${state.question.dial_code}`.trim();
+    codeEl.textContent = `${state.question.country_code || ""} ${
+      state.question.dial_code
+    }`.trim();
 
     if (
       state.questionType === "city" &&
       state.question.primary_cities &&
       state.question.primary_cities.length
     ) {
-      promptEl.textContent = "Hvilken by er tilknyttet denne telefonkoden?";
+      promptEl.textContent =
+        "Hvilken by er tilknyttet denne telefonkoden?";
     } else {
       state.questionType = "region";
-      promptEl.textContent = "Hvilken region/føderalt subjekt bruker denne koden?";
+      promptEl.textContent =
+        "Hvilken region/føderalt subjekt bruker denne koden?";
     }
   } catch (error) {
     console.error(error);
@@ -172,18 +183,20 @@ async function fetchQuestion() {
   }
 }
 
+// ---------- svar / hopp over / neste ----------
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   if (!state.question || state.waiting) return;
+  if (state.answered) return; // allerede svart
   const guess = inputEl.value.trim();
   if (!guess) return;
   await submitGuess(guess);
 });
 
 skipBtn.addEventListener("click", async () => {
-  if (state.waiting || answered === true) return;
-  // tomt svar => vil bli regnet som feil, men vi får fasit
+  if (state.waiting || state.answered) return;
+  // tomt svar -> blir alltid feil, men viser fasit
   await submitGuess("");
 });
 
@@ -191,11 +204,12 @@ nextBtn.addEventListener("click", () => {
   fetchQuestion();
 });
 
-async function submitGuess(guess) {
-  if (answered) return; // hindre dobbelt-submit
-  answered = true;
+// ---------- fasitbygging ----------
 
+async function submitGuess(guess) {
   state.waiting = true;
+  state.answered = true;
+
   feedbackEl.textContent = "Sjekker …";
   feedbackEl.className = "feedback";
 
@@ -211,11 +225,12 @@ async function submitGuess(guess) {
     });
 
     if (!res.ok) throw new Error("Validering feilet");
+
     const result = await res.json();
 
     state.asked += 1;
 
-    // riktig / feil-tekst
+    // 1. Riktig / Feil
     if (result.correct) {
       state.score += 1;
       state.streak += 1;
@@ -227,24 +242,31 @@ async function submitGuess(guess) {
       feedbackEl.className = "feedback bad";
     }
 
-    // kjente byer + notat
+    // 2-4. Byer / Notat / Plassering (region_group)
     const lines = [];
-    if (result.notes) {
-      lines.push(result.notes);
-    }
+
     if (result.primary_cities && result.primary_cities.length) {
       lines.push("Kjente byer: " + result.primary_cities.join(", "));
     }
+
+    if (result.notes) {
+      lines.push("Notat: " + result.notes);
+    }
+
+    if (result.region_group) {
+      lines.push("Plassering: " + result.region_group);
+    }
+
     notesEl.textContent = lines.join("\n");
 
-    // vis kartbilde av regionen
+    // 5. bilde
     showRegionImage(result.regions);
 
-    // lås input til neste runde
+    // lås input til du trykker Neste
     inputEl.disabled = true;
     skipBtn.disabled = true;
 
-    // vis Neste-knappen
+    // vis Neste-knapp
     nextBtn.style.display = "inline-block";
 
     updateScore();
@@ -253,13 +275,14 @@ async function submitGuess(guess) {
     feedbackEl.textContent = "Klarte ikke å sende svaret.";
     feedbackEl.className = "feedback bad";
 
-    // vi må tillate nytt forsøk hvis det feila
-    answered = false;
+    // gi brukeren en sjanse til å prøve igjen hvis dette var nettfeil
+    state.answered = false;
   } finally {
     state.waiting = false;
   }
 }
 
+// ---------- score / shutdown ----------
 
 function updateScore() {
   scoreEl.textContent = `${state.score} / ${state.asked}`;
@@ -278,7 +301,7 @@ function setupAutoShutdown() {
         method: "POST",
         keepalive: true,
         mode: "same-origin",
-      }).catch(() => { });
+      }).catch(() => {});
     }
   };
 

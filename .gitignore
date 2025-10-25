@@ -1,0 +1,8 @@
+# Ignorer Mac OS-spesifikke filer
+.DS_Store
+
+# Ignorer VSCode-innstillinger (hvis de er lokale for prosjektet)
+.vscode/
+
+# Ignorer Python-spesifikke cacher
+__pycache__/

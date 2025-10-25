@@ -1,0 +1,366 @@
+{
+    "country": "Canada",
+    "country_code": "+1",
+    "codes": [
+        {
+            "code": [
+                "236",
+                "672",
+                "778"
+            ],
+            "primary_cities": [
+                "Prince George",
+                "Quesnel",
+                "Vancouver",
+                "Kamloops"
+            ],
+            "regions": [
+                "British Columbia",
+                "BC"
+            ],
+            "notes": "Hele British Columbia (BC)."
+        },
+        {
+            "code": "604",
+            "primary_cities": [
+                "Vancouver",
+                "Surrey",
+                "Burnaby"
+            ],
+            "regions": [
+                "British Columbia",
+                "BC"
+            ],
+            "notes": "Vancouver-området (Lower Mainland)."
+        },
+        {
+            "code": "250",
+            "primary_cities": [
+                "Prince George",
+                "Quesnel",
+                "Kamloops",
+                "Victoria"
+            ],
+            "regions": [
+                "British Columbia",
+                "BC"
+            ],
+            "notes": "BC utenom Vancouver-området."
+        },
+        {
+            "code": [
+                "587",
+                "825"
+            ],
+            "primary_cities": [
+                "Calgary",
+                "Lethbridge",
+                "Red Deer",
+                "Edmonton"
+            ],
+            "regions": [
+                "Alberta",
+                "AB"
+            ],
+            "notes": "Hele Alberta"
+        },
+        {
+            "code": "403",
+            "primary_cities": [
+                "Calgary",
+                "Lethbridge",
+                "Red Deer"
+            ],
+            "regions": [
+                "Alberta",
+                "AB"
+            ],
+            "notes": "Sør-Alberta, inkludert Red Deer og Ponoka."
+        },
+        {
+            "code": "780",
+            "primary_cities": [
+                "Edmonton",
+                "Fort McMurray",
+                "Grande Prairie"
+            ],
+            "regions": [
+                "Alberta",
+                "AB"
+            ],
+            "notes": "Nord-Alberta (Alt nord fra Ponoka), inkludert Edmonton."
+        },
+        {
+            "code": [
+                "306",
+                "474",
+                "639"
+            ],
+            "primary_cities": [
+                "Regina",
+                "Saskatoon"
+            ],
+            "regions": [
+                "Saskatchewan",
+                "SK"
+            ],
+            "notes": "Hele Saskatchewan."
+        },
+        {
+            "code": [
+                "204",
+                "431",
+                "584"
+            ],
+            "primary_cities": [
+                "Winnipeg",
+                "Brandon",
+                "Norway House"
+            ],
+            "regions": [
+                "Manitoba",
+                "MB"
+            ],
+            "notes": "Hele Manitoba."
+        },
+        {
+            "code": "807",
+            "primary_cities": [
+                "Thunder Bay",
+                "Kenora"
+            ],
+            "regions": [
+                "Ontario",
+                "ON"
+            ],
+            "notes": "Nordvestlige Ontario t.o.m. Geraldton."
+        },
+        {
+            "code": [
+                "705",
+                "249",
+                "683"
+            ],
+            "primary_cities": [
+                "Sudbury",
+                "Kenora"
+            ],
+            "regions": [
+                "Ontario",
+                "ON"
+            ],
+            "notes": "Østlige delen av Ontario f.o.m. Longlac"
+        },
+        {
+            "code": [
+                "819",
+                "468",
+                "873"
+            ],
+            "primary_cities": [
+                "Sherbrooke",
+                "Trois-Rivières",
+                "Gatineau"
+            ],
+            "regions": [
+                "Quebec",
+                "QC"
+            ],
+            "notes": "Dekker nesten hele Quebec utenom Montreal og Quebec City, samt Ottawa."
+        },
+        {
+            "code": [
+                "450",
+                "354",
+                "579"
+            ],
+            "primary_cities": [
+                "Granby",
+                "Laval",
+                "Longueuil",
+                "Terrebonne",
+                "Saint-Jérôme",
+                "Saint-Jean-sur-Richelieu"
+            ],
+            "regions": [
+                "Quebec",
+                "QC"
+            ],
+            "notes": "Dekker rundt Montreal på de gitte byene."
+        },
+        {
+            "code": [
+                "514",
+                "263",
+                "438"
+            ],
+            "primary_cities": [
+                "Montreal"
+            ],
+            "regions": [
+                "Quebec",
+                "QC"
+            ],
+            "notes": "Dekker kun Montreal"
+        },
+        {
+            "code": [
+                "613",
+                "343",
+                "753"
+            ],
+            "primary_cities": [
+                "Ottawa",
+                "Kingston",
+                "Belleville",
+                "Cornwall",
+                "Pembroke",
+                "Brockville"
+            ],
+            "regions": [
+                "Ontario",
+                "ON"
+            ],
+            "notes": "Dekker 10km øst for Ottawa, samt masse vest (så langt som Bancroft)."
+        },
+        {
+            "code": [
+                "416",
+                "437",
+                "647"
+            ],
+            "primary_cities": [
+                "Toronto"
+            ],
+            "regions": [
+                "Ontario",
+                "ON"
+            ],
+            "notes": "Dekker Toronto."
+        },
+        {
+            "code": [
+                "905",
+                "289",
+                "365",
+                "742"
+            ],
+            "primary_cities": [
+                "Hamilton",
+                "Oshawa"
+            ],
+            "regions": [
+                "Ontario",
+                "ON"
+            ],
+            "notes": "Dekker Hamilton og Oshawa, ikke Toronto."
+        },
+        {
+            "code": [
+                "519",
+                "226",
+                "382",
+                "548"
+            ],
+            "primary_cities": [
+                "London",
+                "Kitchener",
+                "Wiarton",
+                "Sarnia",
+                "Chatham",
+                "Windsor",
+                "Wiarton"
+            ],
+            "regions": [
+                "Ontario",
+                "ON"
+            ],
+            "notes": "Dekker alt sør for Wiarton, vest for Hamilton."
+        },
+        {
+            "code": [
+                "418",
+                "367",
+                "581"
+            ],
+            "primary_cities": [
+                "Quebec City",
+                "Sagenuay",
+                "Lévis",
+                "Havre-Saint-Pierre"
+            ],
+            "regions": [
+                "Quebec",
+                "QC"
+            ],
+            "notes": "Hele østlige Quebec."
+        },
+        {
+            "code": [
+                "709",
+                "879"
+            ],
+            "primary_cities": [
+                "St. John's",
+                "Conception Bay South"
+            ],
+            "regions": [
+                "Newfoundland og Labrador",
+                "NL"
+            ],
+            "notes": "Hele Newfoundland og Labrador."
+        },
+        {
+            "code": [
+                "902",
+                "782"
+            ],
+            "primary_cities": [
+                "Halifax",
+                "Charlottetown"
+            ],
+            "regions": [
+                "Nova Scotia",
+                "NS",
+                "Prince Edward Island",
+                "PE"
+            ],
+            "notes": "Nova Scotia og Prince Edward Island. 782 er en overleggskode."
+        },
+        {
+            "code": [
+                "506",
+                "428"
+            ],
+            "primary_cities": [
+                "Moncton",
+                "Fredericton",
+                "Saint John"
+            ],
+            "regions": [
+                "New Brunswick",
+                "NB"
+            ],
+            "notes": "Hele New Brunswick."
+        },
+        {
+            "code": [
+                "867"
+            ],
+            "primary_cities": [
+                "Yellowknife",
+                "Whitehorse",
+                "Iqaluit"
+            ],
+            "regions": [
+                "Yukon",
+                "YT",
+                "Nordvestterritoriene",
+                "NT",
+                "Nunavut",
+                "NU"
+            ],
+            "notes": "Alle de nordlige territoriene."
+        }
+    ]
+}

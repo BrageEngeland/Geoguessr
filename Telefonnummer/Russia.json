@@ -1,0 +1,447 @@
+{
+  "country": "Russia",
+  "country_code": "+7",
+  "codes": [
+    {
+      "code": "401",
+      "primary_cities": ["Kaliningrad"],
+      "regions": ["Kaliningrad Oblast"],
+      "notes": "Russisk eksklave mellom Polen og Litauen."
+    },
+    {
+      "code": "812",
+      "primary_cities": ["St. Petersburg", "Indiga"],
+      "regions": [
+        "St. Petersburg (Federal City)",
+        "Leningrad Oblast",
+        "Novgorod Oblast (parts)",
+        "Arkhangelsk Oblast (northern telecom zones)",
+        "Nenets Autonomous Okrug"
+      ],
+      "notes": "812 er primært St. Petersburg, men brukes også i fjerntliggende områder som Indiga (Nenets AO)."
+    },
+    {
+      "code": "814",
+      "primary_cities": ["Petrozavodsk"],
+      "regions": ["Republic of Karelia"],
+      "notes": "Nordvest, grense mot Finland."
+    },
+    {
+      "code": "815",
+      "primary_cities": ["Murmansk", "Apatity", "Kandalaksha"],
+      "regions": ["Murmansk Oblast"],
+      "notes": "Arktisk region ytterst i nordvest."
+    },
+    {
+      "code": "820",
+      "primary_cities": ["Vologda", "Cherepovets"],
+      "regions": ["Vologda Oblast"],
+      "notes": "Nordvestlig industriell region mellom St. Petersburg og Arkhangelsk."
+    },
+
+    {
+      "code": "495",
+      "primary_cities": ["Moscow"],
+      "regions": ["Moscow (Federal City)"],
+      "notes": "Historisk sentrum av Moskva, innenfor MKAD."
+    },
+    {
+      "code": "499",
+      "primary_cities": ["Moscow"],
+      "regions": ["Moscow (Federal City)", "Moscow Oblast (selected suburbs)"],
+      "notes": "Ytre bydeler og forsteder; samme lokalområde som 495."
+    },
+    {
+      "code": "496",
+      "primary_cities": ["Kolomna", "Noginsk", "Elektrostal", "Orekhovo-Zuyevo"],
+      "regions": ["Moscow Oblast"],
+      "notes": "Satellittbyer sørøst for Moskva."
+    },
+    {
+      "code": "497",
+      "primary_cities": ["Klin", "Dmitrov", "Solnechnogorsk"],
+      "regions": ["Moscow Oblast"],
+      "notes": "Nordlige deler av Moscow Oblast."
+    },
+    {
+      "code": "498",
+      "primary_cities": ["Mytishchi", "Khimki", "Dolgoprudny", "Pushkino"],
+      "regions": ["Moscow Oblast"],
+      "notes": "Vestlige og nordvestlige forsteder til Moskva."
+    },
+
+    {
+      "code": "831",
+      "primary_cities": ["Nizhny Novgorod"],
+      "regions": ["Nizhny Novgorod Oblast"],
+      "notes": "Volga-regionen, sentral transportkorridor."
+    },
+    {
+      "code": "843",
+      "primary_cities": ["Kazan"],
+      "regions": ["Republic of Tatarstan"],
+      "notes": "Hovedstaden i Tatarstan."
+    },
+    {
+      "code": "8552",
+      "primary_cities": ["Naberezhnye Chelny"],
+      "regions": ["Republic of Tatarstan"],
+      "notes": "Tatarstan (Naberezhnye Chelny/Nizhnekamsk-industriområdet)."
+    },
+    {
+      "code": "846",
+      "primary_cities": ["Samara"],
+      "regions": ["Samara Oblast"],
+      "notes": "Volga-regionen, viktig industriby."
+    },
+    {
+      "code": "863",
+      "primary_cities": ["Rostov-na-Donu", "Taganrog"],
+      "regions": ["Rostov Oblast"],
+      "notes": "Sørvestlig Russland, ved Don-elva."
+    },
+    {
+      "code": "861",
+      "primary_cities": ["Krasnodar", "Armavir", "Novorossiysk", "Maykop"],
+      "regions": ["Krasnodar Krai", "Republic of Adygea"],
+      "notes": "Sør, mot Svartehavet og Adygea."
+    },
+    {
+      "code": "862",
+      "primary_cities": ["Sochi", "Adler", "Khosta"],
+      "regions": ["Krasnodar Krai"],
+      "notes": "Svartehavskysten."
+    },
+    {
+      "code": "8772",
+      "primary_cities": ["Maykop"],
+      "regions": ["Republic of Adygea"],
+      "notes": "Adygea er en egen republikk inni Krasnodar krai."
+    },
+    {
+      "code": "872",
+      "primary_cities": ["Makhachkala", "Derbent"],
+      "regions": ["Republic of Dagestan"],
+      "notes": "Kaspihavet og Kaukasusfjellene."
+    },
+    {
+      "code": "879",
+      "primary_cities": ["Pyatigorsk", "Kislovodsk", "Essentuki"],
+      "regions": ["Stavropol Krai"],
+      "notes": "Kaukasus, kjent for spa- og mineralvannbyer."
+    },
+
+    {
+      "code": "383",
+      "primary_cities": ["Novosibirsk"],
+      "regions": ["Novosibirsk Oblast"],
+      "notes": "Vest-Sibir."
+    },
+    {
+      "code": "391",
+      "primary_cities": ["Krasnoyarsk", "Norilsk", "Minusinsk", "Achinsk"],
+      "regions": ["Krasnoyarsk Krai"],
+      "notes": "Sentralt Sibir, strekker seg fra sør til Arktis."
+    },
+    {
+      "code": "395",
+      "primary_cities": ["Irkutsk", "Bratsk", "Ust-Ilimsk"],
+      "regions": ["Irkutsk Oblast"],
+      "notes": "Baikal / Øst-Sibir."
+    },
+    {
+      "code": "411",
+      "primary_cities": ["Yakutsk", "Mirny", "Tiksi", "Aldan"],
+      "regions": ["Republic of Sakha (Yakutia)"],
+      "notes": "Dekker nesten hele nordøstlige Russland."
+    },
+    {
+      "code": "415",
+      "primary_cities": ["Magadan", "Susuman"],
+      "regions": ["Magadan Oblast"],
+      "notes": "Langs Okhotskhavet, ekstremt tynt befolket."
+    },
+    {
+      "code": "416",
+      "primary_cities": ["Blagoveshchensk"],
+      "regions": ["Amur Oblast"],
+      "notes": "Grense mot Kina, Amur-elva."
+    },
+    {
+      "code": "421",
+      "primary_cities": ["Khabarovsk", "Komsomolsk-na-Amure"],
+      "regions": ["Khabarovsk Krai"],
+      "notes": "Øst for Amur og nord for Vladivostok."
+    },
+    {
+      "code": "423",
+      "primary_cities": ["Vladivostok", "Nakhodka", "Artyom", "Ussuriysk"],
+      "regions": ["Primorsky Krai"],
+      "notes": "Russlands største havneområde ved Japanhavet."
+    },
+    {
+      "code": "427",
+      "primary_cities": ["Anadyr"],
+      "regions": ["Chukotka Autonomous Okrug"],
+      "notes": "Russlands østligste punkt."
+    },
+    {
+      "code": "811",
+      "primary_cities": ["Pskov"],
+      "regions": ["Pskov Oblast"],
+      "notes": "Nordvest‐Russland." 
+    },
+    {
+      "code": "813",
+      "primary_cities": ["–"],
+      "regions": ["Leningrad Oblast"],
+      "notes": "Leningrad region." 
+    },
+    {
+      "code": "816",
+      "primary_cities": ["Veliky Novgorod"],
+      "regions": ["Novgorod Oblast"],
+      "notes": "Novgorod region." 
+    },
+    {
+      "code": "833",
+      "primary_cities": ["Kirov"],
+      "regions": ["Kirov Oblast"],
+      "notes": "Volga‐Vyatka region." 
+    },
+    {
+      "code": "834",
+      "primary_cities": ["Saransk"],
+      "regions": ["Republic of Mordovia"],
+      "notes": "Mordovia." 
+    },
+    {
+      "code": "481",
+      "primary_cities": ["Smolensk"],
+      "regions": ["Smolensk Oblast"],
+      "notes": "Vest‐sentral Russland." 
+    },
+    {
+      "code": "482",
+      "primary_cities": ["Tver"],
+      "regions": ["Tver Oblast"],
+      "notes": "Vest‐sentral Russland." 
+    },
+    {
+      "code": "483",
+      "primary_cities": ["Bryansk"],
+      "regions": ["Bryansk Oblast"],
+      "notes": "Vest‐Russland." 
+    },
+    {
+      "code": "484",
+      "primary_cities": ["Yaroslavl"],
+      "regions": ["Yaroslavl Oblast"],
+      "notes": "Nordre Volga‐region." 
+    },
+    {
+      "code": "485",
+      "primary_cities": ["Rybinsk"],
+      "regions": ["Yaroslavl Oblast"],
+      "notes": "Område Yaroslavl/Rybinsk." 
+    },
+    {
+      "code": "486",
+      "primary_cities": ["Orel"],
+      "regions": ["Orel Oblast"],
+      "notes": "Sørvest for Moskva." 
+    },
+    {
+      "code": "487",
+      "primary_cities": ["Tula"],
+      "regions": ["Tula Oblast"],
+      "notes": "Sør for Moskva." 
+    },
+    {
+      "code": "471",
+      "primary_cities": ["Kursk"],
+      "regions": ["Kursk Oblast"],
+      "notes": "Sørvest‐Russland." 
+    },
+    {
+      "code": "472",
+      "primary_cities": ["Belgorod"],
+      "regions": ["Belgorod Oblast"],
+      "notes": "Sørvest nær grensen til Ukraina." 
+    },
+    {
+      "code": "473",
+      "primary_cities": ["Voronezh"],
+      "regions": ["Voronezh Oblast"],
+      "notes": "Sørvest‐Russland." 
+    },
+    {
+      "code": "474",
+      "primary_cities": ["Lipetsk"],
+      "regions": ["Lipetsk Oblast"],
+      "notes": "Sentral‐sør Russland." 
+    },
+    {
+      "code": "491",
+      "primary_cities": ["Ryazan"],
+      "regions": ["Ryazan Oblast"],
+      "notes": "Sentral Russland øst for Moskva." 
+    },
+    {
+      "code": "494",
+      "primary_cities": ["Kostroma"],
+      "regions": ["Kostroma Oblast"],
+      "notes": "Volga‐region nord for Moskva." 
+    },
+    {
+      "code": "844",
+      "primary_cities": ["Volgograd"],
+      "regions": ["Volgograd Oblast"],
+      "notes": "Sørvest Russland, Volga‐elva." 
+    },
+    {
+      "code": "845",
+      "primary_cities": ["Saratov"],
+      "regions": ["Saratov Oblast"],
+      "notes": "Nedre Volga‐område." 
+    },
+    {
+      "code": "341",
+      "primary_cities": ["Izhevsk"],
+      "regions": ["Udmurt Republic"],
+      "notes": "Vestlige Uralområdet." 
+    },
+    {
+      "code": "343",
+      "primary_cities": ["Yekaterinburg"],
+      "regions": ["Sverdlovsk Oblast"],
+      "notes": "Uralregionen." 
+    },
+    {
+      "code": "347",
+      "primary_cities": ["Ufa"],
+      "regions": ["Bashkortostan"],
+      "notes": "Vestlige Uralregionen." 
+    },
+    {
+      "code": "351",
+      "primary_cities": ["Chelyabinsk"],
+      "regions": ["Chelyabinsk Oblast"],
+      "notes": "Sør‐Ural." 
+    },
+    {
+      "code": "352",
+      "primary_cities": ["Kurgan"],
+      "regions": ["Kurgan Oblast"],
+      "notes": "Sør‐Ural." 
+    },
+    {
+      "code": "353",
+      "primary_cities": ["Orenburg"],
+      "regions": ["Orenburg Oblast"],
+      "notes": "Sørvest Ural / grenseområde." 
+    },
+    {
+      "code": "345",
+      "primary_cities": ["Tyumen"],
+      "regions": ["Tyumen Oblast"],
+      "notes": "Vest‐Sibir / Uralområdet." 
+    },
+    {
+      "code": "346",
+      "primary_cities": ["Khanty-Mansiysk"],
+      "regions": ["Khanty-Mansi Autonomous Okrug"],
+      "notes": "Vest‐Sibir / olje‐ og gassregion." 
+    },
+    {
+      "code": "349",
+      "primary_cities": ["Yamalo-Nenets Autonomous Okrug"],
+      "regions": ["Yamalo-Nenets Autonomous Okrug"],
+      "notes": "Nordvest Sibir / arktisk region." 
+    },
+    {
+      "code": "381",
+      "primary_cities": ["Omsk"],
+      "regions": ["Omsk Oblast"],
+      "notes": "Vest‐Sibir." 
+    },
+    {
+      "code": "382",
+      "primary_cities": ["Tomsk"],
+      "regions": ["Tomsk Oblast"],
+      "notes": "Sentral‐Sibir." 
+    },
+    {
+      "code": "384",
+      "primary_cities": ["Kemerovo"],
+      "regions": ["Kemerovo Oblast"],
+      "notes": "Sibir‐grove industriområder." 
+    },
+    {
+      "code": "385",
+      "primary_cities": ["Barnaul"],
+      "regions": ["Altai Krai"],
+      "notes": "Sørvest Sibir." 
+    },
+    {
+      "code": "387",
+      "primary_cities": ["Novokuznetsk"],
+      "regions": ["Kemerovo Oblast"],
+      "notes": "Sør‐Sibir." 
+    },
+    {
+      "code": "388",
+      "primary_cities": ["Novosibirsk (outer)"],
+      "regions": ["Novosibirsk Oblast"],
+      "notes": "Vest‐Sibir, forsteder." 
+    },
+    {
+      "code": "390",
+      "primary_cities": ["–"],
+      "regions": ["Republic of Khakassia"],
+      "notes": "Sør‐Sibir." 
+    },
+    {
+      "code": "394",
+      "primary_cities": ["Kyzyl"],
+      "regions": ["Republic of Tuva"],
+      "notes": "Sørøst Sibir." 
+    },
+    {
+      "code": "301",
+      "primary_cities": ["Ulan-Ude"],
+      "regions": ["Republic of Buryatia"],
+      "notes": "Øst‐Sibir / Bajkalområdet." 
+    },
+    {
+      "code": "302",
+      "primary_cities": ["Chita"],
+      "regions": ["Zabaykalsky Krai"],
+      "notes": "Øst‐Sibir / grenseland mot Mongolia." 
+    },
+    {
+      "code": "413",
+      "primary_cities": ["Magadan"],
+      "regions": ["Magadan Oblast"],
+      "notes": "Nordøst Russland, Okhotskhavet." 
+    },
+    {
+      "code": "424",
+      "primary_cities": ["Yuzhno-Sakhalinsk"],
+      "regions": ["Sakhalin Oblast"],
+      "notes": "Østlig øy og oljeområde." 
+    },
+    {
+      "code": "426",
+      "primary_cities": ["Birobidzhan"],
+      "regions": ["Jewish Autonomous Oblast"],
+      "notes": "Russisk fjern‐øst eksklave." 
+    },
+    {
+      "code": "851",
+      "primary_cities": ["Astrakhan"],
+      "regions": ["Astrakhan Oblast"],
+      "notes": "Nedre Volga / Kaspihavet." 
+    }
+  ]
+}

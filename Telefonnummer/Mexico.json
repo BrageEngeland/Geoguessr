@@ -1,0 +1,176 @@
+{
+  "country": "Mexico",
+  "country_code": "+52",
+  "codes": [
+    {
+      "code": "55",
+      "primary_cities": [
+        "Ciudad de México"
+      ],
+      "regions": [
+        "Mexico City (CDMX)"
+      ],
+      "notes": "Metropolitan Mexico City, inkludert store deler av Valle de México."
+    },
+    {
+      "code": "33",
+      "primary_cities": [
+        "Guadalajara"
+      ],
+      "regions": [
+        "Jalisco"
+      ],
+      "notes": "Vest-Mexicos tech- og mariachi-hovedstad."
+    },
+    {
+      "code": "81",
+      "primary_cities": [
+        "Monterrey"
+      ],
+      "regions": [
+        "Nuevo León"
+      ],
+      "notes": "Nordlig industriknutepunkt ved Sierra Madre Oriental."
+    },
+    {
+      "code": "222",
+      "primary_cities": [
+        "Puebla"
+      ],
+      "regions": [
+        "Puebla"
+      ],
+      "notes": "Koloniby ved vulkanene Popocatépetl/Iztaccíhuatl."
+    },
+    {
+      "code": "229",
+      "primary_cities": [
+        "Veracruz"
+      ],
+      "regions": [
+        "Veracruz"
+      ],
+      "notes": "Golfkystens viktigste havn."
+    },
+    {
+      "code": "442",
+      "primary_cities": [
+        "Querétaro"
+      ],
+      "regions": [
+        "Querétaro"
+      ],
+      "notes": "Høyteknologisk vekstsenter i Bajío."
+    },
+    {
+      "code": "444",
+      "primary_cities": [
+        "San Luis Potosí"
+      ],
+      "regions": [
+        "San Luis Potosí"
+      ],
+      "notes": "Midt i landet; gruvehistorie og moderne industri."
+    },
+    {
+      "code": "449",
+      "primary_cities": [
+        "Aguascalientes"
+      ],
+      "regions": [
+        "Aguascalientes"
+      ],
+      "notes": "Liten, tett urban stat i Bajío."
+    },
+    {
+      "code": "477",
+      "primary_cities": [
+        "León"
+      ],
+      "regions": [
+        "Guanajuato"
+      ],
+      "notes": "Skinn- og skoindustriens hovedstad."
+    },
+    {
+      "code": "618",
+      "primary_cities": [
+        "Durango"
+      ],
+      "regions": [
+        "Durango"
+      ],
+      "notes": "Nordlig delstat med Sierra Madre Occidental."
+    },
+    {
+      "code": "656",
+      "primary_cities": [
+        "Ciudad Juárez"
+      ],
+      "regions": [
+        "Chihuahua (nord)"
+      ],
+      "notes": "Grenseby ved El Paso, viktig maquila-senter."
+    },
+    {
+      "code": "664",
+      "primary_cities": [
+        "Tijuana"
+      ],
+      "regions": [
+        "Baja California (nordvest)"
+      ],
+      "notes": "Største by på Californias Baja-halvøy."
+    },
+    {
+      "code": "667",
+      "primary_cities": [
+        "Culiacán"
+      ],
+      "regions": [
+        "Sinaloa"
+      ],
+      "notes": "Sinaloas jordbruks- og handelssentrum."
+    },
+    {
+      "code": "686",
+      "primary_cities": [
+        "Mexicali"
+      ],
+      "regions": [
+        "Baja California (nordøst)"
+      ],
+      "notes": "Hovedstad i Baja California, ved Colorado-elven."
+    },
+    {
+      "code": "744",
+      "primary_cities": [
+        "Acapulco"
+      ],
+      "regions": [
+        "Guerrero (kysten)"
+      ],
+      "notes": "Klassisk ferieby ved Stillehavskysten."
+    },
+    {
+      "code": "771",
+      "primary_cities": [
+        "Pachuca"
+      ],
+      "regions": [
+        "Hidalgo"
+      ],
+      "notes": "Grenseområde mellom Mexico City-platået og fjellene."
+    },
+    {
+      "code": "999",
+      "primary_cities": [
+        "Mérida"
+      ],
+      "regions": [
+        "Yucatán"
+      ],
+      "notes": "Yucatán-halvøyens kulturelle hovedstad."
+    }
+  ]
+}

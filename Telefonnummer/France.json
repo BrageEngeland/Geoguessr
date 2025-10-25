@@ -1,0 +1,453 @@
+{
+  "country": "France",
+  "country_code": "+33",
+  "codes": [
+    {
+      "code": "1 30",
+      "primary_cities": [
+        "Versailles",
+        "Saint-Germain-en-Laye"
+      ],
+      "regions": [
+        "Île-de-France (Yvelines)"
+      ],
+      "notes": "Vestlige forsteder til Paris."
+    },
+    {
+      "code": "1 34",
+      "primary_cities": [
+        "Cergy",
+        "Pontoise"
+      ],
+      "regions": [
+        "Île-de-France (Val-d'Oise)"
+      ],
+      "notes": "Nordvestlige Paris-baner, Oise-dalen."
+    },
+    {
+      "code": "1 45",
+      "primary_cities": [
+        "Paris 15e",
+        "Boulogne-Billancourt"
+      ],
+      "regions": [
+        "Paris intramuros",
+        "Hauts-de-Seine"
+      ],
+      "notes": "Sørvestlige arrondissements og Seine-buen."
+    },
+    {
+      "code": "1 69",
+      "primary_cities": [
+        "Évry",
+        "Massy",
+        "Orsay"
+      ],
+      "regions": [
+        "Île-de-France (Essonne)"
+      ],
+      "notes": "Sør for Paris, Orly og Saclay-platået."
+    },
+    {
+      "code": [
+        "2 96",
+        "2 97",
+        "2 98"
+      ],
+      "primary_cities": [
+        "Rennes",
+        "Brest",
+        "Quimper"
+      ],
+      "regions": [
+        "Bretagne (Ille-et-Vilaine)"
+      ],
+      "notes": "Brittanys administrasjonssenter."
+    },
+    {
+      "code": "2 31",
+      "primary_cities": [
+        "Caen"
+      ],
+      "regions": [
+        "Normandie (Calvados)"
+      ],
+      "notes": "D-dagkysten og Normandies midtby."
+    },
+    {
+      "code": "2 35",
+      "primary_cities": [
+        "Le Havre",
+        "Rouen"
+      ],
+      "regions": [
+        "Normandie (Seine-Maritime)"
+      ],
+      "notes": "Seine-elvens utløp."
+    },
+    {
+      "code": "2 40",
+      "primary_cities": [
+        "Nantes"
+      ],
+      "regions": [
+        "Pays de la Loire (Loire-Atlantique)"
+      ],
+      "notes": "Vestlig Loire-munning."
+    },
+    {
+      "code": "2 48",
+      "primary_cities": [
+        "Bourges",
+        "Vierzon"
+      ],
+      "regions": [
+        "Cher"
+      ],
+      "notes": "Stor by rett nord for Frankrike."
+    },
+    {
+      "code": "2 98",
+      "primary_cities": [
+        "Brest",
+        "Quimper"
+      ],
+      "regions": [
+        "Bretagne (Finistère)"
+      ],
+      "notes": "Ytterst ute på Bretagnes vestkap."
+    },
+    {
+      "code": "3 20",
+      "primary_cities": [
+        "Lille",
+        "Roubaix",
+        "Tourcoing"
+      ],
+      "regions": [
+        "Nord"
+      ],
+      "notes": "Rett ved belgiske grensen."
+    },
+    {
+      "code": "3 21",
+      "primary_cities": [
+        "Calais",
+        "Béthune",
+        "Arsas"
+      ],
+      "regions": [
+        "Pas-de-Calais"
+      ],
+      "notes": "Ved havet, nærmeste punktet til UK i nord."
+    },
+    {
+      "code": "3 22",
+      "primary_cities": [
+        "Amiens",
+        "Abbeville"
+      ],
+      "regions": [
+        "Somme"
+      ],
+      "notes": "Ved havet, mellom paris og Calais (nord)."
+    },
+    {
+      "code": "3 23",
+      "primary_cities": [
+        "Laon",
+        "Saint-Quentin"
+      ],
+      "regions": [
+        "Aisne"
+      ],
+      "notes": "Lang kommune - vest for Reims i nord."
+    },
+    {
+      "code": "3 24",
+      "primary_cities": [
+        "Charleville-Mézières",
+        "Abbeville"
+      ],
+      "regions": [
+        "Ardennes"
+      ],
+      "notes": "Spiss punkt inn til belgia."
+    },
+    {
+      "code": "3 25",
+      "primary_cities": [
+        "Troyes",
+        "Chaumont"
+      ],
+      "regions": [
+        "Aube",
+        "Haute-Marne"
+      ],
+      "notes": "Rett sør for Reims, sørvest for Nancy."
+    },
+    {
+      "code": "3 26",
+      "primary_cities": [
+        "Reims",
+        "Épernay"
+      ],
+      "regions": [
+        "Marne"
+      ],
+      "notes": "Champagneregionen."
+    },
+    {
+      "code": "3 27",
+      "primary_cities": [
+        "Caudry"
+      ],
+      "regions": [
+        "Nord"
+      ],
+      "notes": "Øst i Nord - grenser belgia."
+    },
+    {
+      "code": "3 28",
+      "primary_cities": [
+        "Maubeuge"
+      ],
+      "regions": [
+        "Nord"
+      ],
+      "notes": "Øst i Nord - grenser belgia."
+    },
+    {
+      "code": "3 29",
+      "primary_cities": [
+        "Verdun",
+        "Bar-le-Duc"
+      ],
+      "regions": [
+        "Meuse"
+      ],
+      "notes": "Lang kommune øst for Reims, vest for Metz."
+    },
+    {
+      "code": "3 80",
+      "primary_cities": [
+        "Dijon"
+      ],
+      "regions": [
+        "Cote-Dor"
+      ],
+      "notes": "Rett øst-nordøst for Frankrike."
+    },
+    {
+      "code": "3 81",
+      "primary_cities": [
+        "Besancon"
+      ],
+      "regions": [
+        "Doubs"
+      ],
+      "notes": "Grenser Sveits, nordøst for Bern."
+    },
+    {
+      "code": "3 82",
+      "primary_cities": [
+        "Jarny"
+      ],
+      "regions": [
+        "Meurthe-et-Moselle"
+      ],
+      "notes": "Vest for Metz, nord for Nancy."
+    },
+    {
+      "code": "3 83",
+      "primary_cities": [
+        "Nancy"
+      ],
+      "regions": [
+        "Meurthe-et-Moselle"
+      ],
+      "notes": "Sør for Metz."
+    },
+    {
+      "code": "3 84",
+      "primary_cities": [
+        "Belfort",
+        "Dole",
+        "Lons-le-Saunier"
+      ],
+      "regions": [
+        "Territorie de Belfort",
+        "Jura"
+      ],
+      "notes": "Øst, grenser Nord-Sveits. Den andre grenser Sveits ved Geneva"
+    },
+    {
+      "code": "3 85",
+      "primary_cities": [
+        "Chalon-sur-Saône",
+        "Louhans",
+        "Macon",
+        "Charolles"
+      ],
+      "regions": [
+        "Saone-Et-Loire"
+      ],
+      "notes": "Rett Nord for Lyon (50km)"
+    },
+    {
+      "code": "3 86",
+      "primary_cities": [
+        "Auxerre",
+        "Sens",
+        "Nevers"
+      ],
+      "regions": [
+        "Yonne",
+        "Nievre"
+      ],
+      "notes": "Rett Nordøst for Frankrike (60km)"
+    },
+    {
+      "code": "3 87",
+      "primary_cities": [
+        "Metz"
+      ],
+      "regions": [
+        "Moselle"
+      ],
+      "notes": "Nordøst, grenser Luxembourg og Tyskland."
+    },
+    {
+      "code": "3 88",
+      "primary_cities": [
+        "Strasbourg"
+      ],
+      "regions": [
+        "Bas-Rhin"
+      ],
+      "notes": "Nordøst, grenser Tyskland."
+    },
+    {
+      "code": "3 89",
+      "primary_cities": [
+        "Colmar",
+        "Mulhouse"
+      ],
+      "regions": [
+        "Haut-Rhin"
+      ],
+      "notes": "Nordøst, grenser Tyskland og Sveits."
+    },
+    {
+      "code": "4 13",
+      "primary_cities": [
+        "Marseille",
+        "Aix-en-Provence"
+      ],
+      "regions": [
+        "Provence-Alpes-Côte d'Azur (Bouches-du-Rhône)"
+      ],
+      "notes": "Middelhavshavn og Provence Metropole."
+    },
+    {
+      "code": "4 26",
+      "primary_cities": [
+        "Valence",
+        "Montélimar"
+      ],
+      "regions": [
+        "Auvergne-Rhône-Alpes (Drôme)"
+      ],
+      "notes": "Rhône-dalen mellom Lyon og Provence."
+    },
+    {
+      "code": "4 50",
+      "primary_cities": [
+        "Annecy",
+        "Thonon-les-Bains"
+      ],
+      "regions": [
+        "Auvergne-Rhône-Alpes (Haute-Savoie)"
+      ],
+      "notes": "Alpebyen ved Genfersjøen."
+    },
+    {
+      "code": "4 72",
+      "primary_cities": [
+        "Lyon",
+        "Villeurbanne"
+      ],
+      "regions": [
+        "Auvergne-Rhône-Alpes (Rhône)"
+      ],
+      "notes": "Frankrikes nest største storbyområde."
+    },
+    {
+      "code": "4 93",
+      "primary_cities": [
+        "Nice",
+        "Cannes",
+        "Antibes"
+      ],
+      "regions": [
+        "Provence-Alpes-Côte d'Azur (Alpes-Maritimes)"
+      ],
+      "notes": "Franske Riviera."
+    },
+    {
+      "code": "5 33",
+      "primary_cities": [
+        "Bordeaux"
+      ],
+      "regions": [
+        "Nouvelle-Aquitaine (Gironde)"
+      ],
+      "notes": "Vinmetropolen ved Garonne."
+    },
+    {
+      "code": "5 56",
+      "primary_cities": [
+        "Arcachon",
+        "Mérignac"
+      ],
+      "regions": [
+        "Nouvelle-Aquitaine (Gironde-kysten)"
+      ],
+      "notes": "Atlantiske kystlinjen vest for Bordeaux."
+    },
+    {
+      "code": "5 59",
+      "primary_cities": [
+        "Bayonne",
+        "Pau",
+        "Biarritz"
+      ],
+      "regions": [
+        "Nouvelle-Aquitaine (Pyrénées-Atlantiques)"
+      ],
+      "notes": "Baskisk kyst og Béarn."
+    },
+    {
+      "code": "5 61",
+      "primary_cities": [
+        "Toulouse",
+        "Blagnac"
+      ],
+      "regions": [
+        "Occitanie (Haute-Garonne)"
+      ],
+      "notes": "Sørvest med Airbus og Canal du Midi."
+    },
+    {
+      "code": "5 63",
+      "primary_cities": [
+        "Albi",
+        "Montauban"
+      ],
+      "regions": [
+        "Occitanie (Tarn / Tarn-et-Garonne)"
+      ],
+      "notes": "Rouergue-platået nord for Toulouse."
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "country": "Germany",
+  "country_code": "+49",
+  "codes": [
+    {
+      "code": "30",
+      "primary_cities": [
+        "Berlin"
+      ],
+      "regions": [
+        "Berlin (State)"
+      ],
+      "notes": "Felles prefiks for hele hovedstadsområdet."
+    },
+    {
+      "code": "40",
+      "primary_cities": [
+        "Hamburg"
+      ],
+      "regions": [
+        "Hamburg (State)"
+      ],
+      "notes": "Nordtysk havneby ved Elben."
+    },
+    {
+      "code": "69",
+      "primary_cities": [
+        "Frankfurt am Main",
+        "Offenbach"
+      ],
+      "regions": [
+        "Hesse (Rhine-Main)"
+      ],
+      "notes": "Finanssenter langs Main-elven."
+    },
+    {
+      "code": "89",
+      "primary_cities": [
+        "Munich"
+      ],
+      "regions": [
+        "Bavaria (Upper Bavaria)"
+      ],
+      "notes": "Sørtysk teknologihub ved Alpene."
+    },
+    {
+      "code": "21",
+      "primary_cities": [
+        "Düsseldorf",
+        "Neuss"
+      ],
+      "regions": [
+        "North Rhine-Westphalia (Lower Rhine)"
+      ],
+      "notes": "Rheinmetropolen vest for Ruhr."
+    },
+    {
+      "code": "22",
+      "primary_cities": [
+        "Cologne",
+        "Bonn"
+      ],
+      "regions": [
+        "North Rhine-Westphalia (Rhineland)"
+      ],
+      "notes": "Katedralbyen og tidligere hovedstad."
+    },
+    {
+      "code": "23",
+      "primary_cities": [
+        "Dortmund",
+        "Essen",
+        "Bochum"
+      ],
+      "regions": [
+        "North Rhine-Westphalia (Ruhrgebiet)"
+      ],
+      "notes": "Tett industri- og fotballbelte."
+    },
+    {
+      "code": "24",
+      "primary_cities": [
+        "Aachen",
+        "Mönchengladbach",
+        "Krefeld"
+      ],
+      "regions": [
+        "North Rhine-Westphalia (Lower Rhine west)"
+      ],
+      "notes": "Mot Belgia og Nederland."
+    },
+    {
+      "code": "34",
+      "primary_cities": [
+        "Leipzig",
+        "Halle (Saale)"
+      ],
+      "regions": [
+        "Saxony / Saxony-Anhalt"
+      ],
+      "notes": "Østtysk messeregion."
+    },
+    {
+      "code": "35",
+      "primary_cities": [
+        "Dresden",
+        "Chemnitz"
+      ],
+      "regions": [
+        "Saxony (Elbe-dalen)"
+      ],
+      "notes": "Historisk barokkby langs Elben."
+    },
+    {
+      "code": "36",
+      "primary_cities": [
+        "Erfurt",
+        "Weimar",
+        "Jena"
+      ],
+      "regions": [
+        "Thuringia"
+      ],
+      "notes": "Midt-østlig delstat i Thüringer Wald."
+    },
+    {
+      "code": "42",
+      "primary_cities": [
+        "Bremen",
+        "Bremerhaven",
+        "Oldenburg"
+      ],
+      "regions": [
+        "Bremen (State)",
+        "Lower Saxony (northwest)"
+      ],
+      "notes": "Hanseatisk havneområde."
+    },
+    {
+      "code": "51",
+      "primary_cities": [
+        "Hanover",
+        "Hildesheim"
+      ],
+      "regions": [
+        "Lower Saxony (Leine-dalen)"
+      ],
+      "notes": "Nordtysk messeby."
+    },
+    {
+      "code": "52",
+      "primary_cities": [
+        "Bielefeld",
+        "Paderborn"
+      ],
+      "regions": [
+        "North Rhine-Westphalia (Ostwestfalen-Lippe)"
+      ],
+      "notes": "Øst for Ruhr, nær Teutoburger Wald."
+    },
+    {
+      "code": "71",
+      "primary_cities": [
+        "Stuttgart",
+        "Ludwigsburg"
+      ],
+      "regions": [
+        "Baden-Württemberg (Neckar-dalen)"
+      ],
+      "notes": "Hjem for bilindustrien (Mercedes/Porsche)."
+    },
+    {
+      "code": "72",
+      "primary_cities": [
+        "Karlsruhe",
+        "Freiburg im Breisgau"
+      ],
+      "regions": [
+        "Baden-Württemberg (Rhine valley south)"
+      ],
+      "notes": "Mot Sveits og Alsace."
+    },
+    {
+      "code": "73",
+      "primary_cities": [
+        "Ulm",
+        "Augsburg"
+      ],
+      "regions": [
+        "Baden-Württemberg / Bavaria (Danube arc)"
+      ],
+      "notes": "Overgangen mellom Schwaben og Bayern."
+    },
+    {
+      "code": "91",
+      "primary_cities": [
+        "Nuremberg",
+        "Fürth",
+        "Erlangen"
+      ],
+      "regions": [
+        "Bavaria (Franconia)"
+      ],
+      "notes": "Nordbayersk triangel kjent for Nürnberg-messen."
+    }
+  ]
+}

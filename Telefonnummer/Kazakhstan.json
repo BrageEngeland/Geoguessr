@@ -1,0 +1,194 @@
+{
+    "country": "Kazakhstan",
+    "country_code": "+7",
+    "codes": [
+        {
+            "code": [
+                "710",
+                "721"
+            ],
+            "primary_cities": [
+                "Jezkazgan",
+                "Karazhal",
+                "Satbayev"
+            ],
+            "regions": [
+                "Ulytau Region"
+            ],
+            "notes": "Midten av Kazakhstan."
+        },
+        {
+            "code": "716",
+            "primary_cities": [
+                "Kokshetau"
+            ],
+            "regions": [
+                "Akmola Region"
+            ],
+            "notes": "Omkranser Astana."
+        },
+        {
+            "code": "717",
+            "primary_cities": [
+                "Astana"
+            ],
+            "regions": [
+                "Astana Region"
+            ],
+            "notes": "Hovedstaden."
+        },
+        {
+            "code": "727",
+            "primary_cities": [
+                "Almaty"
+            ],
+            "regions": [
+                "Almaty (City)",
+                "Almaty Region (selected suburbs)"
+            ],
+            "notes": "Største by og tidligere hovedstad, i sørøst mot Tian Shan."
+        },
+        {
+            "code": "728",
+            "primary_cities": [
+                "Taldykorgan"
+            ],
+            "regions": [
+                "Jetisu region"
+            ],
+            "notes": "Øst for Almaty."
+        },
+        {
+            "code": "721",
+            "primary_cities": [
+                "Karaganda"
+            ],
+            "regions": [
+                "Karaganda Region"
+            ],
+            "notes": "Sentral gruve- og industriknutepunkt."
+        },
+        {
+            "code": "718",
+            "primary_cities": [
+                "Pavlodar"
+            ],
+            "regions": [
+                "Pavlodar Region"
+            ],
+            "notes": "Nordøst ved Russland."
+        },
+        {
+            "code": "724",
+            "primary_cities": [
+                "Kyzylorda"
+            ],
+            "regions": [
+                "Kyzylorda Region"
+            ],
+            "notes": "Sørvest ved Syr-Darya, tidligere hovedstad i 1920-årene."
+        },
+        {
+            "code": "725",
+            "primary_cities": [
+                "Shymkent",
+                "Turkistan"
+            ],
+            "regions": [
+                "Turkistan Region",
+                "Sør-Kazakhstan"
+            ],
+            "notes": "Storby i sør nær Uzbekistan-grensen."
+        },
+        {
+            "code": "713",
+            "primary_cities": [
+                "Aktobe"
+            ],
+            "regions": [
+                "Aktobe Region"
+            ],
+            "notes": "Vestlig olje- og gasssentrum."
+        },
+        {
+            "code": "712",
+            "primary_cities": [
+                "Atyrau"
+            ],
+            "regions": [
+                "Atyrau Region"
+            ],
+            "notes": "Ved Kaspihavet; oljehovedstad for vest-Kasakhstan."
+        },
+        {
+            "code": "711",
+            "primary_cities": [
+                "Oral (Uralsk)"
+            ],
+            "regions": [
+                "West Kazakhstan Region"
+            ],
+            "notes": "Vestlig grenseby mot Russland."
+        },
+        {
+            "code": "729",
+            "primary_cities": [
+                "Aktau"
+            ],
+            "regions": [
+                "Mangystau Region"
+            ],
+            "notes": "Sørvest ved kaspihavet."
+        },
+        {
+            "code": "723",
+            "primary_cities": [
+                "Öskemen (Ust-Kamenogorsk)"
+            ],
+            "regions": [
+                "East Kazakhstan Region"
+            ],
+            "notes": "Grenser Kina, Mongolia og Russland"
+        },
+        {
+            "code": "715",
+            "primary_cities": [
+                "Petropavl"
+            ],
+            "regions": [
+                "North Kazakhstan Region"
+            ],
+            "notes": "Grenser Russland i nord."
+        },
+        {
+            "code": "714",
+            "primary_cities": [
+                "Kostanay"
+            ],
+            "regions": [
+                "Kostanay Region"
+            ],
+            "notes": "Nordvestlig jordbruksregion."
+        },
+        {
+            "code": "722",
+            "primary_cities": [
+                "Semey"
+            ],
+            "regions": [
+                "Abai Region"
+            ],
+            "notes": "Nordøst, ved siden av Øst-Kazakhstan."
+        },
+        {
+            "code": "726",
+            "primary_cities": [
+                "Taraz"
+            ],
+            "regions": [
+                "Jambyl Region"
+            ],
+            "notes": "Sørlig Silkeveiby ved Talas-elven."
+        }
+    ]
+}

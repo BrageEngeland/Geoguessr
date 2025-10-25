@@ -1,7 +1,15 @@
 import random
 import re
 import sys
-from loader import load_country_data
+from loader import load_country_data, available_countries
+
+
+QUIT_COMMANDS = {"q", "quit", "exit"}
+CHANGE_COMMANDS = {"c", "change", "bytt", "land", "country"}
+
+
+class ChangeCountryRequest(Exception):
+    """Raised when the player wants to switch to another country."""
 
 
 def normalize(s: str) -> str:
@@ -25,54 +33,70 @@ def matches_any(user_answer, correct_list):
         if ua in ci:
             return True
 
-        # moscow/moskva fleks
-        if ua == "moskva" and "moscow" in ci:
-            return True
-        if ua == "moscow" and "moskva" in ci:
-            return True
-
     return False
 
 
-def check_quit(user_input):
+def handle_control(user_input, allow_change=True):
     ua = normalize(user_input)
-    if ua in {"q", "quit", "exit"}:
+    if ua in QUIT_COMMANDS:
         print("\n🛑 Avslutter quiz...")
         sys.exit(0)
+    if allow_change and ua in CHANGE_COMMANDS:
+        raise ChangeCountryRequest()
 
 
-def ask_by_question(entry):
+def print_note(entry):
+    note = entry.get("notes")
+    if note:
+        print(f"Notat: {note}")
+
+
+def format_code(country_code: str, code: str) -> str:
+    prefix = (country_code or "").strip()
+    if prefix:
+        return f"{prefix} {code}"
+    return code
+
+
+def ask_by_question(entry, country_code):
     code = entry["code"]
-    print(f"Hvilken by er +7 {code}?")
+    print(f"Hvilken by er {format_code(country_code, code)}?")
     guess = input("> ")
 
-    check_quit(guess)
+    handle_control(guess)
 
     if guess.strip() == "":
         print("Ingen svar ❌")
-        print("Riktig svar:", ", ".join(entry["primary_cities"]), "\n")
+        print("Riktig svar:", ", ".join(entry["primary_cities"]))
+        print_note(entry)
+        print()
         return False
 
     if matches_any(guess, entry["primary_cities"]):
-        print("Riktig ✅\n")
+        print("Riktig ✅")
+        print_note(entry)
+        print()
         return True
     else:
-        print(f"Feil ❌ Riktig svar: {', '.join(entry['primary_cities'])}\n")
+        print(f"Feil ❌ Riktig svar: {', '.join(entry['primary_cities'])}")
+        print_note(entry)
+        print()
         return False
 
 
-def ask_region_question(entry):
+def ask_region_question(entry, country_code):
     code = entry["code"]
-    print(f"Hvilken region/føderalt subjekt bruker +7 {code}?")
+    print(f"Hvilken region/føderalt subjekt bruker {format_code(country_code, code)}?")
     guess = input("> ")
 
-    check_quit(guess)
+    handle_control(guess)
 
     if guess.strip() == "":
         print("Ingen svar ❌")
         print("Det var:")
         for r in entry["regions"]:
             print(r)
+        print_note(entry)
         print()
         return False
 
@@ -82,49 +106,91 @@ def ask_region_question(entry):
     # 1. Brukeren svarte selve regionen/føderale subjektet
     if matches_any(guess, regions):
         if len(cities) > 0:
-            print(f"Riktig ✅ ({cities[0]} ligger i {regions[0]})\n")
+            print(f"Riktig ✅ ({cities[0]} ligger i {regions[0]})")
         else:
-            print("Riktig ✅\n")
+            print("Riktig ✅")
+        print_note(entry)
+        print()
         return True
 
     # 2. Brukeren svarte en by vi assosierer med denne koden
     if matches_any(guess, cities):
         if len(regions) > 0:
-            print(f"Riktig ✅ ({cities[0]} er hovedby i {regions[0]})\n")
+            print(f"Riktig ✅ ({cities[0]} er hovedby i {regions[0]})")
         else:
-            print("Riktig ✅\n")
+            print("Riktig ✅")
+        print_note(entry)
+        print()
         return True
 
     print("Ikke helt ❌ Det var:")
     for r in regions:
         print(" ", r)
+    print_note(entry)
     print()
     return False
 
 
+def choose_country():
+    countries = available_countries()
+    if not countries:
+        print("Fant ingen telefonnummer-filer med innhold.")
+        sys.exit(1)
+
+    print("Velg hvilket land du vil spille med:")
+    for idx, info in enumerate(countries, start=1):
+        print(f"{idx}. {info['display_name']} ({info['count']} koder)")
+
+    while True:
+        choice = input("> ")
+        try:
+            handle_control(choice, allow_change=False)
+        except ChangeCountryRequest:
+            print("Du velger allerede land. Tast tallet til landet eller 'q' for å avslutte.")
+            continue
+
+        choice = choice.strip()
+        if choice.isdigit():
+            idx = int(choice)
+            if 1 <= idx <= len(countries):
+                return countries[idx - 1]
+
+        print(f"Ugyldig valg. Oppgi et tall mellom 1 og {len(countries)}.")
+
+
 def main():
-    data = load_country_data("Russland")
-    codes = data["codes"]
+    print("Skriv 'q' for å avslutte når som helst, eller 'bytt'/'change' for å hoppe til et annet land.\n")
+    selected = choose_country()
 
-    score = 0
-    rounds = 10
+    while True:
+        data = load_country_data(selected["filename"])
+        country_name = selected["display_name"]
+        country_code = data.get("country_code", "").strip()
+        codes = data["codes"]
 
-    print("=== Russiske telefonkoder-quiz ===")
-    print("Skriv 'q' for å avslutte når som helst.\n")
+        score = 0
+        asked = 0
 
-    for _ in range(rounds):
-        entry = random.choice(codes)
+        print(f"\n=== Telefonkoder-quiz: {country_name} ===")
 
-        # 50/50 by vs region/føderalt subjekt
-        if random.random() < 0.5:
-            correct = ask_by_question(entry)
-        else:
-            correct = ask_region_question(entry)
+        while True:
+            entry = random.choice(codes)
 
-        if correct:
-            score += 1
+            try:
+                if random.random() < 0.5:
+                    correct = ask_by_question(entry, country_code)
+                else:
+                    correct = ask_region_question(entry, country_code)
+            except ChangeCountryRequest:
+                print("\n🌍 Bytter land...\n")
+                selected = choose_country()
+                break
 
-    print(f"\nFerdig! Du fikk {score} av {rounds} poeng.")
+            asked += 1
+            if correct:
+                score += 1
+
+            print(f"Stilling: {score}/{asked} riktige.\n")
 
 
 if __name__ == "__main__":

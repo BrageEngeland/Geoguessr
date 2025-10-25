@@ -70,9 +70,50 @@ def get_country_bundle(country: str):
     }
 
 
-def pick_question(country: str):
+def pick_question(
+    country: str,
+    difficulty: str | None = None,
+    region_group: str | None = None,
+    force_code: str | None = None,
+):
     bundle = get_country_bundle(country)
-    entry = random.choice(bundle["entries"])
+    entries = bundle["entries"]
+
+    if not entries:
+        abort(404, description="Ingen telefonkoder er registrert for dette landet ennå.")
+
+    # Hvis vi har fått en spesifikk kode (f.eks. fra spaced repetition)
+    if force_code:
+        chosen = bundle["by_code"].get(force_code)
+        if chosen is None:
+            abort(404, description=f"Fant ikke kode {force_code} for {country}.")
+        entry = chosen
+    else:
+        # filtrer på vanskelighet hvis valgt
+        if difficulty:
+            filtered = [
+                e
+                for e in entries
+                if (e.get("difficulty") or "").strip().lower()
+                == difficulty.strip().lower()
+            ]
+            if filtered:
+                entries = filtered
+
+        # filtrer på region_group hvis valgt
+        if region_group:
+            filtered = [
+                e
+                for e in entries
+                if (e.get("region_group") or "").strip().lower()
+                == region_group.strip().lower()
+            ]
+            if filtered:
+                entries = filtered
+
+        # velg tilfeldig blant gjenværende
+        entry = random.choice(entries)
+
     code = entry.get("_primary_code") or entry.get("code")
     return {
         "id": code,
@@ -81,6 +122,8 @@ def pick_question(country: str):
         "dial_code": code,
         "regions": entry.get("regions", []),
         "primary_cities": entry.get("primary_cities", []),
+        "difficulty": entry.get("difficulty"),
+        "region_group": entry.get("region_group"),
     }
 
 
@@ -102,18 +145,25 @@ def evaluate_answer(country: str, code: str, guess: str):
         "regions": regions,
         "primary_cities": cities,
         "notes": entry.get("notes"),
+        "region_group": entry.get("region_group"),
     }
-
-
-@app.get("/api/countries")
-def api_countries():
-    return jsonify(available_countries())
 
 
 @app.get("/api/question")
 def api_question():
     country = request.args.get("country", DEFAULT_COUNTRY)
-    return jsonify(pick_question(country))
+    difficulty = request.args.get("difficulty") or None
+    region_group = request.args.get("region_group") or None
+    force_code = request.args.get("force_code") or None
+
+    return jsonify(pick_question(
+        country=country,
+        difficulty=difficulty,
+        region_group=region_group,
+        force_code=force_code,
+    ))
+
+
 
 
 @app.post("/api/answer")
@@ -129,6 +179,11 @@ def api_answer():
     # Viktig endring: guess kan være tomt (= hopp over)
     result = evaluate_answer(country, code, guess)
     return jsonify(result)
+
+
+@app.get("/api/countries")
+def api_countries():
+    return jsonify(available_countries())
 
 
 @app.post("/api/lookup")

@@ -28,6 +28,45 @@
         <div id="quiz-country-grid" class="country-grid"></div>
       </div>
 
+      <div class="practice-box">
+        <label class="practice-row">
+          <input type="checkbox" id="practice-toggle" />
+          <span>Practice mode</span>
+        </label>
+
+        <div class="practice-controls">
+          <label>
+            Vanskelighet
+            <select id="practice-diff">
+              <option value="">Alle</option>
+              <option value="easy">Lett</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Vanskelig</option>
+            </select>
+          </label>
+
+          <label>
+            Område
+            <select id="practice-region">
+              <option value="">Hele landet</option>
+              <option value="Central">Central</option>
+              <option value="Volga">Volga</option>
+              <option value="Ural">Ural</option>
+              <option value="Siberia">Siberia</option>
+              <option value="Far East">Far East</option>
+              <option value="South">South</option>
+              <option value="Northwest">Northwest</option>
+              <option value="Exclave">Exclave</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="practice-note" id="practice-note">
+          Practice mode er ikke tilgjengelig for alle land ennå.
+        </p>
+      </div>
+
+
       <div class="scorecard">
         <div>
           <span class="scorecard__label">Stilling</span>

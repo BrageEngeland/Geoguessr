@@ -17,16 +17,42 @@ def available_countries():
     for file in sorted(data_dir().glob("*.json")):
         try:
             with open(file, "r", encoding="utf-8") as f:
-                data = json.load(f)
+                raw = f.read().strip()
+                if not raw:
+                    data = {"country": file.stem, "codes": []}
+                else:
+                    data = json.loads(raw)
         except json.JSONDecodeError:
-            continue
+            data = {"country": file.stem, "codes": []}
 
         codes = data.get("codes") or []
-        if not codes:
-            continue
 
-        code_values = [str(entry.get("code", "")).strip() for entry in codes if entry.get("code")]
-        code_lengths = [len(code) for code in code_values if code]
+        code_values = []
+        code_lengths = []
+        region_groups = set()
+        difficulty_levels = set()
+
+        for entry in codes:
+            raw_code = entry.get("code")
+            if isinstance(raw_code, list):
+                normalized_codes = [
+                    str(code).strip() for code in raw_code if str(code).strip()
+                ]
+            elif raw_code is None:
+                normalized_codes = []
+            else:
+                normalized_codes = [str(raw_code).strip()]
+
+            code_values.extend(normalized_codes)
+            code_lengths.extend(len(code) for code in normalized_codes if code)
+
+            region_group = entry.get("region_group")
+            if region_group:
+                region_groups.add(region_group)
+
+            difficulty = entry.get("difficulty")
+            if difficulty:
+                difficulty_levels.add(str(difficulty).lower())
 
         countries.append(
             {
@@ -36,6 +62,8 @@ def available_countries():
                 "code_hint": code_values[0] if code_values else "",
                 "code_length_min": min(code_lengths) if code_lengths else None,
                 "code_length_max": max(code_lengths) if code_lengths else None,
+                "region_groups": sorted(region_groups),
+                "difficulty_levels": sorted(difficulty_levels),
             }
         )
     return countries

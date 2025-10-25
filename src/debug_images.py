@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 import re
+import sys
+from typing import Optional, Tuple
 
 
 def region_to_filename(region_name: str) -> str:
@@ -12,14 +14,28 @@ def region_to_filename(region_name: str) -> str:
     return f"{name}.png"
 
 
-def check_region_images(country_file="Kazakhstan.json"):
+def _normalize_country_file(country_arg: Optional[str]) -> Tuple[str, Path]:
+    """
+    Tar imot brukerinndata (med/uten .json) og returnerer (filnavn, Path stem).
+    """
+    if not country_arg:
+        country_arg = "Kazakhstan"
+    country_path = Path(country_arg)
+    stem = country_path.stem  # håndterer ".json" hvis oppgitt
+    filename = f"{stem}.json"
+    return stem, Path(filename)
+
+
+def check_region_images(country_arg="Kazakhstan"):
     # Finn prosjektroten (mappen over src/)
     base_dir = Path(__file__).resolve().parent.parent
 
-    data_path = base_dir / "Telefonnummer" / country_file
-    img_dir = base_dir / "static" / "maps" / "Kazakhstan"
+    country_stem, filename = _normalize_country_file(country_arg)
 
-    print(f"--- DEBUG: Bilde-sjekk for {country_file} ---")
+    data_path = base_dir / "Telefonnummer" / filename
+    img_dir = base_dir / "static" / "maps" / country_stem
+
+    print(f"--- DEBUG: Bilde-sjekk for {filename.name} ---")
     print(f"📁 JSON-fil: {data_path}")
     print(f"🗺️  Bildemappe: {img_dir}")
 
@@ -71,4 +87,5 @@ def check_region_images(country_file="Kazakhstan.json"):
 
 
 if __name__ == "__main__":
-    check_region_images()
+    arg = sys.argv[1] if len(sys.argv) > 1 else "Kazakhstan"
+    check_region_images(arg)

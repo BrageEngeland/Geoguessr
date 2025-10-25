@@ -3,7 +3,7 @@
   "country_code": "+33",
   "codes": [
     {
-      "code": "1 30",
+      "code": "01 30",
       "primary_cities": [
         "Versailles",
         "Saint-Germain-en-Laye"
@@ -14,7 +14,7 @@
       "notes": "Vestlige forsteder til Paris."
     },
     {
-      "code": "1 34",
+      "code": "01 34",
       "primary_cities": [
         "Cergy",
         "Pontoise"
@@ -25,7 +25,7 @@
       "notes": "Nordvestlige Paris-baner, Oise-dalen."
     },
     {
-      "code": "1 45",
+      "code": "01 45",
       "primary_cities": [
         "Paris 15e",
         "Boulogne-Billancourt"
@@ -37,7 +37,7 @@
       "notes": "Sørvestlige arrondissements og Seine-buen."
     },
     {
-      "code": "1 69",
+      "code": "01 69",
       "primary_cities": [
         "Évry",
         "Massy",
@@ -50,9 +50,9 @@
     },
     {
       "code": [
-        "2 96",
-        "2 97",
-        "2 98"
+        "02 96",
+        "02 97",
+        "02 98"
       ],
       "primary_cities": [
         "Rennes",
@@ -65,7 +65,7 @@
       "notes": "Brittanys administrasjonssenter."
     },
     {
-      "code": "2 31",
+      "code": "02 31",
       "primary_cities": [
         "Caen"
       ],
@@ -75,7 +75,7 @@
       "notes": "D-dagkysten og Normandies midtby."
     },
     {
-      "code": "2 35",
+      "code": "02 35",
       "primary_cities": [
         "Le Havre",
         "Rouen"
@@ -86,7 +86,7 @@
       "notes": "Seine-elvens utløp."
     },
     {
-      "code": "2 40",
+      "code": "02 40",
       "primary_cities": [
         "Nantes"
       ],
@@ -96,7 +96,7 @@
       "notes": "Vestlig Loire-munning."
     },
     {
-      "code": "2 48",
+      "code": "02 48",
       "primary_cities": [
         "Bourges",
         "Vierzon"
@@ -107,7 +107,7 @@
       "notes": "Stor by rett nord for Frankrike."
     },
     {
-      "code": "2 98",
+      "code": "02 98",
       "primary_cities": [
         "Brest",
         "Quimper"
@@ -118,7 +118,7 @@
       "notes": "Ytterst ute på Bretagnes vestkap."
     },
     {
-      "code": "3 20",
+      "code": "03 20",
       "primary_cities": [
         "Lille",
         "Roubaix",
@@ -130,7 +130,7 @@
       "notes": "Rett ved belgiske grensen."
     },
     {
-      "code": "3 21",
+      "code": "03 21",
       "primary_cities": [
         "Calais",
         "Béthune",
@@ -142,7 +142,7 @@
       "notes": "Ved havet, nærmeste punktet til UK i nord."
     },
     {
-      "code": "3 22",
+      "code": "03 22",
       "primary_cities": [
         "Amiens",
         "Abbeville"
@@ -153,7 +153,7 @@
       "notes": "Ved havet, mellom paris og Calais (nord)."
     },
     {
-      "code": "3 23",
+      "code": "03 23",
       "primary_cities": [
         "Laon",
         "Saint-Quentin"
@@ -164,7 +164,7 @@
       "notes": "Lang kommune - vest for Reims i nord."
     },
     {
-      "code": "3 24",
+      "code": "03 24",
       "primary_cities": [
         "Charleville-Mézières",
         "Abbeville"
@@ -175,7 +175,7 @@
       "notes": "Spiss punkt inn til belgia."
     },
     {
-      "code": "3 25",
+      "code": "03 25",
       "primary_cities": [
         "Troyes",
         "Chaumont"
@@ -187,7 +187,7 @@
       "notes": "Rett sør for Reims, sørvest for Nancy."
     },
     {
-      "code": "3 26",
+      "code": "03 26",
       "primary_cities": [
         "Reims",
         "Épernay"
@@ -198,7 +198,7 @@
       "notes": "Champagneregionen."
     },
     {
-      "code": "3 27",
+      "code": "03 27",
       "primary_cities": [
         "Caudry"
       ],
@@ -208,7 +208,7 @@
       "notes": "Øst i Nord - grenser belgia."
     },
     {
-      "code": "3 28",
+      "code": "03 28",
       "primary_cities": [
         "Maubeuge"
       ],
@@ -218,7 +218,7 @@
       "notes": "Øst i Nord - grenser belgia."
     },
     {
-      "code": "3 29",
+      "code": "03 29",
       "primary_cities": [
         "Verdun",
         "Bar-le-Duc"
@@ -229,7 +229,7 @@
       "notes": "Lang kommune øst for Reims, vest for Metz."
     },
     {
-      "code": "3 80",
+      "code": "03 80",
       "primary_cities": [
         "Dijon"
       ],
@@ -239,7 +239,7 @@
       "notes": "Rett øst-nordøst for Frankrike."
     },
     {
-      "code": "3 81",
+      "code": "03 81",
       "primary_cities": [
         "Besancon"
       ],
@@ -249,7 +249,7 @@
       "notes": "Grenser Sveits, nordøst for Bern."
     },
     {
-      "code": "3 82",
+      "code": "03 82",
       "primary_cities": [
         "Jarny"
       ],
@@ -259,7 +259,7 @@
       "notes": "Vest for Metz, nord for Nancy."
     },
     {
-      "code": "3 83",
+      "code": "03 83",
       "primary_cities": [
         "Nancy"
       ],
@@ -269,7 +269,7 @@
       "notes": "Sør for Metz."
     },
     {
-      "code": "3 84",
+      "code": "03 84",
       "primary_cities": [
         "Belfort",
         "Dole",
@@ -282,7 +282,7 @@
       "notes": "Øst, grenser Nord-Sveits. Den andre grenser Sveits ved Geneva"
     },
     {
-      "code": "3 85",
+      "code": "03 85",
       "primary_cities": [
         "Chalon-sur-Saône",
         "Louhans",
@@ -295,7 +295,7 @@
       "notes": "Rett Nord for Lyon (50km)"
     },
     {
-      "code": "3 86",
+      "code": "03 86",
       "primary_cities": [
         "Auxerre",
         "Sens",
@@ -308,7 +308,7 @@
       "notes": "Rett Nordøst for Frankrike (60km)"
     },
     {
-      "code": "3 87",
+      "code": "03 87",
       "primary_cities": [
         "Metz"
       ],
@@ -318,7 +318,7 @@
       "notes": "Nordøst, grenser Luxembourg og Tyskland."
     },
     {
-      "code": "3 88",
+      "code": "03 88",
       "primary_cities": [
         "Strasbourg"
       ],
@@ -328,7 +328,7 @@
       "notes": "Nordøst, grenser Tyskland."
     },
     {
-      "code": "3 89",
+      "code": "03 89",
       "primary_cities": [
         "Colmar",
         "Mulhouse"
@@ -339,7 +339,7 @@
       "notes": "Nordøst, grenser Tyskland og Sveits."
     },
     {
-      "code": "4 13",
+      "code": "04 13",
       "primary_cities": [
         "Marseille",
         "Aix-en-Provence"
@@ -350,7 +350,7 @@
       "notes": "Middelhavshavn og Provence Metropole."
     },
     {
-      "code": "4 26",
+      "code": "04 26",
       "primary_cities": [
         "Valence",
         "Montélimar"
@@ -361,7 +361,7 @@
       "notes": "Rhône-dalen mellom Lyon og Provence."
     },
     {
-      "code": "4 50",
+      "code": "04 50",
       "primary_cities": [
         "Annecy",
         "Thonon-les-Bains"
@@ -372,7 +372,7 @@
       "notes": "Alpebyen ved Genfersjøen."
     },
     {
-      "code": "4 72",
+      "code": "04 72",
       "primary_cities": [
         "Lyon",
         "Villeurbanne"
@@ -383,7 +383,7 @@
       "notes": "Frankrikes nest største storbyområde."
     },
     {
-      "code": "4 93",
+      "code": "04 93",
       "primary_cities": [
         "Nice",
         "Cannes",
@@ -395,7 +395,7 @@
       "notes": "Franske Riviera."
     },
     {
-      "code": "5 33",
+      "code": "05 33",
       "primary_cities": [
         "Bordeaux"
       ],
@@ -405,7 +405,7 @@
       "notes": "Vinmetropolen ved Garonne."
     },
     {
-      "code": "5 56",
+      "code": "05 56",
       "primary_cities": [
         "Arcachon",
         "Mérignac"
@@ -416,7 +416,7 @@
       "notes": "Atlantiske kystlinjen vest for Bordeaux."
     },
     {
-      "code": "5 59",
+      "code": "05 59",
       "primary_cities": [
         "Bayonne",
         "Pau",
@@ -428,7 +428,7 @@
       "notes": "Baskisk kyst og Béarn."
     },
     {
-      "code": "5 61",
+      "code": "05 61",
       "primary_cities": [
         "Toulouse",
         "Blagnac"
@@ -439,7 +439,7 @@
       "notes": "Sørvest med Airbus og Canal du Midi."
     },
     {
-      "code": "5 63",
+      "code": "05 63",
       "primary_cities": [
         "Albi",
         "Montauban"

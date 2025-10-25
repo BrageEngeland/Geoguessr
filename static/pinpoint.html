@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>Telefonkode-pinpoint</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/pinpoint.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <a href="/" class="nav-link">Oppslag</a>
+      <a href="/pinpoint" class="nav-link nav-link--active">Pinpoint</a>
+      <a href="/quiz" class="nav-link">Quiz</a>
+    </header>
+
+    <main class="pinpoint">
+      <aside class="sidebar">
+        <a class="link" href="/">← Tilbake til oppslag</a>
+        <h1>Pinpoint</h1>
+        <p class="subtitle">
+          Velg land, få en kode og klikk i kartbildet for å gjette regionen.
+        </p>
+
+        <div class="country-picker">
+          <p class="country-picker__label">Land</p>
+          <div id="pinpoint-country-grid" class="country-grid"></div>
+        </div>
+
+        <div class="info" id="prompt">Laster …</div>
+        <div class="score" id="score">0 / 0</div>
+        <div class="feedback" id="feedback"></div>
+      </aside>
+
+      <section class="board">
+        <div class="board-inner">
+          <img id="map" alt="Kart" draggable="false" />
+          <div id="zones" class="zones"></div>
+          <div id="missing" class="missing hidden">
+            <p>Har ikke kartdata for dette landet ennå.</p>
+            <p>Legg til en fil under <code>static/zones/</code>.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/static/pinpoint.js"></script>
+  </body>
+</html>

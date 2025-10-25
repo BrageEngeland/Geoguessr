@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="no">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Telefonkode-quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/quiz.css" />
+</head>
+
+<body>
+  <header class="top-nav">
+    <a href="/" class="nav-link">Oppslag</a>
+    <a href="/pinpoint" class="nav-link">Pinpoint</a>
+    <a href="/quiz" class="nav-link nav-link--active">Quiz</a>
+  </header>
+
+  <main class="quiz-layout">
+    <section class="sidebar">
+      <h1>Quiz</h1>
+      <p class="subtitle">
+        Gjett riktig by eller region for hver telefonkode. Velg land i
+        rutenettet under.
+      </p>
+
+      <div class="country-picker">
+        <p class="country-picker__label">Land</p>
+        <div id="quiz-country-grid" class="country-grid"></div>
+      </div>
+
+      <div class="scorecard">
+        <div>
+          <span class="scorecard__label">Stilling</span>
+          <strong id="score">0 / 0</strong>
+        </div>
+        <div>
+          <span class="scorecard__label">Rekke</span>
+          <strong id="streak">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="game">
+      <div class="card">
+        <p class="code" id="code">Laster kode …</p>
+        <p class="prompt" id="prompt">Henter spørsmål …</p>
+
+        <form id="answer-form" autocomplete="off">
+          <input type="text" id="answer-input" placeholder="Skriv svaret her" required />
+          <div class="actions">
+            <button class="button" type="submit">Svar</button>
+            <button class="link-button" type="button" id="skip-btn">
+              Hopp over
+            </button>
+            <!-- NY: Neste -->
+            <button class="link-button" type="button" id="next-btn" style="display:none;">
+              Neste →
+            </button>
+          </div>
+        </form>
+
+        <div class="feedback" id="feedback"></div>
+        <div class="notes" id="notes"></div>
+
+        <!-- NY: bilde av region/føderalt subjekt -->
+        <img id="region-img" alt=""
+          style="display:none; max-width:300px; border-radius:12px; border:1px solid #e2e8f0;" />
+      </div>
+
+    </section>
+  </main>
+
+  <script type="module" src="/static/quiz.js"></script>
+</body>
+
+</html>

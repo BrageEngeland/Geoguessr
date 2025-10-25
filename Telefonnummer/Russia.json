@@ -3,764 +3,1623 @@
   "country_code": "+7",
   "codes": [
     {
-      "code": "401",
+      "code": "811",
       "primary_cities": [
-        "Kaliningrad"
+        "Pskov"
+      ],
+      "alt_names": [
+        "Псков"
       ],
       "regions": [
-        "Kaliningrad Oblast"
+        "Pskov Oblast"
       ],
-      "notes": "Russisk eksklave mellom Polen og Litauen."
+      "region_group": "Northwest",
+      "notes": "Vestlig by nær grensen til Estland.",
+      "difficulty": "medium",
+      "population_rank": "low",
+      "has_autonomy": false
     },
     {
       "code": "812",
       "primary_cities": [
-        "St. Petersburg",
-        "Indiga"
+        "St. Petersburg"
+      ],
+      "alt_names": [
+        "Санкт-Петербург",
+        "Sankt Peterburg"
       ],
       "regions": [
-        "St. Petersburg (Federal City)",
-        "Leningrad Oblast",
-        "Novgorod Oblast (parts)",
-        "Arkhangelsk Oblast (northern telecom zones)",
-        "Nenets Autonomous Okrug"
+        "St. Petersburg (Federal City)"
       ],
-      "notes": "812 er primært St. Petersburg, men brukes også i fjerntliggende områder som Indiga (Nenets AO)."
+      "region_group": "Northwest",
+      "notes": "Russlands nest største by, viktig kultur- og havneby.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "813",
+      "primary_cities": [
+        "Leningrad Oblast"
+      ],
+      "alt_names": [
+        "Ленинградская область"
+      ],
+      "regions": [
+        "Leningrad Oblast"
+      ],
+      "region_group": "Northwest",
+      "notes": "Område som omkranser St. Petersburg.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
     },
     {
       "code": "814",
       "primary_cities": [
         "Petrozavodsk"
       ],
+      "alt_names": [
+        "Петрозаводск"
+      ],
       "regions": [
         "Republic of Karelia"
       ],
-      "notes": "Nordvest, grense mot Finland."
+      "region_group": "Northwest",
+      "notes": "Autonom republikk ved Ladogasjøen.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": true
     },
     {
       "code": "815",
       "primary_cities": [
-        "Murmansk",
-        "Apatity",
-        "Kandalaksha"
+        "Murmansk"
+      ],
+      "alt_names": [
+        "Мурманск"
       ],
       "regions": [
         "Murmansk Oblast"
       ],
-      "notes": "Arktisk region ytterst i nordvest."
-    },
-    {
-      "code": "820",
-      "primary_cities": [
-        "Vologda",
-        "Cherepovets"
-      ],
-      "regions": [
-        "Vologda Oblast"
-      ],
-      "notes": "Nordvestlig industriell region mellom St. Petersburg og Arkhangelsk."
-    },
-    {
-      "code": "495",
-      "primary_cities": [
-        "Moscow"
-      ],
-      "regions": [
-        "Moscow (Federal City)"
-      ],
-      "notes": "Historisk sentrum av Moskva, innenfor MKAD."
-    },
-    {
-      "code": "499",
-      "primary_cities": [
-        "Moscow"
-      ],
-      "regions": [
-        "Moscow (Federal City)",
-        "Moscow Oblast (selected suburbs)"
-      ],
-      "notes": "Ytre bydeler og forsteder; samme lokalområde som 495."
-    },
-    {
-      "code": "496",
-      "primary_cities": [
-        "Kolomna",
-        "Noginsk",
-        "Elektrostal",
-        "Orekhovo-Zuyevo"
-      ],
-      "regions": [
-        "Moscow Oblast"
-      ],
-      "notes": "Satellittbyer sørøst for Moskva."
-    },
-    {
-      "code": "497",
-      "primary_cities": [
-        "Klin",
-        "Dmitrov",
-        "Solnechnogorsk"
-      ],
-      "regions": [
-        "Moscow Oblast"
-      ],
-      "notes": "Nordlige deler av Moscow Oblast."
-    },
-    {
-      "code": "498",
-      "primary_cities": [
-        "Mytishchi",
-        "Khimki",
-        "Dolgoprudny",
-        "Pushkino"
-      ],
-      "regions": [
-        "Moscow Oblast"
-      ],
-      "notes": "Vestlige og nordvestlige forsteder til Moskva."
-    },
-    {
-      "code": "831",
-      "primary_cities": [
-        "Nizhny Novgorod"
-      ],
-      "regions": [
-        "Nizhny Novgorod Oblast"
-      ],
-      "notes": "Volga-regionen, sentral transportkorridor."
-    },
-    {
-      "code": "843",
-      "primary_cities": [
-        "Kazan"
-      ],
-      "regions": [
-        "Republic of Tatarstan"
-      ],
-      "notes": "Hovedstaden i Tatarstan."
-    },
-    {
-      "code": "8552",
-      "primary_cities": [
-        "Naberezhnye Chelny"
-      ],
-      "regions": [
-        "Republic of Tatarstan"
-      ],
-      "notes": "Tatarstan (Naberezhnye Chelny/Nizhnekamsk-industriområdet)."
-    },
-    {
-      "code": "846",
-      "primary_cities": [
-        "Samara"
-      ],
-      "regions": [
-        "Samara Oblast"
-      ],
-      "notes": "Volga-regionen, viktig industriby."
-    },
-    {
-      "code": "863",
-      "primary_cities": [
-        "Rostov-na-Donu",
-        "Taganrog"
-      ],
-      "regions": [
-        "Rostov Oblast"
-      ],
-      "notes": "Sørvestlig Russland, ved Don-elva."
-    },
-    {
-      "code": "861",
-      "primary_cities": [
-        "Krasnodar",
-        "Armavir",
-        "Novorossiysk",
-        "Maykop"
-      ],
-      "regions": [
-        "Krasnodar Krai",
-        "Republic of Adygea"
-      ],
-      "notes": "Sør, mot Svartehavet og Adygea."
-    },
-    {
-      "code": "862",
-      "primary_cities": [
-        "Sochi",
-        "Adler",
-        "Khosta"
-      ],
-      "regions": [
-        "Krasnodar Krai"
-      ],
-      "notes": "Svartehavskysten."
-    },
-    {
-      "code": "8772",
-      "primary_cities": [
-        "Maykop"
-      ],
-      "regions": [
-        "Republic of Adygea"
-      ],
-      "notes": "Adygea er en egen republikk inni Krasnodar krai."
-    },
-    {
-      "code": "872",
-      "primary_cities": [
-        "Makhachkala",
-        "Derbent"
-      ],
-      "regions": [
-        "Republic of Dagestan"
-      ],
-      "notes": "Kaspihavet og Kaukasusfjellene."
-    },
-    {
-      "code": "879",
-      "primary_cities": [
-        "Pyatigorsk",
-        "Kislovodsk",
-        "Essentuki"
-      ],
-      "regions": [
-        "Stavropol Krai"
-      ],
-      "notes": "Kaukasus, kjent for spa- og mineralvannbyer."
-    },
-    {
-      "code": "383",
-      "primary_cities": [
-        "Novosibirsk"
-      ],
-      "regions": [
-        "Novosibirsk Oblast"
-      ],
-      "notes": "Vest-Sibir."
-    },
-    {
-      "code": "391",
-      "primary_cities": [
-        "Krasnoyarsk",
-        "Norilsk",
-        "Minusinsk",
-        "Achinsk"
-      ],
-      "regions": [
-        "Krasnoyarsk Krai"
-      ],
-      "notes": "Sentralt Sibir, strekker seg fra sør til Arktis."
-    },
-    {
-      "code": "395",
-      "primary_cities": [
-        "Irkutsk",
-        "Bratsk",
-        "Ust-Ilimsk"
-      ],
-      "regions": [
-        "Irkutsk Oblast"
-      ],
-      "notes": "Baikal / Øst-Sibir."
-    },
-    {
-      "code": "411",
-      "primary_cities": [
-        "Yakutsk",
-        "Mirny",
-        "Tiksi",
-        "Aldan"
-      ],
-      "regions": [
-        "Republic of Sakha (Yakutia)"
-      ],
-      "notes": "Dekker nesten hele nordøstlige Russland."
-    },
-    {
-      "code": "415",
-      "primary_cities": [
-        "Magadan",
-        "Susuman"
-      ],
-      "regions": [
-        "Magadan Oblast"
-      ],
-      "notes": "Langs Okhotskhavet, ekstremt tynt befolket."
-    },
-    {
-      "code": "416",
-      "primary_cities": [
-        "Blagoveshchensk"
-      ],
-      "regions": [
-        "Amur Oblast"
-      ],
-      "notes": "Grense mot Kina, Amur-elva."
-    },
-    {
-      "code": "421",
-      "primary_cities": [
-        "Khabarovsk",
-        "Komsomolsk-na-Amure"
-      ],
-      "regions": [
-        "Khabarovsk Krai"
-      ],
-      "notes": "Øst for Amur og nord for Vladivostok."
-    },
-    {
-      "code": "423",
-      "primary_cities": [
-        "Vladivostok",
-        "Nakhodka",
-        "Artyom",
-        "Ussuriysk"
-      ],
-      "regions": [
-        "Primorsky Krai"
-      ],
-      "notes": "Russlands største havneområde ved Japanhavet."
-    },
-    {
-      "code": "427",
-      "primary_cities": [
-        "Anadyr"
-      ],
-      "regions": [
-        "Chukotka Autonomous Okrug"
-      ],
-      "notes": "Russlands østligste punkt."
-    },
-    {
-      "code": "811",
-      "primary_cities": [
-        "Pskov"
-      ],
-      "regions": [
-        "Pskov Oblast"
-      ],
-      "notes": "Nordvest‐Russland."
-    },
-    {
-      "code": "813",
-      "primary_cities": [
-        "–"
-      ],
-      "regions": [
-        "Leningrad Oblast"
-      ],
-      "notes": "Leningrad region."
+      "region_group": "Northwest",
+      "notes": "Arktisk havneby ved Barentshavet.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
     },
     {
       "code": "816",
       "primary_cities": [
         "Veliky Novgorod"
       ],
+      "alt_names": [
+        "Великий Новгород"
+      ],
       "regions": [
         "Novgorod Oblast"
       ],
-      "notes": "Novgorod region."
+      "region_group": "Northwest",
+      "notes": "Historisk by mellom Moskva og St. Petersburg.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
     },
     {
-      "code": "833",
+      "code": "817",
       "primary_cities": [
-        "Kirov"
+        "Vologda"
+      ],
+      "alt_names": [
+        "Вологда"
       ],
       "regions": [
-        "Kirov Oblast"
+        "Vologda Oblast"
       ],
-      "notes": "Volga‐Vyatka region."
+      "region_group": "Northwest",
+      "notes": "Kjent for trearkitektur og gamle kirker.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": false
     },
     {
-      "code": "834",
+      "code": "818",
       "primary_cities": [
-        "Saransk"
+        "Arkhangelsk"
+      ],
+      "alt_names": [
+        "Архангельск"
       ],
       "regions": [
-        "Republic of Mordovia"
+        "Arkhangelsk Oblast",
+        "Nenets Autonomous Okrug"
       ],
-      "notes": "Mordovia."
+      "region_group": "Northwest",
+      "notes": "Nordlig region med Nenets AO tilknyttet.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": true
     },
     {
-      "code": "481",
+      "code": "819",
       "primary_cities": [
-        "Smolensk"
+        "Syktyvkar"
+      ],
+      "alt_names": [
+        "Сыктывкар"
       ],
       "regions": [
-        "Smolensk Oblast"
+        "Komi Republic"
       ],
-      "notes": "Vest‐sentral Russland."
-    },
-    {
-      "code": "482",
-      "primary_cities": [
-        "Tver"
-      ],
-      "regions": [
-        "Tver Oblast"
-      ],
-      "notes": "Vest‐sentral Russland."
-    },
-    {
-      "code": "483",
-      "primary_cities": [
-        "Bryansk"
-      ],
-      "regions": [
-        "Bryansk Oblast"
-      ],
-      "notes": "Vest‐Russland."
-    },
-    {
-      "code": "484",
-      "primary_cities": [
-        "Yaroslavl"
-      ],
-      "regions": [
-        "Yaroslavl Oblast"
-      ],
-      "notes": "Nordre Volga‐region."
-    },
-    {
-      "code": "485",
-      "primary_cities": [
-        "Rybinsk"
-      ],
-      "regions": [
-        "Yaroslavl Oblast"
-      ],
-      "notes": "Område Yaroslavl/Rybinsk."
-    },
-    {
-      "code": "486",
-      "primary_cities": [
-        "Orel"
-      ],
-      "regions": [
-        "Orel Oblast"
-      ],
-      "notes": "Sørvest for Moskva."
-    },
-    {
-      "code": "487",
-      "primary_cities": [
-        "Tula"
-      ],
-      "regions": [
-        "Tula Oblast"
-      ],
-      "notes": "Sør for Moskva."
+      "region_group": "Northwest",
+      "notes": "Autonom republikk øst for Arkhangelsk.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
     },
     {
       "code": "471",
       "primary_cities": [
         "Kursk"
       ],
+      "alt_names": [
+        "Курск"
+      ],
       "regions": [
         "Kursk Oblast"
       ],
-      "notes": "Sørvest‐Russland."
+      "region_group": "Central",
+      "notes": "Sørvest-Russland nær grensen til Ukraina.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
     },
     {
       "code": "472",
       "primary_cities": [
         "Belgorod"
       ],
+      "alt_names": [
+        "Белгород"
+      ],
       "regions": [
         "Belgorod Oblast"
       ],
-      "notes": "Sørvest nær grensen til Ukraina."
+      "region_group": "Central",
+      "notes": "Grenseområde mot Ukraina, jordbruksregion.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
     },
     {
       "code": "473",
       "primary_cities": [
         "Voronezh"
       ],
+      "alt_names": [
+        "Воронеж"
+      ],
       "regions": [
         "Voronezh Oblast"
       ],
-      "notes": "Sørvest‐Russland."
+      "region_group": "Central",
+      "notes": "Stor industriby sør for Moskva.",
+      "difficulty": "medium",
+      "population_rank": "high",
+      "has_autonomy": false
     },
     {
       "code": "474",
       "primary_cities": [
         "Lipetsk"
       ],
+      "alt_names": [
+        "Липецк"
+      ],
       "regions": [
         "Lipetsk Oblast"
       ],
-      "notes": "Sentral‐sør Russland."
+      "region_group": "Central",
+      "notes": "Kjent for metallindustri.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": false
     },
     {
-      "code": "491",
+      "code": "475",
+      "primary_cities": [
+        "Tambov"
+      ],
+      "alt_names": [
+        "Тамбов"
+      ],
+      "regions": [
+        "Tambov Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Historisk region i sentral Russland.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "476",
+      "primary_cities": [
+        "Orel"
+      ],
+      "alt_names": [
+        "Орёл"
+      ],
+      "regions": [
+        "Oryol Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Liten region sør for Moskva.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "477",
+      "primary_cities": [
+        "Tula"
+      ],
+      "alt_names": [
+        "Тула"
+      ],
+      "regions": [
+        "Tula Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Berømt for våpenindustri og teblandinger.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "480",
+      "primary_cities": [
+        "Smolensk"
+      ],
+      "alt_names": [
+        "Смоленск"
+      ],
+      "regions": [
+        "Smolensk Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Historisk by nær grensen til Belarus.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "481",
+      "primary_cities": [
+        "Bryansk"
+      ],
+      "alt_names": [
+        "Брянск"
+      ],
+      "regions": [
+        "Bryansk Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Sørvestlig region ved Ukraina-grensen.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "482",
+      "primary_cities": [
+        "Tver"
+      ],
+      "alt_names": [
+        "Тверь"
+      ],
+      "regions": [
+        "Tver Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Ligger mellom Moskva og St. Petersburg.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "483",
+      "primary_cities": [
+        "Yaroslavl"
+      ],
+      "alt_names": [
+        "Ярославль"
+      ],
+      "regions": [
+        "Yaroslavl Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "By langs Volga-elven, kjent for arkitektur.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "484",
+      "primary_cities": [
+        "Kostroma"
+      ],
+      "alt_names": [
+        "Кострома"
+      ],
+      "regions": [
+        "Kostroma Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Nordøst for Moskva ved Volga-elven.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
+    },
+    {
+      "code": "485",
+      "primary_cities": [
+        "Ivanovo"
+      ],
+      "alt_names": [
+        "Иваново"
+      ],
+      "regions": [
+        "Ivanovo Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Tekstilindustri, kjent som 'brudenes by'.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "486",
+      "primary_cities": [
+        "Vladimir"
+      ],
+      "alt_names": [
+        "Владимир"
+      ],
+      "regions": [
+        "Vladimir Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Historisk by på den gyldne ringen.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "487",
       "primary_cities": [
         "Ryazan"
+      ],
+      "alt_names": [
+        "Рязань"
       ],
       "regions": [
         "Ryazan Oblast"
       ],
-      "notes": "Sentral Russland øst for Moskva."
+      "region_group": "Central",
+      "notes": "Elveby sørøst for Moskva.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "491",
+      "primary_cities": [
+        "Kostroma"
+      ],
+      "alt_names": [
+        "Кострома"
+      ],
+      "regions": [
+        "Kostroma Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Småby ved Volga, nordøst for Moskva.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
+    },
+    {
+      "code": "492",
+      "primary_cities": [
+        "Vladimir"
+      ],
+      "alt_names": [
+        "Владимир"
+      ],
+      "regions": [
+        "Vladimir Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Del av den historiske gyldne ringen.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "493",
+      "primary_cities": [
+        "Ivanovo"
+      ],
+      "alt_names": [
+        "Иваново"
+      ],
+      "regions": [
+        "Ivanovo Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Tekstil- og håndverksby i sentral Russland.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
     },
     {
       "code": "494",
       "primary_cities": [
         "Kostroma"
       ],
+      "alt_names": [
+        "Кострома"
+      ],
       "regions": [
         "Kostroma Oblast"
       ],
-      "notes": "Volga‐region nord for Moskva."
+      "region_group": "Central",
+      "notes": "Nordlig del av den gyldne ringen.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
     },
     {
-      "code": "844",
+      "code": "495",
       "primary_cities": [
-        "Volgograd"
+        "Moscow"
+      ],
+      "alt_names": [
+        "Москва",
+        "Moskva"
       ],
       "regions": [
-        "Volgograd Oblast"
+        "Moscow (Federal City)"
       ],
-      "notes": "Sørvest Russland, Volga‐elva."
+      "region_group": "Central",
+      "notes": "Russlands hovedstad.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "496",
+      "primary_cities": [
+        "Moscow Oblast (Outer zone)"
+      ],
+      "alt_names": [
+        "Московская область"
+      ],
+      "regions": [
+        "Moscow Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Forsteder rundt hovedstaden.",
+      "difficulty": "medium",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "498",
+      "primary_cities": [
+        "Moscow Oblast (Outer zone)"
+      ],
+      "alt_names": [
+        "Московская область"
+      ],
+      "regions": [
+        "Moscow Oblast"
+      ],
+      "region_group": "Central",
+      "notes": "Dekker deler av hovedstadsregionen.",
+      "difficulty": "medium",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "499",
+      "primary_cities": [
+        "Moscow (Outer)"
+      ],
+      "alt_names": [
+        "Москва"
+      ],
+      "regions": [
+        "Moscow (Federal City)"
+      ],
+      "region_group": "Central",
+      "notes": "Ytre telefonsoner for Moskva.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "831",
+      "primary_cities": [
+        "Nizhny Novgorod"
+      ],
+      "alt_names": [
+        "Нижний Новгород"
+      ],
+      "regions": [
+        "Nizhny Novgorod Oblast"
+      ],
+      "region_group": "Volga",
+      "notes": "Storby ved Volga, viktig industriell hub.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "833",
+      "primary_cities": [
+        "Kirov"
+      ],
+      "alt_names": [
+        "Киров"
+      ],
+      "regions": [
+        "Kirov Oblast"
+      ],
+      "region_group": "Volga",
+      "notes": "Skog- og treindustri.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "834",
+      "primary_cities": [
+        "Saransk"
+      ],
+      "alt_names": [
+        "Саранск"
+      ],
+      "regions": [
+        "Republic of Mordovia"
+      ],
+      "region_group": "Volga",
+      "notes": "Autonom republikk i Volga-regionen.",
+      "difficulty": "medium",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "835",
+      "primary_cities": [
+        "Cheboksary"
+      ],
+      "alt_names": [
+        "Чебоксары"
+      ],
+      "regions": [
+        "Chuvash Republic"
+      ],
+      "region_group": "Volga",
+      "notes": "Autonom republikk ved Volga.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": true
+    },
+    {
+      "code": "836",
+      "primary_cities": [
+        "Yoshkar-Ola"
+      ],
+      "alt_names": [
+        "Йошкар-Ола"
+      ],
+      "regions": [
+        "Republic of Mari El"
+      ],
+      "region_group": "Volga",
+      "notes": "Autonom republikk i Volga-området.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "841",
+      "primary_cities": [
+        "Penza"
+      ],
+      "alt_names": [
+        "Пенза"
+      ],
+      "regions": [
+        "Penza Oblast"
+      ],
+      "region_group": "Volga",
+      "notes": "Kjent for jordbruk og tekstilindustri.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "842",
+      "primary_cities": [
+        "Ulyanovsk"
+      ],
+      "alt_names": [
+        "Ульяновск"
+      ],
+      "regions": [
+        "Ulyanovsk Oblast"
+      ],
+      "region_group": "Volga",
+      "notes": "Lenins fødeby, ved Volga.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "843",
+      "primary_cities": [
+        "Kazan"
+      ],
+      "alt_names": [
+        "Казань"
+      ],
+      "regions": [
+        "Republic of Tatarstan"
+      ],
+      "region_group": "Volga",
+      "notes": "Autonom republikk i Volga-regionen.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": true
     },
     {
       "code": "845",
       "primary_cities": [
         "Saratov"
       ],
+      "alt_names": [
+        "Саратов"
+      ],
       "regions": [
         "Saratov Oblast"
       ],
-      "notes": "Nedre Volga‐område."
+      "region_group": "Volga",
+      "notes": "Stor by ved Volga-elven.",
+      "difficulty": "medium",
+      "population_rank": "high",
+      "has_autonomy": false
     },
     {
-      "code": "341",
+      "code": "846",
       "primary_cities": [
-        "Izhevsk"
+        "Samara"
+      ],
+      "alt_names": [
+        "Самара"
       ],
       "regions": [
-        "Udmurt Republic"
+        "Samara Oblast"
       ],
-      "notes": "Vestlige Uralområdet."
+      "region_group": "Volga",
+      "notes": "En av Russlands største byer, på Volgas bredder.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
     },
     {
-      "code": "343",
+      "code": "848",
       "primary_cities": [
-        "Yekaterinburg"
+        "Tolyatti"
+      ],
+      "alt_names": [
+        "Тольятти"
       ],
       "regions": [
-        "Sverdlovsk Oblast"
+        "Samara Oblast"
       ],
-      "notes": "Uralregionen."
+      "region_group": "Volga",
+      "notes": "Bilindustri-by kjent for Lada-fabrikken.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
     },
     {
-      "code": "347",
+      "code": "849",
       "primary_cities": [
-        "Ufa"
+        "Balakovo"
+      ],
+      "alt_names": [
+        "Балаково"
       ],
       "regions": [
-        "Bashkortostan"
+        "Saratov Oblast"
       ],
-      "notes": "Vestlige Uralregionen."
-    },
-    {
-      "code": "351",
-      "primary_cities": [
-        "Chelyabinsk"
-      ],
-      "regions": [
-        "Chelyabinsk Oblast"
-      ],
-      "notes": "Sør‐Ural."
-    },
-    {
-      "code": "352",
-      "primary_cities": [
-        "Kurgan"
-      ],
-      "regions": [
-        "Kurgan Oblast"
-      ],
-      "notes": "Sør‐Ural."
-    },
-    {
-      "code": "353",
-      "primary_cities": [
-        "Orenburg"
-      ],
-      "regions": [
-        "Orenburg Oblast"
-      ],
-      "notes": "Sørvest Ural / grenseområde."
-    },
-    {
-      "code": "345",
-      "primary_cities": [
-        "Tyumen"
-      ],
-      "regions": [
-        "Tyumen Oblast"
-      ],
-      "notes": "Vest‐Sibir / Uralområdet."
-    },
-    {
-      "code": "346",
-      "primary_cities": [
-        "Khanty-Mansiysk"
-      ],
-      "regions": [
-        "Khanty-Mansi Autonomous Okrug"
-      ],
-      "notes": "Vest‐Sibir / olje‐ og gassregion."
-    },
-    {
-      "code": "349",
-      "primary_cities": [
-        "Yamalo-Nenets Autonomous Okrug"
-      ],
-      "regions": [
-        "Yamalo-Nenets Autonomous Okrug"
-      ],
-      "notes": "Nordvest Sibir / arktisk region."
-    },
-    {
-      "code": "381",
-      "primary_cities": [
-        "Omsk"
-      ],
-      "regions": [
-        "Omsk Oblast"
-      ],
-      "notes": "Vest‐Sibir."
-    },
-    {
-      "code": "382",
-      "primary_cities": [
-        "Tomsk"
-      ],
-      "regions": [
-        "Tomsk Oblast"
-      ],
-      "notes": "Sentral‐Sibir."
-    },
-    {
-      "code": "384",
-      "primary_cities": [
-        "Kemerovo"
-      ],
-      "regions": [
-        "Kemerovo Oblast"
-      ],
-      "notes": "Sibir‐grove industriområder."
-    },
-    {
-      "code": "385",
-      "primary_cities": [
-        "Barnaul"
-      ],
-      "regions": [
-        "Altai Krai"
-      ],
-      "notes": "Sørvest Sibir."
-    },
-    {
-      "code": "387",
-      "primary_cities": [
-        "Novokuznetsk"
-      ],
-      "regions": [
-        "Kemerovo Oblast"
-      ],
-      "notes": "Sør‐Sibir."
-    },
-    {
-      "code": "388",
-      "primary_cities": [
-        "Novosibirsk (outer)"
-      ],
-      "regions": [
-        "Novosibirsk Oblast"
-      ],
-      "notes": "Vest‐Sibir, forsteder."
-    },
-    {
-      "code": "390",
-      "primary_cities": [
-        "–"
-      ],
-      "regions": [
-        "Republic of Khakassia"
-      ],
-      "notes": "Sør‐Sibir."
-    },
-    {
-      "code": "394",
-      "primary_cities": [
-        "Kyzyl"
-      ],
-      "regions": [
-        "Republic of Tuva"
-      ],
-      "notes": "Sørøst Sibir."
-    },
-    {
-      "code": "301",
-      "primary_cities": [
-        "Ulan-Ude"
-      ],
-      "regions": [
-        "Republic of Buryatia"
-      ],
-      "notes": "Øst‐Sibir / Bajkalområdet."
-    },
-    {
-      "code": "302",
-      "primary_cities": [
-        "Chita"
-      ],
-      "regions": [
-        "Zabaykalsky Krai"
-      ],
-      "notes": "Øst‐Sibir / grenseland mot Mongolia."
-    },
-    {
-      "code": "413",
-      "primary_cities": [
-        "Magadan"
-      ],
-      "regions": [
-        "Magadan Oblast"
-      ],
-      "notes": "Nordøst Russland, Okhotskhavet."
-    },
-    {
-      "code": "424",
-      "primary_cities": [
-        "Yuzhno-Sakhalinsk"
-      ],
-      "regions": [
-        "Sakhalin Oblast"
-      ],
-      "notes": "Østlig øy og oljeområde."
-    },
-    {
-      "code": "426",
-      "primary_cities": [
-        "Birobidzhan"
-      ],
-      "regions": [
-        "Jewish Autonomous Oblast"
-      ],
-      "notes": "Russisk fjern‐øst eksklave."
+      "region_group": "Volga",
+      "notes": "Kjent for vannkraftverk og kjemisk industri.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
     },
     {
       "code": "851",
       "primary_cities": [
         "Astrakhan"
       ],
+      "alt_names": [
+        "Астрахань"
+      ],
       "regions": [
         "Astrakhan Oblast"
       ],
-      "notes": "Nedre Volga / Kaspihavet."
+      "region_group": "Volga",
+      "notes": "Elve- og havneby ved Kaspihavet.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "853",
+      "primary_cities": [
+        "Ulyanovsk (Outer)"
+      ],
+      "alt_names": [
+        "Ульяновск"
+      ],
+      "regions": [
+        "Ulyanovsk Oblast"
+      ],
+      "region_group": "Volga",
+      "notes": "Dekker forsteder og distrikter rundt byen.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "855",
+      "primary_cities": [
+        "Naberezhnye Chelny"
+      ],
+      "alt_names": [
+        "Набережные Челны"
+      ],
+      "regions": [
+        "Republic of Tatarstan"
+      ],
+      "region_group": "Volga",
+      "notes": "Tatarstans nest største by, KamAZ-fabrikken.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": true
+    },
+    {
+      "code": "861",
+      "primary_cities": [
+        "Krasnodar"
+      ],
+      "alt_names": [
+        "Краснодар"
+      ],
+      "regions": [
+        "Krasnodar Krai"
+      ],
+      "region_group": "South",
+      "notes": "Hovedby i Kuban-regionen, nær Svartehavet.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "862",
+      "primary_cities": [
+        "Sochi"
+      ],
+      "alt_names": [
+        "Сочи"
+      ],
+      "regions": [
+        "Krasnodar Krai"
+      ],
+      "region_group": "South",
+      "notes": "Feriested ved Svartehavet, kjent for OL 2014.",
+      "difficulty": "easy",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "863",
+      "primary_cities": [
+        "Rostov-on-Don"
+      ],
+      "alt_names": [
+        "Ростов-на-Дону"
+      ],
+      "regions": [
+        "Rostov Oblast"
+      ],
+      "region_group": "South",
+      "notes": "Største by i sør-Russland, handelssentrum.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "864",
+      "primary_cities": [
+        "Volgodonsk"
+      ],
+      "alt_names": [
+        "Волгодонск"
+      ],
+      "regions": [
+        "Rostov Oblast"
+      ],
+      "region_group": "South",
+      "notes": "Industri- og kraftverksby i Don-regionen.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
+    },
+    {
+      "code": "865",
+      "primary_cities": [
+        "Stavropol"
+      ],
+      "alt_names": [
+        "Ставрополь"
+      ],
+      "regions": [
+        "Stavropol Krai"
+      ],
+      "region_group": "South",
+      "notes": "Sør-russisk by i Kaukasus-forlandet.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "866",
+      "primary_cities": [
+        "Nalchik"
+      ],
+      "alt_names": [
+        "Нальчик"
+      ],
+      "regions": [
+        "Kabardino-Balkaria Republic"
+      ],
+      "region_group": "South",
+      "notes": "Autonom republikk i Nord-Kaukasus.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": true
+    },
+    {
+      "code": "867",
+      "primary_cities": [
+        "Vladikavkaz"
+      ],
+      "alt_names": [
+        "Владикавказ"
+      ],
+      "regions": [
+        "Republic of North Ossetia-Alania"
+      ],
+      "region_group": "South",
+      "notes": "Autonom republikk i Kaukasus-fjellene.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": true
+    },
+    {
+      "code": "871",
+      "primary_cities": [
+        "Grozny"
+      ],
+      "alt_names": [
+        "Грозный"
+      ],
+      "regions": [
+        "Chechen Republic"
+      ],
+      "region_group": "South",
+      "notes": "Autonom republikk i Nord-Kaukasus, gjenoppbygd etter konflikter.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": true
+    },
+    {
+      "code": "872",
+      "primary_cities": [
+        "Makhachkala"
+      ],
+      "alt_names": [
+        "Махачкала"
+      ],
+      "regions": [
+        "Republic of Dagestan"
+      ],
+      "region_group": "South",
+      "notes": "Autonom republikk ved Kaspihavet.",
+      "difficulty": "medium",
+      "population_rank": "high",
+      "has_autonomy": true
+    },
+    {
+      "code": "873",
+      "primary_cities": [
+        "Cherkessk"
+      ],
+      "alt_names": [
+        "Черкесск"
+      ],
+      "regions": [
+        "Karachay-Cherkess Republic"
+      ],
+      "region_group": "South",
+      "notes": "Autonom republikk nord i Kaukasus.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "877",
+      "primary_cities": [
+        "Nazran"
+      ],
+      "alt_names": [
+        "Назрань"
+      ],
+      "regions": [
+        "Republic of Ingushetia"
+      ],
+      "region_group": "South",
+      "notes": "Autonom republikk, en av Russlands minste.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "878",
+      "primary_cities": [
+        "Elista"
+      ],
+      "alt_names": [
+        "Элиста"
+      ],
+      "regions": [
+        "Republic of Kalmykia"
+      ],
+      "region_group": "South",
+      "notes": "Autonom buddhistisk republikk ved Kaspihavet.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "341",
+      "primary_cities": [
+        "Izhevsk"
+      ],
+      "alt_names": [
+        "Ижевск"
+      ],
+      "regions": [
+        "Udmurt Republic"
+      ],
+      "region_group": "Ural",
+      "notes": "Autonom republikk vest i Uralregionen.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": true
+    },
+    {
+      "code": "342",
+      "primary_cities": [
+        "Perm"
+      ],
+      "alt_names": [
+        "Пермь"
+      ],
+      "regions": [
+        "Perm Krai"
+      ],
+      "region_group": "Ural",
+      "notes": "Stor industriby i vestlige Ural.",
+      "difficulty": "medium",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "343",
+      "primary_cities": [
+        "Yekaterinburg"
+      ],
+      "alt_names": [
+        "Екатеринбург"
+      ],
+      "regions": [
+        "Sverdlovsk Oblast"
+      ],
+      "region_group": "Ural",
+      "notes": "Russlands fjerde største by, ved grensen mellom Europa og Asia.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "345",
+      "primary_cities": [
+        "Tyumen"
+      ],
+      "alt_names": [
+        "Тюмень"
+      ],
+      "regions": [
+        "Tyumen Oblast"
+      ],
+      "region_group": "Ural",
+      "notes": "Olje- og gasshovedstad i Vest-Sibir.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "346",
+      "primary_cities": [
+        "Khanty-Mansiysk"
+      ],
+      "alt_names": [
+        "Ханты-Мансийск"
+      ],
+      "regions": [
+        "Khanty-Mansi Autonomous Okrug"
+      ],
+      "region_group": "Ural",
+      "notes": "Autonomt okrug i oljerike områder.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "347",
+      "primary_cities": [
+        "Ufa"
+      ],
+      "alt_names": [
+        "Уфа"
+      ],
+      "regions": [
+        "Republic of Bashkortostan"
+      ],
+      "region_group": "Ural",
+      "notes": "Autonom republikk sørvest i Ural.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": true
+    },
+    {
+      "code": "351",
+      "primary_cities": [
+        "Chelyabinsk"
+      ],
+      "alt_names": [
+        "Челябинск"
+      ],
+      "regions": [
+        "Chelyabinsk Oblast"
+      ],
+      "region_group": "Ural",
+      "notes": "Stor industriby i sør-Ural.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "352",
+      "primary_cities": [
+        "Kurgan"
+      ],
+      "alt_names": [
+        "Курган"
+      ],
+      "regions": [
+        "Kurgan Oblast"
+      ],
+      "region_group": "Ural",
+      "notes": "Småby øst for Uralfjellene.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
+    },
+    {
+      "code": "353",
+      "primary_cities": [
+        "Orenburg"
+      ],
+      "alt_names": [
+        "Оренбург"
+      ],
+      "regions": [
+        "Orenburg Oblast"
+      ],
+      "region_group": "Ural",
+      "notes": "By ved grensen til Kasakhstan.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "381",
+      "primary_cities": [
+        "Omsk"
+      ],
+      "alt_names": [
+        "Омск"
+      ],
+      "regions": [
+        "Omsk Oblast"
+      ],
+      "region_group": "Siberia",
+      "notes": "Stor by i Vest-Sibir.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "382",
+      "primary_cities": [
+        "Tomsk"
+      ],
+      "alt_names": [
+        "Томск"
+      ],
+      "regions": [
+        "Tomsk Oblast"
+      ],
+      "region_group": "Siberia",
+      "notes": "Universitetsby i Vest-Sibir.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "383",
+      "primary_cities": [
+        "Novosibirsk"
+      ],
+      "alt_names": [
+        "Новосибирск"
+      ],
+      "regions": [
+        "Novosibirsk Oblast"
+      ],
+      "region_group": "Siberia",
+      "notes": "Russlands tredje største by.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "384",
+      "primary_cities": [
+        "Kemerovo"
+      ],
+      "alt_names": [
+        "Кемерово"
+      ],
+      "regions": [
+        "Kemerovo Oblast"
+      ],
+      "region_group": "Siberia",
+      "notes": "Kull- og industriregion i Kuzbass.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "385",
+      "primary_cities": [
+        "Barnaul"
+      ],
+      "alt_names": [
+        "Барнаул"
+      ],
+      "regions": [
+        "Altai Krai"
+      ],
+      "region_group": "Siberia",
+      "notes": "Hovedstad i Altai Krai.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "386",
+      "primary_cities": [
+        "Gorno-Altaysk"
+      ],
+      "alt_names": [
+        "Горно-Алтайск"
+      ],
+      "regions": [
+        "Altai Republic"
+      ],
+      "region_group": "Siberia",
+      "notes": "Autonom republikk i fjellområdet sør i Sibir.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "387",
+      "primary_cities": [
+        "Abakan"
+      ],
+      "alt_names": [
+        "Абакан"
+      ],
+      "regions": [
+        "Republic of Khakassia"
+      ],
+      "region_group": "Siberia",
+      "notes": "Autonom republikk sentralt i Sør-Sibir.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "388",
+      "primary_cities": [
+        "Kyzyl"
+      ],
+      "alt_names": [
+        "Кызыл"
+      ],
+      "regions": [
+        "Republic of Tuva"
+      ],
+      "region_group": "Siberia",
+      "notes": "Autonom republikk, geografisk sentrum av Asia.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "390",
+      "primary_cities": [
+        "Krasnoyarsk"
+      ],
+      "alt_names": [
+        "Красноярск"
+      ],
+      "regions": [
+        "Krasnoyarsk Krai"
+      ],
+      "region_group": "Siberia",
+      "notes": "Stor industriby ved Jenisej-elven.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "391",
+      "primary_cities": [
+        "Norilsk"
+      ],
+      "alt_names": [
+        "Норильск"
+      ],
+      "regions": [
+        "Krasnoyarsk Krai"
+      ],
+      "region_group": "Siberia",
+      "notes": "Nordlig industriby, en av verdens kaldeste.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
+    },
+    {
+      "code": "392",
+      "primary_cities": [
+        "Irkutsk"
+      ],
+      "alt_names": [
+        "Иркутск"
+      ],
+      "regions": [
+        "Irkutsk Oblast"
+      ],
+      "region_group": "Siberia",
+      "notes": "Historisk by nær Bajkalsjøen.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "394",
+      "primary_cities": [
+        "Ulan-Ude"
+      ],
+      "alt_names": [
+        "Улан-Удэ"
+      ],
+      "regions": [
+        "Republic of Buryatia"
+      ],
+      "region_group": "Siberia",
+      "notes": "Autonom republikk ved Bajkal-sjøen.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": true
+    },
+    {
+      "code": "395",
+      "primary_cities": [
+        "Chita"
+      ],
+      "alt_names": [
+        "Чита"
+      ],
+      "regions": [
+        "Zabaykalsky Krai"
+      ],
+      "region_group": "Siberia",
+      "notes": "By i det sørøstlige Sibir, nær Mongolia.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "411",
+      "primary_cities": [
+        "Yakutsk"
+      ],
+      "alt_names": [
+        "Якутск"
+      ],
+      "regions": [
+        "Sakha (Yakutia) Republic"
+      ],
+      "region_group": "Far East",
+      "notes": "Autonom republikk, verdens kaldeste hovedstad.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": true
+    },
+    {
+      "code": "413",
+      "primary_cities": [
+        "Magadan"
+      ],
+      "alt_names": [
+        "Магадан"
+      ],
+      "regions": [
+        "Magadan Oblast"
+      ],
+      "region_group": "Far East",
+      "notes": "Kystby ved Okhotskhavet.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
+    },
+    {
+      "code": "414",
+      "primary_cities": [
+        "Anadyr"
+      ],
+      "alt_names": [
+        "Анадырь"
+      ],
+      "regions": [
+        "Chukotka Autonomous Okrug"
+      ],
+      "region_group": "Far East",
+      "notes": "Autonomt okrug, Russlands østligste region.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "415",
+      "primary_cities": [
+        "Petropavlovsk-Kamchatsky"
+      ],
+      "alt_names": [
+        "Петропавловск-Камчатский"
+      ],
+      "regions": [
+        "Kamchatka Krai"
+      ],
+      "region_group": "Far East",
+      "notes": "By på Kamchatka-halvøya omgitt av vulkaner.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "416",
+      "primary_cities": [
+        "Blagoveshchensk"
+      ],
+      "alt_names": [
+        "Благовещенск"
+      ],
+      "regions": [
+        "Amur Oblast"
+      ],
+      "region_group": "Far East",
+      "notes": "Grenseby mot Kina, ved Amur-elven.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "421",
+      "primary_cities": [
+        "Khabarovsk"
+      ],
+      "alt_names": [
+        "Хабаровск"
+      ],
+      "regions": [
+        "Khabarovsk Krai"
+      ],
+      "region_group": "Far East",
+      "notes": "Storby i det russiske fjerne østen.",
+      "difficulty": "medium",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "422",
+      "primary_cities": [
+        "Komsomolsk-on-Amur"
+      ],
+      "alt_names": [
+        "Комсомольск-на-Амуре"
+      ],
+      "regions": [
+        "Khabarovsk Krai"
+      ],
+      "region_group": "Far East",
+      "notes": "Industriell by ved Amur-elven.",
+      "difficulty": "hard",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "423",
+      "primary_cities": [
+        "Vladivostok"
+      ],
+      "alt_names": [
+        "Владивосток"
+      ],
+      "regions": [
+        "Primorsky Krai"
+      ],
+      "region_group": "Far East",
+      "notes": "Største havneby i det russiske fjerne østen.",
+      "difficulty": "easy",
+      "population_rank": "high",
+      "has_autonomy": false
+    },
+    {
+      "code": "424",
+      "primary_cities": [
+        "Yuzhno-Sakhalinsk"
+      ],
+      "alt_names": [
+        "Южно-Сахалинск"
+      ],
+      "regions": [
+        "Sakhalin Oblast"
+      ],
+      "region_group": "Far East",
+      "notes": "By på Sakhalin-øya, olje- og gassindustri.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
+    },
+    {
+      "code": "425",
+      "primary_cities": [
+        "Birobidzhan"
+      ],
+      "alt_names": [
+        "Биробиджан"
+      ],
+      "regions": [
+        "Jewish Autonomous Oblast"
+      ],
+      "region_group": "Far East",
+      "notes": "Autonomt jødisk område opprettet på 1930-tallet.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "426",
+      "primary_cities": [
+        "Amursk"
+      ],
+      "alt_names": [
+        "Амурск"
+      ],
+      "regions": [
+        "Khabarovsk Krai"
+      ],
+      "region_group": "Far East",
+      "notes": "Liten by nær Komsomolsk-on-Amur.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
+    },
+    {
+      "code": "427",
+      "primary_cities": [
+        "Anadyr"
+      ],
+      "alt_names": [
+        "Анадырь"
+      ],
+      "regions": [
+        "Chukotka Autonomous Okrug"
+      ],
+      "region_group": "Far East",
+      "notes": "Repeteres for sekundær sone i Chukotka.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": true
+    },
+    {
+      "code": "428",
+      "primary_cities": [
+        "Magadan (Outer)"
+      ],
+      "alt_names": [
+        "Магадан"
+      ],
+      "regions": [
+        "Magadan Oblast"
+      ],
+      "region_group": "Far East",
+      "notes": "Dekker distrikter rundt Magadan.",
+      "difficulty": "hard",
+      "population_rank": "low",
+      "has_autonomy": false
+    },
+    {
+      "code": "401",
+      "primary_cities": [
+        "Kaliningrad"
+      ],
+      "alt_names": [
+        "Калининград"
+      ],
+      "regions": [
+        "Kaliningrad Oblast"
+      ],
+      "region_group": "Exclave",
+      "notes": "Russisk eksklave mellom Polen og Litauen.",
+      "difficulty": "medium",
+      "population_rank": "medium",
+      "has_autonomy": false
     }
   ]
 }
+ 

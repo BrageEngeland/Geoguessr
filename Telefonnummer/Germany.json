@@ -4,204 +4,441 @@
   "codes": [
     {
       "code": "30",
-      "primary_cities": [
-        "Berlin"
-      ],
-      "regions": [
-        "Berlin (State)"
-      ],
+      "primary_cities": ["Berlin"],
+      "regions": ["Berlin (State)"],
       "notes": "Felles prefiks for hele hovedstadsområdet."
     },
     {
       "code": "40",
-      "primary_cities": [
-        "Hamburg"
-      ],
-      "regions": [
-        "Hamburg (State)"
-      ],
+      "primary_cities": ["Hamburg"],
+      "regions": ["Hamburg (State)"],
       "notes": "Nordtysk havneby ved Elben."
     },
     {
       "code": "69",
-      "primary_cities": [
-        "Frankfurt am Main",
-        "Offenbach"
-      ],
-      "regions": [
-        "Hesse (Rhine-Main)"
-      ],
+      "primary_cities": ["Frankfurt am Main", "Offenbach"],
+      "regions": ["Hesse (Rhine-Main)"],
       "notes": "Finanssenter langs Main-elven."
     },
     {
       "code": "89",
-      "primary_cities": [
-        "Munich"
-      ],
-      "regions": [
-        "Bavaria (Upper Bavaria)"
-      ],
+      "primary_cities": ["Munich"],
+      "regions": ["Bavaria (Upper Bavaria)"],
       "notes": "Sørtysk teknologihub ved Alpene."
     },
     {
       "code": "21",
-      "primary_cities": [
-        "Düsseldorf",
-        "Neuss"
-      ],
-      "regions": [
-        "North Rhine-Westphalia (Lower Rhine)"
-      ],
+      "primary_cities": ["Düsseldorf", "Neuss"],
+      "regions": ["North Rhine-Westphalia (Lower Rhine)"],
       "notes": "Rheinmetropolen vest for Ruhr."
     },
     {
       "code": "22",
-      "primary_cities": [
-        "Cologne",
-        "Bonn"
-      ],
-      "regions": [
-        "North Rhine-Westphalia (Rhineland)"
-      ],
+      "primary_cities": ["Cologne", "Bonn"],
+      "regions": ["North Rhine-Westphalia (Rhineland)"],
       "notes": "Katedralbyen og tidligere hovedstad."
     },
     {
       "code": "23",
-      "primary_cities": [
-        "Dortmund",
-        "Essen",
-        "Bochum"
-      ],
-      "regions": [
-        "North Rhine-Westphalia (Ruhrgebiet)"
-      ],
+      "primary_cities": ["Dortmund", "Essen", "Bochum"],
+      "regions": ["North Rhine-Westphalia (Ruhrgebiet)"],
       "notes": "Tett industri- og fotballbelte."
     },
     {
       "code": "24",
-      "primary_cities": [
-        "Aachen",
-        "Mönchengladbach",
-        "Krefeld"
-      ],
-      "regions": [
-        "North Rhine-Westphalia (Lower Rhine west)"
-      ],
+      "primary_cities": ["Aachen", "Düren", "Jülich"],
+      "regions": ["North Rhine-Westphalia (Lower Rhine west)"],
+      "notes": "Rett vest for Køln."
+    },
+    {
+      "code": "25",
+      "primary_cities": ["Münster", "Coesfeld", "Ahaus"],
+      "regions": ["North Rhine-Westphalia (Münsterland)"],
       "notes": "Mot Belgia og Nederland."
     },
     {
+      "code": "26",
+      "primary_cities": ["Koblenz", "Neuwied", "Mayen"],
+      "regions": ["Rheinland-Pfalz"],
+      "notes": "Sør for Bonn, nordvest for Frankfurt."
+    },
+    {
+      "code": "27",
+      "primary_cities": ["Siegen", "Olpe", "Betzdorf"],
+      "regions": ["North Rhine-Westphalia (Sauerland)"],
+      "notes": "Øst for Cologne, vest for Marburg."
+    },
+    {
+      "code": "28",
+      "primary_cities": ["Kleve", "Wesel"],
+      "regions": ["North Rhine-Westphalia (Lower Rhine)"],
+      "notes": "Spiss inn til Nederland, nordvest for Essen."
+    },
+    {
+      "code": "29",
+      "primary_cities": ["Arnsberg", "Soest", "Meschede"],
+      "regions": ["North Rhine-Westphalia (Sauerland)"],
+      "notes": "Rett øst for Dortmund."
+    },
+    {
+      "code": "33",
+      "primary_cities": ["Potsdam", "Brandenburg an der Havel"],
+      "regions": ["Brandenburg"],
+      "notes": "Området rundt Berlin."
+    },
+    {
       "code": "34",
-      "primary_cities": [
-        "Leipzig",
-        "Halle (Saale)"
-      ],
-      "regions": [
-        "Saxony / Saxony-Anhalt"
-      ],
+      "primary_cities": ["Leipzig", "Halle (Saale)"],
+      "regions": ["Saxony / Saxony-Anhalt"],
       "notes": "Østtysk messeregion."
     },
     {
       "code": "35",
-      "primary_cities": [
-        "Dresden",
-        "Chemnitz"
-      ],
-      "regions": [
-        "Saxony (Elbe-dalen)"
-      ],
+      "primary_cities": ["Dresden", "Chemnitz"],
+      "regions": ["Saxony (Elbe-dalen)"],
       "notes": "Historisk barokkby langs Elben."
     },
     {
       "code": "36",
-      "primary_cities": [
-        "Erfurt",
-        "Weimar",
-        "Jena"
-      ],
-      "regions": [
-        "Thuringia"
-      ],
+      "primary_cities": ["Erfurt", "Weimar", "Jena"],
+      "regions": ["Thuringia"],
       "notes": "Midt-østlig delstat i Thüringer Wald."
     },
     {
+      "code": "37",
+      "primary_cities": ["Zwickau", "Plauen", "Gera"],
+      "regions": ["Saxony / Thuringia border"],
+      "notes": "Småbyer i sørøstlige del av tidligere DDR."
+    },
+    {
+      "code": "38",
+      "primary_cities": ["Magdeburg", "Schwerin", "Wismar"],
+      "regions": ["Saxony-Anhalt / Mecklenburg-Vorpommern"],
+      "notes": "Nordøstlige Elbe-region."
+    },
+    {
+      "code": "41",
+      "primary_cities": ["Lübeck", "Kiel", "Flensburg"],
+      "regions": ["Schleswig-Holstein"],
+      "notes": "Nordligste tyske delstat mot Danmark."
+    },
+    {
       "code": "42",
-      "primary_cities": [
-        "Bremen",
-        "Bremerhaven",
-        "Oldenburg"
-      ],
-      "regions": [
-        "Bremen (State)",
-        "Lower Saxony (northwest)"
-      ],
+      "primary_cities": ["Bremen", "Bremerhaven", "Oldenburg"],
+      "regions": ["Bremen (State)", "Lower Saxony (northwest)"],
       "notes": "Hanseatisk havneområde."
     },
     {
-      "code": "51",
-      "primary_cities": [
-        "Hanover",
-        "Hildesheim"
-      ],
-      "regions": [
-        "Lower Saxony (Leine-dalen)"
-      ],
+      "code": "43",
+      "primary_cities": ["Osnabrück", "Emden"],
+      "regions": ["Lower Saxony (northwest coast)"],
+      "notes": "Område mellom Ems og Nordsjøen."
+    },
+    {
+      "code": "44",
+      "primary_cities": ["Wilhelmshaven", "Aurich"],
+      "regions": ["Lower Saxony (Friesland)"],
+      "notes": "Nordkysten mot Nordsjøen."
+    },
+    {
+      "code": "45",
+      "primary_cities": ["Lüneburg", "Celle"],
+      "regions": ["Lower Saxony (east)"],
+      "notes": "Mellom Hamburg og Hannover."
+    },
+    {
+      "code": "46",
+      "primary_cities": ["Norderstedt", "Pinneberg"],
+      "regions": ["Schleswig-Holstein (south)"],
+      "notes": "Forsteder til Hamburg."
+    },
+    {
+      "code": "47",
+      "primary_cities": ["Cuxhaven", "Stade"],
+      "regions": ["Lower Saxony (Elbe delta)"],
+      "notes": "Område ved Elbens utløp."
+    },
+    {
+      "code": "48",
+      "primary_cities": ["Itzehoe", "Heide"],
+      "regions": ["Schleswig-Holstein (west)"],
+      "notes": "Landlige områder vest for Kiel."
+    },
+    {
+      "code": "49",
+      "primary_cities": ["Lüchow", "Uelzen"],
+      "regions": ["Lower Saxony (east)"],
+      "notes": "Småbyregion mellom Hannover og Elben."
+    },
+    {
+      "code": "50",
+      "primary_cities": ["Hanover"],
+      "regions": ["Lower Saxony (Leine-dalen)"],
       "notes": "Nordtysk messeby."
     },
     {
+      "code": "51",
+      "primary_cities": ["Hildesheim", "Hameln"],
+      "regions": ["Lower Saxony (south)"],
+      "notes": "Område sør for Hannover."
+    },
+    {
       "code": "52",
-      "primary_cities": [
-        "Bielefeld",
-        "Paderborn"
-      ],
-      "regions": [
-        "North Rhine-Westphalia (Ostwestfalen-Lippe)"
-      ],
+      "primary_cities": ["Bielefeld", "Paderborn"],
+      "regions": ["North Rhine-Westphalia (Ostwestfalen-Lippe)"],
       "notes": "Øst for Ruhr, nær Teutoburger Wald."
     },
     {
+      "code": "53",
+      "primary_cities": ["Braunschweig", "Wolfsburg"],
+      "regions": ["Lower Saxony (east)"],
+      "notes": "Bilregionen med Volkswagen HQ."
+    },
+    {
+      "code": "54",
+      "primary_cities": ["Osnabrück", "Lingen (Ems)"],
+      "regions": ["Lower Saxony (west)"],
+      "notes": "Landlig område mot Nederland."
+    },
+    {
+      "code": "55",
+      "primary_cities": ["Göttingen", "Kassel"],
+      "regions": ["Lower Saxony / Hesse border"],
+      "notes": "Universitetsbyer ved Weser."
+    },
+    {
+      "code": "56",
+      "primary_cities": ["Kassel"],
+      "regions": ["Hesse (north)"],
+      "notes": "Nordhessisk region."
+    },
+    {
+      "code": "57",
+      "primary_cities": ["Hagen", "Iserlohn", "Lüdenscheid"],
+      "regions": ["North Rhine-Westphalia (Sauerland)"],
+      "notes": "Sør for Dortmund, NEE for Düsseldorf."
+    },
+    {
+      "code": "58",
+      "primary_cities": ["Wuppertal", "Solingen", "Remscheid"],
+      "regions": ["North Rhine-Westphalia (Bergisches Land)"],
+      "notes": "Bybånd øst for Düsseldorf."
+    },
+    {
+      "code": "59",
+      "primary_cities": ["Dortmund (landlig)", "Unna", "Hamm"],
+      "regions": ["North Rhine-Westphalia (Ruhr east)"],
+      "notes": "Østlige rand av Ruhr."
+    },
+    {
+      "code": "60",
+      "primary_cities": ["Wiesbaden", "Mainz"],
+      "regions": ["Hesse / Rheinland-Pfalz (Rhine-Main)"],
+      "notes": "Vest for Frankfurt."
+    },
+    {
+      "code": "61",
+      "primary_cities": ["Darmstadt", "Rüsselsheim"],
+      "regions": ["Hesse (south)"],
+      "notes": "Bilregion (Opel HQ)."
+    },
+    {
+      "code": "62",
+      "primary_cities": ["Mannheim", "Heidelberg"],
+      "regions": ["Baden-Württemberg (northwest)"],
+      "notes": "Industribånd langs Rhinen."
+    },
+    {
+      "code": "63",
+      "primary_cities": ["Kaiserslautern", "Pirmasens"],
+      "regions": ["Rheinland-Pfalz (Palatinate)"],
+      "notes": "Mot fransk grense."
+    },
+    {
+      "code": "64",
+      "primary_cities": ["Gießen", "Marburg"],
+      "regions": ["Hesse (central)"],
+      "notes": "Universitetsregion nord for Frankfurt."
+    },
+    {
+      "code": "65",
+      "primary_cities": ["Trier"],
+      "regions": ["Rheinland-Pfalz (Mosel)"],
+      "notes": "Eldste by i Tyskland, ved Luxembourg-grensen."
+    },
+    {
+      "code": "66",
+      "primary_cities": ["Saarbrücken"],
+      "regions": ["Saarland"],
+      "notes": "Vestligste delstat, nær Frankrike."
+    },
+    {
+      "code": "67",
+      "primary_cities": ["Ludwigshafen", "Speyer"],
+      "regions": ["Rheinland-Pfalz (Rhine valley)"],
+      "notes": "Tett på Mannheim."
+    },
+    {
+      "code": "68",
+      "primary_cities": ["Landau", "Neustadt an der Weinstraße"],
+      "regions": ["Rheinland-Pfalz (Palatinate)"],
+      "notes": "Vinregion vest for Rhinen."
+    },
+    {
       "code": "71",
-      "primary_cities": [
-        "Stuttgart",
-        "Ludwigsburg"
-      ],
-      "regions": [
-        "Baden-Württemberg (Neckar-dalen)"
-      ],
+      "primary_cities": ["Stuttgart", "Ludwigsburg"],
+      "regions": ["Baden-Württemberg (Neckar-dalen)"],
       "notes": "Hjem for bilindustrien (Mercedes/Porsche)."
     },
     {
       "code": "72",
-      "primary_cities": [
-        "Karlsruhe",
-        "Freiburg im Breisgau"
-      ],
-      "regions": [
-        "Baden-Württemberg (Rhine valley south)"
-      ],
+      "primary_cities": ["Karlsruhe", "Freiburg im Breisgau"],
+      "regions": ["Baden-Württemberg (Rhine valley south)"],
       "notes": "Mot Sveits og Alsace."
     },
     {
       "code": "73",
-      "primary_cities": [
-        "Ulm",
-        "Augsburg"
-      ],
-      "regions": [
-        "Baden-Württemberg / Bavaria (Danube arc)"
-      ],
+      "primary_cities": ["Ulm", "Augsburg"],
+      "regions": ["Baden-Württemberg / Bavaria (Danube arc)"],
       "notes": "Overgangen mellom Schwaben og Bayern."
     },
     {
+      "code": "74",
+      "primary_cities": ["Tübingen", "Reutlingen"],
+      "regions": ["Baden-Württemberg (Swabian Alb)"],
+      "notes": "Universitets- og forskningsregion sør for Stuttgart."
+    },
+    {
+      "code": "75",
+      "primary_cities": ["Konstanz", "Ravensburg", "Friedrichshafen"],
+      "regions": ["Baden-Württemberg (Lake Constance)"],
+      "notes": "Sørtysk område mot Sveits og Østerrike."
+    },
+    {
+      "code": "76",
+      "primary_cities": ["Offenburg", "Lahr"],
+      "regions": ["Baden-Württemberg (Black Forest west)"],
+      "notes": "Mellom Karlsruhe og Freiburg."
+    },
+    {
+      "code": "77",
+      "primary_cities": ["Donaueschingen", "Villingen-Schwenningen"],
+      "regions": ["Baden-Württemberg (Black Forest)"],
+      "notes": "Helt sørvest i tyskland, men ikke så langt som Basel i Sveits."
+    },
+    {
+      "code": "78",
+      "primary_cities": ["Offenburg", "Kehl"],
+      "regions": ["Baden-Württemberg (south)"],
+      "notes": "VSV for stuttgart, nabo til øst for Strasbourg."
+    },
+    {
+      "code": "79",
+      "primary_cities": ["Heilbronn", "Schwäbisch Hall"],
+      "regions": ["Baden-Württemberg (north)"],
+      "notes": "Vinregion nord for Stuttgart."
+    },
+    {
+      "code": "81",
+      "primary_cities": ["Rosenheim", "Traunstein"],
+      "regions": ["Bavaria (Upper Bavaria)"],
+      "notes": "Mot Salzburg og de bayerske alpene."
+    },
+    {
+      "code": "82",
+      "primary_cities": ["Augsburg", "Landsberg am Lech"],
+      "regions": ["Bavaria (Swabia)"],
+      "notes": "Mellom München og Ulm."
+    },
+    {
+      "code": "83",
+      "primary_cities": ["Garmisch-Partenkirchen"],
+      "regions": ["Bavaria (Alpine region)"],
+      "notes": "Helt sør i Bayern ved foten av Zugspitze mot Østerrike."
+    },
+    {
+      "code": "84",
+      "primary_cities": ["Freising", "Erding"],
+      "regions": ["Bavaria (Upper Bavaria north)"],
+      "notes": "Nord for München."
+    },
+    {
+      "code": "85",
+      "primary_cities": ["Passau"],
+      "regions": ["Bavaria (Lower Bavaria)"],
+      "notes": "Langs Donau helt øst i Bayern på grensen til Østerrike/Tsjekkia."
+    },
+    {
+      "code": "86",
+      "primary_cities": ["Deggendorf", "Straubing"],
+      "regions": ["Bavaria (Lower Bavaria)"],
+      "notes": "Donau-dalen øst for Regensburg."
+    },
+    {
+      "code": "87",
+      "primary_cities": ["Regensburg", "Landshut"],
+      "regions": ["Bavaria (Upper Palatinate)"],
+      "notes": "Historisk by ved Donau."
+    },
+    {
+      "code": "88",
+      "primary_cities": ["Memmingen", "Kempten"],
+      "regions": ["Bavaria (Allgäu)"],
+      "notes": "Fjellregion mot Sveits og Østerrike."
+    },
+    {
       "code": "91",
-      "primary_cities": [
-        "Nuremberg",
-        "Fürth",
-        "Erlangen"
-      ],
-      "regions": [
-        "Bavaria (Franconia)"
-      ],
+      "primary_cities": ["Nuremberg", "Fürth", "Erlangen"],
+      "regions": ["Bavaria (Franconia)"],
       "notes": "Nordbayersk triangel kjent for Nürnberg-messen."
+    },
+    {
+      "code": "92",
+      "primary_cities": ["Bayreuth", "Hof"],
+      "regions": ["Bavaria (Upper Franconia)"],
+      "notes": "Nordøst i Bayern, mot Tsjekkia."
+    },
+    {
+      "code": "93",
+      "primary_cities": ["Weiden", "Amberg"],
+      "regions": ["Bavaria (Upper Palatinate)"],
+      "notes": "Grense mot Böhmen."
+    },
+    {
+      "code": "94",
+      "primary_cities": ["Deggendorf", "Zwiesel"],
+      "regions": ["Bavaria (Bavarian Forest)"],
+      "notes": "Skogsområder øst for Regensburg."
+    },
+    {
+      "code": "95",
+      "primary_cities": ["Coburg", "Bamberg"],
+      "regions": ["Bavaria (Upper Franconia)"],
+      "notes": "Kjent for historiske bykjerner."
+    },
+    {
+      "code": "96",
+      "primary_cities": ["Ansbach", "Schwabach"],
+      "regions": ["Bavaria (Middle Franconia)"],
+      "notes": "Vest for Nürnberg."
+    },
+    {
+      "code": "97",
+      "primary_cities": ["Würzburg", "Schweinfurt"],
+      "regions": ["Bavaria (Lower Franconia)"],
+      "notes": "Langs Main mellom Würzburg og Schweinfurt i Nord-Bayern."
+    },
+    {
+      "code": "98",
+      "primary_cities": ["Rothenburg ob der Tauber", "Bad Mergentheim"],
+      "regions": ["Bavaria / Baden-Württemberg border"],
+      "notes": "Historiske småbyer langs Romantische Straße."
+    },
+    {
+      "code": "99",
+      "primary_cities": ["Straubing", "Cham"],
+      "regions": ["Bavaria (Eastern Bavaria)"],
+      "notes": "Mot Tsjekkisk grense."
     }
   ]
 }

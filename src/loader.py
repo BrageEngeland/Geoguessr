@@ -25,11 +25,17 @@ def available_countries():
         if not codes:
             continue
 
+        code_values = [str(entry.get("code", "")).strip() for entry in codes if entry.get("code")]
+        code_lengths = [len(code) for code in code_values if code]
+
         countries.append(
             {
                 "filename": file.stem,
                 "display_name": data.get("country", file.stem),
                 "count": len(codes),
+                "code_hint": code_values[0] if code_values else "",
+                "code_length_min": min(code_lengths) if code_lengths else None,
+                "code_length_max": max(code_lengths) if code_lengths else None,
             }
         )
     return countries

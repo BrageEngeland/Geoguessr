@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>Telefonkodeoppslag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/lookup.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <a href="/" class="nav-link nav-link--active">Oppslag</a>
+      <a href="/pinpoint" class="nav-link">Pinpoint</a>
+      <a href="/quiz" class="nav-link">Quiz</a>
+    </header>
+
+    <div class="hero">
+      <header class="hero__content">
+        <p class="eyebrow">Telefonkoder</p>
+        <h1>Finn byen og regionen bak en kode</h1>
+        <p class="lede">
+          Velg et land, skriv inn telefonkoden og få svar på sekunder. Når du er
+          klar for å teste deg selv, kan du hoppe til pinpoint-siden.
+        </p>
+        <div class="actions">
+          <a class="button button--ghost" href="/pinpoint">Prøv pinpoint</a>
+        </div>
+      </header>
+    </div>
+
+    <main class="panel">
+      <section class="card">
+        <form id="lookup-form" autocomplete="off">
+          <div class="country-picker">
+            <p class="country-picker__label">Land</p>
+            <div id="lookup-country-grid" class="country-grid"></div>
+          </div>
+
+          <label class="field">
+            Telefonkode
+            <input
+              type="text"
+              id="lookup-code"
+              placeholder="f.eks. 812 eller +7 812"
+              inputmode="numeric"
+              required
+            />
+          </label>
+
+          <button class="button" type="submit">Slå opp</button>
+        </form>
+
+        <p class="status" id="lookup-status">Velg land og skriv inn kode.</p>
+      </section>
+
+      <section id="result" class="result hidden" aria-live="polite">
+        <div class="result__badge">Treff</div>
+        <h2 id="result-title"></h2>
+        <dl>
+          <div>
+            <dt>Region(er)</dt>
+            <dd id="result-regions"></dd>
+          </div>
+          <div>
+            <dt>By(er)</dt>
+            <dd id="result-cities"></dd>
+          </div>
+          <div>
+            <dt>Notat</dt>
+            <dd id="result-notes"></dd>
+          </div>
+          <div>
+            <dt>Vanskelighet</dt>
+            <dd id="result-difficulty"></dd>
+          </div>
+        </dl>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Laget for å kombinere telefonkoder med geografi. Pinpoint finnes på
+      <a href="/pinpoint">/pinpoint</a>.
+    </footer>
+
+    <script type="module" src="/static/lookup.js"></script>
+  </body>
+</html>

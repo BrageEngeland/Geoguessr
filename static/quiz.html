@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Telefonkode-quiz</title>
-  <meta name="description"
-    content="Lær regionskoder for hvert land." />
+  <meta name="description" content="Lær regionskoder for hvert land." />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#6366f1" />
@@ -19,6 +18,11 @@
     <a href="/lookup" class="nav-link">Oppslag</a>
     <a href="/pinpoint" class="nav-link">Pinpoint</a>
     <a href="/quiz" class="nav-link nav-link--active">Quiz</a>
+    <div class="nav-right">
+      <a class="nav-link" href="/stats">
+        <span class="stats-icon" aria-hidden="true">📊</span>
+      </a>
+    </div>
   </header>
 
   <main class="quiz-layout">
@@ -32,6 +36,11 @@
       <div class="country-picker">
         <p class="country-picker__label">Land</p>
         <div id="quiz-country-grid" class="country-grid"></div>
+      </div>
+
+      <div class="mode-picker" id="dataset-picker" hidden>
+        <label for="dataset-select">Øv på</label>
+        <select id="dataset-select"></select>
       </div>
 
       <div class="practice-box">
@@ -107,9 +116,8 @@
         <div class="feedback" id="feedback"></div>
         <div class="notes" id="notes"></div>
 
-        <!-- NY: bilde av region/føderalt subjekt -->
-        <img id="region-img" alt=""
-          style="display:none; max-width:300px; border-radius:12px; border:1px solid #e2e8f0;" />
+        <!-- Galleri med regionbilder -->
+        <div id="region-gallery" class="region-gallery"></div>
       </div>
 
     </section>

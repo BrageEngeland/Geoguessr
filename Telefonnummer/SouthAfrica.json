@@ -1,0 +1,456 @@
+{
+    "country": "South Africa",
+    "country_code": "+27",
+    "codes": [
+        {
+            "code": "10",
+            "primary_cities": [
+                "Johannesburg (Alt)"
+            ],
+            "regions": [
+                "City of Johannesburg Metropolitan Municipality"
+            ],
+            "notes": "Sør-Afrikas største by, sentrum for finans og gullgruvedrift.",
+            "difficulty": "easy"
+        },
+        {
+            "code": "11",
+            "primary_cities": [
+                "Johannesburg",
+                "Ekurhuleni"
+            ],
+            "regions": [
+                "City of Ekurhuleni Metropolitan Municipality"
+            ],
+            "notes": "Største metroområde i landet, i nærheten av OR Tambo flyplass.",
+            "difficulty": "easy"
+        },
+        {
+            "code": "12",
+            "primary_cities": [
+                "Pretoria",
+                "Tshwane"
+            ],
+            "regions": [
+                "City of Tshwane Metropolitan Municipality"
+            ],
+            "notes": "Administrativ hovedstad, kjent for jacarandatrær.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "13",
+            "primary_cities": [
+                "Emalahleni",
+                "Mbombela (Nelspruit)"
+            ],
+            "regions": [
+                "Mpumalanga"
+            ],
+            "notes": "Kullområde og porten til Kruger nasjonalpark.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "14",
+            "primary_cities": [
+                "Lephalale",
+                "Modimolle",
+                "Bela Bela"
+            ],
+            "regions": [
+                "Waterberg District Municipality",
+                "Bojanala Platinum District Municipality"
+            ],
+            "notes": "Nordlige villmarksområder og varme kilder.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "15",
+            "primary_cities": [
+                "Polokwane",
+                "Tzaneen"
+            ],
+            "regions": [
+                "Mopani District Municipality",
+                "Vhembe District Municipality",
+                "Capricorn District Municipality"
+            ],
+            "notes": "Nordligste provins, nær Zimbabwe-grensen.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "16",
+            "primary_cities": [
+                "Vereeniging",
+                "Heidelberg"
+            ],
+            "regions": [
+                "Sedibeng District Municipality"
+            ],
+            "notes": "Vaal-triangle, industriregion sør for Johannesburg.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "17",
+            "primary_cities": [
+                "Secunda",
+                "Standerton"
+            ],
+            "regions": [
+                "Gert Sibande District Municipality"
+            ],
+            "notes": "Sasol-byen og kullkraftverk i innlandet.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "18",
+            "primary_cities": [
+                "Klerksdorp",
+                "Potchefstroom"
+            ],
+            "regions": [
+                "Dr Kenneth Kaunda District Municipality",
+                "Ngaka Modiri Molema District Municipality"
+            ],
+            "notes": "Historisk gruveområde og universitetsby.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "21",
+            "primary_cities": [
+                "Cape Town"
+            ],
+            "regions": [
+                "City of Cape Town"
+            ],
+            "notes": "Lovgivende hovedstad ved Table Mountain.",
+            "difficulty": "easy"
+        },
+        {
+            "code": "22",
+            "primary_cities": [
+                "Vredenburg",
+                "West Coast"
+            ],
+            "regions": [
+                "West Coast District Municipality"
+            ],
+            "notes": "Kystområde nord for Cape Town.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "23",
+            "primary_cities": [
+                "Worcester",
+                "Robertson"
+            ],
+            "regions": [
+                "Cape Winelands District Municipality",
+                "Central Karoo District Municipality"
+            ],
+            "notes": "Vinregion i ‘Klein Karoo’.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "27",
+            "primary_cities": [
+                "Calvinia",
+                "Namaqualand"
+            ],
+            "regions": [
+                "Namakwa District Municipality"
+            ],
+            "notes": "Kjent for vårblomster og ørkenlandskap.",
+            "difficulty": "hard"
+        },
+        {
+            "code": "28",
+            "primary_cities": [
+                "Hermanus",
+                "Swellendam"
+            ],
+            "regions": [
+                "Overberg District Municipality"
+            ],
+            "notes": "Kystbyer kjent for hvalsafari.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "31",
+            "primary_cities": [
+                "Durban"
+            ],
+            "regions": [
+                "eThekwini Metropolitan Municipality"
+            ],
+            "notes": "Stor havneby ved Indiahavet.",
+            "difficulty": "easy"
+        },
+        {
+            "code": "32",
+            "primary_cities": [
+                "Ballito",
+                "Stanger"
+            ],
+            "regions": [
+                "iLembe District Municipality"
+            ],
+            "notes": "Nord for Durban, populær ferieby.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "33",
+            "primary_cities": [
+                "Pietermaritzburg"
+            ],
+            "regions": [
+                "Umgungundlovu District Municipality"
+            ],
+            "notes": "Tidligere hovedstad i Natal-provinsen.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "34",
+            "primary_cities": [
+                "Newcastle",
+                "Vryheid"
+            ],
+            "regions": [
+                "Amajuba District Municipality"
+            ],
+            "notes": "Industriområde nær grensen til Free State.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "35",
+            "primary_cities": [
+                "Richards Bay",
+                "Zululand"
+            ],
+            "regions": [
+                "Umkhanyakude District Municipality"
+            ],
+            "notes": "Stor havn nord for Durban.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "36",
+            "primary_cities": [
+                "Ladysmith",
+                "Drakensberg"
+            ],
+            "regions": [
+                "Uthukela District Municipality"
+            ],
+            "notes": "Kjent for fjell og historie fra Boerkrigene.",
+            "difficulty": "hard"
+        },
+        {
+            "code": "39",
+            "primary_cities": [
+                "Port Shepstone"
+            ],
+            "regions": [
+                "Ugu District Municipality",
+                "Harry Gwala District Municipality",
+                "Alfred Nzo District Municipality",
+                "OR Tambo District Municipality"
+            ],
+            "notes": "‘Wild Coast’ med tropiske strender.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "40",
+            "primary_cities": [
+                "Alice",
+                "Bhisho"
+            ],
+            "regions": [
+                "Buffalo City Metropolitan Municipality"
+            ],
+            "notes": "2 små byer inne i Buffalo.",
+            "difficulty": "hard"
+        },
+        {
+            "code": "41",
+            "primary_cities": [
+                "Gqeberha (Port Elizabeth)",
+                "Uitenhage"
+            ],
+            "regions": [
+                "Nelson Mandela Bay Metropolitan Municipality"
+            ],
+            "notes": "Stor havneby på sørøstkysten.",
+            "difficulty": "easy"
+        },
+        {
+            "code": "42",
+            "primary_cities": [
+                "Jeffreys Bay",
+                "Humansdorp"
+            ],
+            "regions": [
+                "Sarah Baartman District Municipality"
+            ],
+            "notes": "Helt sørlig del.",
+            "difficulty": "easy"
+        },
+        {
+            "code": "43",
+            "primary_cities": [
+                "Gqeberha (Port Elizabeth)",
+                "Uitenhage"
+            ],
+            "regions": [
+                "Buffalo City Metropolitan Municipality"
+            ],
+            "notes": "Stor havneby på sørøstkysten.",
+            "difficulty": "easy"
+        },
+        {
+            "code": "44",
+            "primary_cities": [
+                "George",
+                "Knysna",
+                "Mossel Bay"
+            ],
+            "regions": [
+                "Garden Route District Municipality"
+            ],
+            "notes": "Langs kysten, vest for Port Elizabeth (Gqeberha).",
+            "difficulty": "easy"
+        },
+        {
+            "code": "45",
+            "primary_cities": [
+                "Queenstown"
+            ],
+            "regions": [
+                "Chris Hani District Municipality",
+                "Joe Gqabi District Municipality"
+            ],
+            "notes": "Rett under Lesotho, østlig del av Chris Hani, østlig del av Joe Gqabi.",
+            "difficulty": "hard"
+        },
+        {
+            "code": "46",
+            "primary_cities": [
+                "Bathurst",
+                "Grahamstown",
+                "Kenton"
+            ],
+            "regions": [
+                "Eastern Cape tegning"
+            ],
+            "notes": "Region langs kysten, øst for Port Elizabeth (Gqeberha).",
+            "difficulty": "hard"
+        },
+        {
+            "code": "47",
+            "primary_cities": [
+                "Butterworth",
+                "Mthatha"
+            ],
+            "regions": [
+                "Amathole District Municipality"
+            ],
+            "notes": "Langs kysten, omkranser East London.",
+            "difficulty": "hard"
+        },
+        {
+            "code": "48",
+            "primary_cities": [
+                "Cradock",
+                "Steynsburg"
+            ],
+            "regions": [
+                "Chris Hani District Municipality",
+                "Joe Gqabi District Municipality"
+            ],
+            "notes": "Rett under Bloemfontein, vestlig del av Joe Gqabi, vestlig del av Chris Hani.",
+            "difficulty": "hard"
+        },
+        {
+            "code": "49",
+            "primary_cities": [
+                "Graff-Reinet"
+            ],
+            "regions": [
+                "Sarah Baartman District Municipality"
+            ],
+            "notes": "Stor region over Gqberha, ikke helt sør i bildet.",
+            "difficulty": "hard"
+        },
+        {
+            "code": "51",
+            "primary_cities": [
+                "Bloemfontein",
+                "Trompsburg"
+            ],
+            "regions": [
+                "Xhariep District Municipality",
+                "Thabo Mofutsanyana District Municipality",
+                "Mangaung Metropolitan Municipality"
+            ],
+            "notes": "Ikke så langt nord som Betlehem (sørlige del av Thabo Mofutsanyana), hele Xhariep og Mangaung.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "53",
+            "primary_cities": [
+                "Kimberley"
+            ],
+            "regions": [
+                "ZF Mgcawu District Municipality",
+                "Pixley ka Seme District Municipality",
+                "Frances Baard District Municipality",
+                "John Taolo Gaetsewe District Municipality"
+            ],
+            "notes": "Alle 4 regionene untatt ZF, kun østlige del (øst for midten).",
+            "difficulty": "easy"
+        },
+        {
+            "code": "54",
+            "primary_cities": [
+                "Upington"
+            ],
+            "regions": [
+                "ZF Mgcawu District Municipality"
+            ],
+            "notes": "Midt - vestlige del av Zf Mgcawu.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "56",
+            "primary_cities": [
+                "Kroonstad"
+            ],
+            "regions": [
+                "Fezile Dabi District Municipality"
+            ],
+            "notes": "Mellom Johannesburg og Bloemfontein.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "57",
+            "primary_cities": [
+                "Welkom"
+            ],
+            "regions": [
+                "Lejweleputswa District Municipality"
+            ],
+            "notes": "Kun sørøstlige del.",
+            "difficulty": "medium"
+        },
+        {
+            "code": "58",
+            "primary_cities": [
+                "Bethlehem"
+            ],
+            "regions": [
+                "Thabo Mofutsanyana District Municipality"
+            ],
+            "notes": "Fjellby nær grensen til Lesotho i nord, nord i Thabo Mofutsanyana (nord fom. Bethlehem).",
+            "difficulty": "medium"
+        }
+    ]
+}

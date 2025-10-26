@@ -46,6 +46,12 @@ body {
   color: #fff;
 }
 
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
 .pinpoint {
   display: grid;
   grid-template-columns: 320px 1fr;

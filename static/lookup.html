@@ -1,89 +1,97 @@
 <!doctype html>
 <html lang="no">
-  <head>
-    <meta charset="utf-8" />
-    <title>Telefonkodeoppslag</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#6366f1" />
-    <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
-    <link rel="manifest" href="/static/manifest.webmanifest" />
-    <link rel="stylesheet" href="/static/lookup.css" />
-  </head>
-  <body>
-    <header class="top-nav">
-      <a href="/lookup" class="nav-link nav-link--active">Oppslag</a>
-      <a href="/pinpoint" class="nav-link">Pinpoint</a>
-      <a href="/quiz" class="nav-link">Quiz</a>
-    </header>
 
-    <div class="hero">
-      <header class="hero__content">
-        <p class="eyebrow">Telefonkoder</p>
-        <h1>Finn byen og regionen bak en kode</h1>
-        <p class="lede">
-          Velg et land, skriv inn telefonkoden og få svar på sekunder. Når du er
-          klar for å teste deg selv, kan du hoppe til pinpoint-siden.
-        </p>
-        <div class="actions">
-          <a class="button button--ghost" href="/pinpoint">Prøv pinpoint</a>
-        </div>
-      </header>
+<head>
+  <meta charset="utf-8" />
+  <title>Telefonkodeoppslag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
+  <link rel="manifest" href="/static/manifest.webmanifest" />
+  <link rel="stylesheet" href="/static/lookup.css" />
+</head>
+
+<body>
+  <header class="top-nav">
+    <a href="/lookup" class="nav-link nav-link--active">Oppslag</a>
+    <a href="/pinpoint" class="nav-link">Pinpoint</a>
+    <a href="/quiz" class="nav-link">Quiz</a>
+    <div class="nav-right">
+      <a class="nav-link" href="/stats">
+        <span class="stats-icon" aria-hidden="true">📊</span>
+      </a>
     </div>
+  </header>
 
-    <main class="panel">
-      <section class="card">
-        <form id="lookup-form" autocomplete="off">
-          <div class="country-picker">
-            <p class="country-picker__label">Land</p>
-            <div id="lookup-country-grid" class="country-grid"></div>
-          </div>
+  <div class="hero">
+    <header class="hero__content">
+      <p class="eyebrow">Telefonkoder</p>
+      <h1>Finn byen og regionen bak en kode</h1>
+      <p class="lede">
+        Velg et land, skriv inn telefonkoden og få svar på sekunder. Når du er
+        klar for å teste deg selv, kan du hoppe til pinpoint-siden.
+      </p>
+      <div class="actions">
+        <a class="button button--ghost" href="/pinpoint">Prøv pinpoint</a>
+      </div>
+    </header>
+  </div>
 
-          <label class="field">
-            Telefonkode
-            <input
-              type="text"
-              id="lookup-code"
-              placeholder="f.eks. 812 eller +7 812"
-              inputmode="numeric"
-              required
-            />
-          </label>
+  <main class="panel">
+    <section class="card">
+      <form id="lookup-form" autocomplete="off">
+        <div class="country-picker">
+          <p class="country-picker__label">Land</p>
+          <div id="lookup-country-grid" class="country-grid"></div>
+        </div>
 
-          <button class="button" type="submit">Slå opp</button>
-        </form>
+        <div class="mode-picker" id="dataset-picker" hidden>
+          <label for="lookup-dataset-select">Datasett</label>
+          <select id="lookup-dataset-select"></select>
+        </div>
 
-        <p class="status" id="lookup-status">Velg land og skriv inn kode.</p>
-      </section>
+        <label class="field">
+          Telefonkode
+          <input type="text" id="lookup-code" placeholder="f.eks. 812 eller +7 812" inputmode="numeric" required />
+        </label>
 
-      <section id="result" class="result hidden" aria-live="polite">
-        <div class="result__badge">Treff</div>
-        <h2 id="result-title"></h2>
-        <dl>
-          <div>
-            <dt>Region(er)</dt>
-            <dd id="result-regions"></dd>
-          </div>
-          <div>
-            <dt>By(er)</dt>
-            <dd id="result-cities"></dd>
-          </div>
-          <div>
-            <dt>Notat</dt>
-            <dd id="result-notes"></dd>
-          </div>
-          <div>
-            <dt>Vanskelighet</dt>
-            <dd id="result-difficulty"></dd>
-          </div>
-        </dl>
-      </section>
-    </main>
+        <button class="button" type="submit">Slå opp</button>
+      </form>
 
-    <footer class="footer">
-      Laget for å kombinere telefonkoder med geografi. Pinpoint finnes på
-      <a href="/pinpoint">/pinpoint</a>.
-    </footer>
+      <p class="status" id="lookup-status">Velg land og skriv inn kode.</p>
+    </section>
 
-    <script type="module" src="/static/lookup.js"></script>
-  </body>
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="result__badge">Treff</div>
+      <h2 id="result-title"></h2>
+      <dl>
+        <div>
+          <dt>Region(er)</dt>
+          <dd id="result-regions"></dd>
+        </div>
+        <div>
+          <dt>By(er)</dt>
+          <dd id="result-cities"></dd>
+        </div>
+        <div>
+          <dt>Notat</dt>
+          <dd id="result-notes"></dd>
+        </div>
+        <div>
+          <dt>Vanskelighet</dt>
+          <dd id="result-difficulty"></dd>
+        </div>
+      </dl>
+      <div id="result-images" class="result-images"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Laget for å kombinere telefonkoder med geografi. Pinpoint finnes på
+    <a href="/pinpoint">/pinpoint</a>.
+  </footer>
+
+  <script type="module" src="/static/lookup.js"></script>
+</body>
+
 </html>

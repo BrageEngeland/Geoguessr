@@ -2,16 +2,44 @@ import json
 from pathlib import Path
 import re
 import sys
-from typing import Optional, Tuple
+from typing import List, Optional, Tuple
 
 
-def region_to_filename(region_name: str) -> str:
-    """Samme logikk som i quiz.js: lager forventet bildefilnavn fra regionnavn."""
+def _region_to_filename(region_name: str) -> str:
+    """Samme slugging som i quiz.js: lager forventet bildefilnavn fra regionnavn."""
     name = region_name.lower()
     name = re.sub(r"[()\s,.'-]+", "_", name)
     name = re.sub(r"_+", "_", name)
     name = re.sub(r"^_+|_+$", "", name)
-    return f"{name}.png"
+    return f"{name}.png" if name else ""
+
+
+def _normalize_image_name(value: str) -> str:
+    """Trim + legg til .png dersom brukeren bare har gitt et slug."""
+    if not value:
+        return ""
+    trimmed = value.strip()
+    if not trimmed:
+        return ""
+    if re.search(r"\.[a-z0-9]{2,4}$", trimmed, re.IGNORECASE):
+        return trimmed
+    return f"{trimmed}.png"
+
+
+def gather_image_candidates(entry: dict) -> List[str]:
+    """
+    Returnerer alle filnavn vi forventer for en kode.
+    1) Bruk eksplisitt `images` hvis satt.
+    2) Ellers: slug alle regionnavn (kan være >1).
+    """
+    images = entry.get("images") or []
+    if images:
+        return [name for name in (_normalize_image_name(img) for img in images) if name]
+
+    regions = entry.get("regions") or []
+    return [
+        name for name in (_region_to_filename(region) for region in regions) if name
+    ]
 
 
 def _normalize_country_file(country_arg: Optional[str]) -> Tuple[str, Path]:
@@ -19,31 +47,41 @@ def _normalize_country_file(country_arg: Optional[str]) -> Tuple[str, Path]:
     Tar imot brukerinndata (med/uten .json) og returnerer (filnavn, Path stem).
     """
     if not country_arg:
-        country_arg = "Kazakhstan"
+        country_arg = "SouthAfrica"
     country_path = Path(country_arg)
     stem = country_path.stem  # håndterer ".json" hvis oppgitt
     filename = f"{stem}.json"
     return stem, Path(filename)
 
 
-def check_region_images(country_arg="Kazakhstan"):
+def check_region_images(country_arg="SouthAfrica"):
     # Finn prosjektroten (mappen over src/)
     base_dir = Path(__file__).resolve().parent.parent
 
     country_stem, filename = _normalize_country_file(country_arg)
 
     data_path = base_dir / "Telefonnummer" / filename
-    img_dir = base_dir / "static" / "maps" / country_stem
+    primary_dir = base_dir / "static" / "maps" / country_stem
+    fallback_dir = base_dir / "static" / "maps" / country_stem.split("-", 1)[0]
+
+    image_dirs = []
+    for candidate in [primary_dir, fallback_dir]:
+        if candidate and candidate.exists() and candidate not in image_dirs:
+            image_dirs.append(candidate)
 
     print(f"--- DEBUG: Bilde-sjekk for {filename.name} ---")
     print(f"📁 JSON-fil: {data_path}")
-    print(f"🗺️  Bildemappe: {img_dir}")
+    if image_dirs:
+        for idx, folder in enumerate(image_dirs, start=1):
+            print(f"🗺️  Bildemappe {idx}: {folder}")
+    else:
+        print("🗺️  Fant ingen bildemapper som eksisterer.")
 
     if not data_path.exists():
         print("❌ Fant ikke JSON-filen.")
         return
-    if not img_dir.exists():
-        print("❌ Fant ikke bildemappen.")
+    if not image_dirs:
+        print("❌ Fant ingen gyldige bildemapper.")
         return
 
     with data_path.open("r", encoding="utf-8") as f:
@@ -55,20 +93,23 @@ def check_region_images(country_arg="Kazakhstan"):
 
     for e in entries:
         regions = e.get("regions") or []
-        if not regions:
+        image_files = gather_image_candidates(e)
+
+        if not image_files:
             continue
 
-        # vi bruker bare første region for bildet, samme som frontend
-        region = regions[0]
-        filename = region_to_filename(region)
-        file_path = img_dir / filename
-        checked_pairs.append((region, filename, file_path.exists()))
-
-        if not file_path.exists():
-            missing.append(filename)
+        for idx, filename in enumerate(image_files):
+            exists = any((folder / filename).exists() for folder in image_dirs)
+            region_label = (
+                regions[idx] if idx < len(regions) else regions[0] if regions else ""
+            )
+            checked_pairs.append((region_label or filename, filename, exists))
+            if not exists:
+                missing.append(filename)
 
     print(f"\n🔍 Antall oppføringer i JSON: {len(entries)}")
-    print(f"📸 Antall faktiske .png i maps-mappa: {len(list(img_dir.glob('*.png')))}")
+    total_png = sum(len(list(folder.glob("*.png"))) for folder in image_dirs)
+    print(f"📸 Antall faktiske .png i kartmapper: {total_png}")
 
     # Vis en liste over hva vi forventer
     print("\nForventede filnavn per region (første region pr kode):")
@@ -87,5 +128,5 @@ def check_region_images(country_arg="Kazakhstan"):
 
 
 if __name__ == "__main__":
-    arg = sys.argv[1] if len(sys.argv) > 1 else "Kazakhstan"
+    arg = sys.argv[1] if len(sys.argv) > 1 else "Russia"
     check_region_images(arg)

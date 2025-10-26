@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Statistikk • Telefonkode-quiz</title>
+
+  <!-- bruk samme css som quiz siden -->
+  <link rel="stylesheet" href="/static/quiz.css" />
+  <link rel="stylesheet" href="/static/stats.css" />
+</head>
+<body>
+
+  <header class="top-nav">
+    <a class="nav-link" href="/lookup">Oppslag</a>
+    <a class="nav-link" href="/pinpoint">Pinpoint</a>
+    <a class="nav-link" href="/quiz">Quiz</a>
+    <div class="nav-right">
+      <a class="nav-link nav-link--active" href="/stats">
+        <span class="stats-icon" aria-hidden="true">📊</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="stats-page">
+    <section class="stats-card">
+      <h1 class="stats-title">Din statistikk</h1>
+
+      <div class="stats-global-row">
+        <div class="stats-box">
+          <div class="stats-box-label">Totalt riktig</div>
+          <div class="stats-box-value" id="stat-global-accuracy">0%</div>
+          <div class="stats-box-sub" id="stat-global-score">0 / 0</div>
+        </div>
+
+        <div class="stats-box">
+          <div class="stats-box-label">Beste streak</div>
+          <div class="stats-box-value" id="stat-global-streak">0</div>
+          <div class="stats-box-sub">på tvers av alle land</div>
+        </div>
+      </div>
+
+      <h2 class="stats-subtitle">Per land</h2>
+      <div id="stat-country-list" class="country-stats-list">
+        <!-- fylles av stats.js -->
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/stats.js"></script>
+</body>
+</html>

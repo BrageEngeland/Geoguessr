@@ -1,0 +1,62 @@
+{
+  "country": "South Africa",
+  "country_code": "R",
+  "dataset": "Regional Roads (R-ruter)",
+  "dataset_short_label": "R-veier",
+  "codes": [
+    {
+      "code": ["R300–R329", "360-370"],
+      "regions": ["Western Cape"],
+      "notes": "Dekker Cape Town og sørvestlige kystområder.",
+      "difficulty": "medium"
+    },
+    {
+      "code": ["R330–R352", "390-410"],
+      "regions": ["Eastern Cape"],
+      "notes": "Ved port Elizabeth-området eller sørvest for Lesotho.",
+      "difficulty": "medium"
+    },
+    {
+      "code": ["350-369", "R380–R390"],
+      "regions": ["Northern Cape"],
+      "notes": "Området vest for Upington mot grensen til Namibia.",
+      "difficulty": "medium"
+    },
+    {
+      "code": "R451–R573",
+      "regions": ["Gauteng"],
+      "notes": "Johannesburg-området.",
+      "difficulty": "easy"
+    },
+    {
+      "code": "R501–R511",
+      "regions": ["North West"],
+      "notes": "På grensen til Botswana, sør for Gaborone.",
+      "difficulty": "medium"
+    },
+    {
+      "code": "R510–R532",
+      "regions": ["Limpopo"],
+      "notes": "R-veier helt nordøst i landet",
+      "difficulty": "medium"
+    },
+    {
+      "code": "R533–R546",
+      "regions": ["Mpumalanga"],
+      "notes": "Omkranser Eswatini fra Vest til Nordøst med klokken.",
+      "difficulty": "medium"
+    },
+    {
+      "code": "R600–R622",
+      "regions": ["KwaZulu-Natal"],
+      "notes": "Langs østkysten og Durban-området.",
+      "difficulty": "easy"
+    },
+    {
+      "code": "R700–R730",
+      "regions": ["Free State"],
+      "notes": "omkranser Lesotho fra vest til øst med klokken.",
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,16 +1,17 @@
-const COUNTRY_FLAGS = {
-  Russia: "🇷🇺",
-  Germany: "🇩🇪",
-  France: "🇫🇷",
-  USA: "🇺🇸",
-  Canada: "🇨🇦",
-  Mexico: "🇲🇽",
-  Turkey: "🇹🇷",
-  Brazil: "🇧🇷",
-  Brasil: "🇧🇷",
-  Kazakhstan: "🇰🇿",
-  SouthAfrica: "🇿🇦",
-  "South Africa": "🇿🇦",
+const FLAG_PATHS = {
+  Brazil: "/static/icons/flags/br.svg",
+  Brasil: "/static/icons/flags/br.svg",
+  Canada: "/static/icons/flags/ca.svg",
+  France: "/static/icons/flags/fr.svg",
+  Germany: "/static/icons/flags/de.svg",
+  Kazakhstan: "/static/icons/flags/kz.svg",
+  Mexico: "/static/icons/flags/mx.svg",
+  Russia: "/static/icons/flags/ru.svg",
+  Turkey: "/static/icons/flags/tr.svg",
+  USA: "/static/icons/flags/us.svg",
+  "United States": "/static/icons/flags/us.svg",
+  SouthAfrica: "/static/icons/flags/za.svg",
+  "South Africa": "/static/icons/flags/za.svg",
 };
 
 const countryGrid = document.getElementById("quiz-country-grid");
@@ -24,16 +25,20 @@ const form = document.getElementById("answer-form");
 const inputEl = document.getElementById("answer-input");
 const skipBtn = document.getElementById("skip-btn");
 const nextBtn = document.getElementById("next-btn");
-const regionImg = document.getElementById("region-img");
+const regionGallery = document.getElementById("region-gallery");
 const practiceBox = document.querySelector(".practice-box");
 const practiceToggleEl = document.getElementById("practice-toggle");
 const practiceDiffEl = document.getElementById("practice-diff");
 const practiceRegionEl = document.getElementById("practice-region");
 const practiceNoteEl = document.getElementById("practice-note");
+const datasetPickerEl = document.getElementById("dataset-picker");
+const datasetSelectEl = document.getElementById("dataset-select");
 
 const state = {
   country: "Russia",
-  countries: [],
+  countryGroups: [],
+  countryGroupKey: "Russia",
+  datasetSelections: {},
   question: null,
   questionType: "region",
   score: 0,
@@ -49,7 +54,85 @@ const state = {
 
 init();
 
+function getFlagPath(label, fallback) {
+  const normalized = label?.replace(/\s*\(.*\)$/, "");
+  return (
+    FLAG_PATHS[label] ||
+    FLAG_PATHS[normalized] ||
+    FLAG_PATHS[fallback] ||
+    null
+  );
+}
+
+function renderFlag(label, fallback) {
+  const path = getFlagPath(label, fallback);
+  if (!path) {
+    return "🌍";
+  }
+  return `<img src="${path}" alt="" loading="lazy" decoding="async" />`;
+}
+
+function loadStats() {
+  try {
+    const raw = localStorage.getItem("quizStats");
+    if (!raw) {
+      return { global: { asked: 0, correct: 0, bestStreak: 0 } };
+    }
+    return JSON.parse(raw);
+  } catch (e) {
+    console.warn("Kunne ikke lese quizStats fra localStorage:", e);
+    return { global: { asked: 0, correct: 0, bestStreak: 0 } };
+  }
+}
+
+function saveStats(stats) {
+  try {
+    localStorage.setItem("quizStats", JSON.stringify(stats));
+  } catch (e) {
+    console.warn("Kunne ikke lagre quizStats:", e);
+  }
+}
+
+
+function recordAnswer(countryName, wasCorrect, currentStreak) {
+  const stats = loadStats();
+
+  // init global
+  if (!stats.global) {
+    stats.global = { asked: 0, correct: 0, bestStreak: 0 };
+  }
+  // init land
+  if (!stats[countryName]) {
+    stats[countryName] = { asked: 0, correct: 0, bestStreak: 0 };
+  }
+
+  // øk tellinger
+  stats.global.asked += 1;
+  stats[countryName].asked += 1;
+
+  if (wasCorrect) {
+    stats.global.correct += 1;
+    stats[countryName].correct = (stats[countryName].correct || 0) + 1;
+  } else {
+    // sørg for felt finnes
+    stats.global.correct = stats.global.correct || 0;
+    stats[countryName].correct = stats[countryName].correct || 0;
+  }
+
+  // streak-highscore
+  if (currentStreak > (stats.global.bestStreak || 0)) {
+    stats.global.bestStreak = currentStreak;
+  }
+  if (currentStreak > (stats[countryName].bestStreak || 0)) {
+    stats[countryName].bestStreak = currentStreak;
+  }
+
+  saveStats(stats);
+}
+
+
 async function init() {
+  setupDatasetPicker();
   await loadCountries();
   updatePracticeControls();
   await fetchQuestion();
@@ -81,16 +164,31 @@ function setupPracticeHandlers() {
   });
 }
 
+function setupDatasetPicker() {
+  if (!datasetSelectEl) return;
+  datasetSelectEl.addEventListener("change", () => {
+    const nextValue = datasetSelectEl.value;
+    if (nextValue && nextValue !== state.country) {
+      changeDataset(nextValue);
+    }
+  });
+}
+
 async function loadCountries() {
   try {
     const res = await fetch("/api/countries");
     if (!res.ok) throw new Error("Kunne ikke hente land");
-    state.countries = await res.json();
-    const current = state.countries.find((c) => c.filename === state.country);
-    if (!current) {
-      state.country = state.countries[0]?.filename || "";
+    const rawCountries = await res.json();
+    state.countryGroups = buildCountryGroups(rawCountries);
+    if (!state.countryGroups.length) {
+      throw new Error("Fant ingen land å øve på.");
     }
+    if (!state.countryGroups.some((group) => group.key === state.countryGroupKey)) {
+      state.countryGroupKey = state.countryGroups[0].key;
+    }
+    ensureDatasetSelection();
     renderCountryGrid();
+    renderDatasetOptions();
   } catch (error) {
     console.error(error);
     promptEl.textContent = "Klarte ikke å laste land.";
@@ -99,35 +197,27 @@ async function loadCountries() {
 
 function renderCountryGrid() {
   countryGrid.innerHTML = "";
-  state.countries.forEach((country) => {
+  state.countryGroups.forEach((group) => {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "country-tile";
-    const isActive = country.filename === state.country;
+    const isActive = group.key === state.countryGroupKey;
     if (isActive) {
       button.classList.add("country-tile--active");
     }
-    const count = country.count || 0;
+    const count = group.count || 0;
     if (count === 0) {
       button.classList.add("country-tile--disabled");
       button.title = "Ingen koder ennå";
     }
     button.innerHTML = `
-      <span class="country-tile__flag">${
-        COUNTRY_FLAGS[country.display_name] ||
-        COUNTRY_FLAGS[country.filename] ||
-        "🌍"
-      }</span>
-      <span class="country-tile__name">${country.display_name}</span>
+      <span class="country-tile__flag">${flagForGroup(group)}</span>
+      <span class="country-tile__name">${group.label}</span>
       <span class="country-tile__count">${count}</span>
     `;
     button.addEventListener("click", () => {
-      if (country.filename !== state.country) {
-        state.country = country.filename;
-        resetScore();
-        renderCountryGrid();
-        updatePracticeControls();
-        fetchQuestion();
+      if (group.key !== state.countryGroupKey) {
+        selectCountryGroup(group.key);
       }
     });
     countryGrid.appendChild(button);
@@ -138,8 +228,7 @@ async function fetchQuestion() {
   feedbackEl.textContent = "";
   feedbackEl.className = "feedback";
   notesEl.textContent = "";
-  regionImg.style.display = "none";
-  regionImg.src = "";
+  clearRegionGallery();
   nextBtn.style.display = "none";
   state.answered = false;
   state.waiting = false;
@@ -233,9 +322,12 @@ async function submitGuess(guess) {
     const result = await res.json();
 
     state.asked += 1;
+    let wasCorrect = false;
+
     if (result.correct) {
       state.score += 1;
       state.streak += 1;
+      wasCorrect = true;
       feedbackEl.textContent = `Riktig! ${result.regions.join(", ")}.`;
       feedbackEl.className = "feedback good";
     } else {
@@ -243,6 +335,11 @@ async function submitGuess(guess) {
       feedbackEl.textContent = `Feil. Det riktige var ${result.regions.join(", ")}.`;
       feedbackEl.className = "feedback bad";
     }
+
+
+    const statsKey = getCurrentDatasetMeta()?.stats_key || state.country;
+    recordAnswer(statsKey, wasCorrect, state.streak);
+
 
     const lines = [];
     if (result.primary_cities && result.primary_cities.length) {
@@ -255,7 +352,10 @@ async function submitGuess(guess) {
       lines.push("Notat: " + result.notes);
     }
     notesEl.textContent = lines.join("\n");
-    showRegionImage(result.regions);
+    showRegionImages({
+      regions: result.regions,
+      images: result.images && result.images.length ? result.images : state.question?.images,
+    });
 
     inputEl.disabled = true;
     skipBtn.disabled = true;
@@ -310,7 +410,7 @@ function setupAutoShutdown() {
 
 function updatePracticeControls() {
   if (!practiceBox) return;
-  const meta = getCurrentCountryMeta();
+  const meta = getCurrentDatasetMeta();
   const diffOptions = meta?.difficulty_levels || [];
   const regionOptions = meta?.region_groups || [];
   const hasOptions = diffOptions.length > 0 || regionOptions.length > 0;
@@ -364,8 +464,115 @@ function updatePracticeControls() {
   practiceToggleEl.checked = state.practiceMode && !practiceToggleEl.disabled;
 }
 
-function getCurrentCountryMeta() {
-  return state.countries.find((c) => c.filename === state.country) || null;
+function getCurrentGroup() {
+  return state.countryGroups.find((group) => group.key === state.countryGroupKey) || null;
+}
+
+function getCurrentDatasetMeta() {
+  const group = getCurrentGroup();
+  if (!group) return null;
+  return group.datasets.find((dataset) => dataset.filename === state.country) || null;
+}
+
+function buildCountryGroups(entries) {
+  const map = new Map();
+  entries.forEach((entry) => {
+    const key = entry.group_key || entry.filename;
+    if (!map.has(key)) {
+      map.set(key, {
+        key,
+        label: entry.group_label || entry.display_name || key,
+        datasets: [],
+        defaultDataset: null,
+        count: 0,
+      });
+    }
+    const group = map.get(key);
+    group.datasets.push(entry);
+    if (!group.defaultDataset || entry.is_default_dataset) {
+      group.defaultDataset = entry;
+    }
+  });
+
+  return Array.from(map.values()).map((group) => {
+    group.datasets.sort((a, b) => {
+      if (a.is_default_dataset === b.is_default_dataset) {
+        return a.dataset_label.localeCompare(b.dataset_label);
+      }
+      return a.is_default_dataset ? -1 : 1;
+    });
+    group.count =
+      group.defaultDataset?.count ??
+      group.datasets[0]?.count ??
+      0;
+    return group;
+  });
+}
+
+function ensureDatasetSelection() {
+  const group = getCurrentGroup();
+  if (!group) {
+    state.country = "";
+    return;
+  }
+  const preferred = state.datasetSelections[group.key];
+  const match = group.datasets.find((dataset) => dataset.filename === preferred);
+  const fallback = match || group.defaultDataset || group.datasets[0];
+  if (fallback) {
+    state.country = fallback.filename;
+    state.datasetSelections[group.key] = fallback.filename;
+  } else {
+    state.country = "";
+  }
+}
+
+function selectCountryGroup(groupKey) {
+  state.countryGroupKey = groupKey;
+  ensureDatasetSelection();
+  renderCountryGrid();
+  renderDatasetOptions();
+  resetScore();
+  updatePracticeControls();
+  fetchQuestion();
+}
+
+function changeDataset(datasetFilename) {
+  state.country = datasetFilename;
+  const group = getCurrentGroup();
+  if (group) {
+    state.datasetSelections[group.key] = datasetFilename;
+  }
+  renderDatasetOptions();
+  resetScore();
+  updatePracticeControls();
+  fetchQuestion();
+}
+
+function renderDatasetOptions() {
+  if (!datasetSelectEl || !datasetPickerEl) return;
+  const group = getCurrentGroup();
+  if (!group) {
+    datasetPickerEl.hidden = true;
+    return;
+  }
+  datasetSelectEl.innerHTML = "";
+  group.datasets.forEach((dataset) => {
+    const option = document.createElement("option");
+    option.value = dataset.filename;
+    option.textContent =
+      dataset.dataset_display_label ||
+      dataset.dataset_label ||
+      dataset.display_name;
+    datasetSelectEl.appendChild(option);
+  });
+  datasetSelectEl.value = state.country || group.datasets[0]?.filename || "";
+  datasetSelectEl.disabled = group.datasets.length <= 1;
+  datasetPickerEl.hidden = group.datasets.length <= 1;
+}
+
+function flagForGroup(group) {
+  const label = group?.label || "";
+  return renderFlag(label, group?.key);
 }
 
 function populateSelect(selectEl, options, desiredValue, stateKey) {
@@ -404,40 +611,145 @@ function capitalize(word) {
 }
 
 function regionNameToImage(regionName) {
-  return (
-    regionName
-      ?.toLowerCase()
-      .replace(/[()\s,.'-]+/g, "_")
-      .replace(/_+/g, "_")
-      .replace(/^_+|_+$/g, "") + ".png"
-  );
+  if (!regionName) return "";
+  const slug = regionName
+    .toLowerCase()
+    .replace(/[()\s,.'-]+/g, "_")
+    .replace(/_+/g, "_")
+    .replace(/^_+|_+$/g, "");
+  return slug ? `${slug}.png` : "";
 }
 
-function showRegionImage(regions) {
-  if (!regions || !regions.length) {
-    regionImg.style.display = "none";
-    regionImg.src = "";
+function normalizeImageName(name) {
+  if (!name) return "";
+  return name.trim();
+}
+
+function buildImageSources(file) {
+  if (!file) return [];
+  const trimmed = file.trim();
+  if (!trimmed) return [];
+  if (/^https?:\/\//i.test(trimmed) || trimmed.startsWith("/")) {
+    return [trimmed];
+  }
+
+  const hasExtension = /\.[a-z0-9]{2,4}$/i.test(trimmed);
+  const filename = hasExtension ? trimmed : `${trimmed}.png`;
+
+  const sources = [];
+  const datasetFolder = state.country;
+  const baseFolder = getCurrentGroup()?.key;
+
+  const pushFolder = (folder) => {
+    if (!folder) return;
+    sources.push(`/static/maps/${folder}/${filename}`);
+  };
+
+  pushFolder(datasetFolder);
+  if (baseFolder && baseFolder !== datasetFolder) {
+    pushFolder(baseFolder);
+  }
+
+  return Array.from(new Set(sources));
+}
+
+function gatherImageCandidates(images, regions) {
+  const explicit = (images || [])
+    .map(normalizeImageName)
+    .filter(Boolean);
+  if (explicit.length) {
+    return Array.from(new Set(explicit));
+  }
+  const fromRegions = (regions || [])
+    .map(regionNameToImage)
+    .filter(Boolean);
+  return Array.from(new Set(fromRegions));
+}
+
+function clearRegionGallery() {
+  if (!regionGallery) return;
+  regionGallery.querySelectorAll("img").forEach((img) => {
+    img.dataset.cancelled = "true";
+  });
+  regionGallery.innerHTML = "";
+  regionGallery.style.display = "none";
+}
+
+function showRegionImages({ regions = [], images = [] } = {}) {
+  if (!regionGallery) return;
+  clearRegionGallery();
+
+  const candidates = gatherImageCandidates(images, regions);
+  if (!candidates.length) {
     return;
   }
 
-  const imgFile = regionNameToImage(regions[0]);
-  if (!imgFile) {
-    regionImg.style.display = "none";
-    regionImg.src = "";
-    return;
-  }
+  const fragment = document.createDocumentFragment();
+  candidates.forEach((file, index) => {
+    const sources = buildImageSources(file);
+    if (!sources.length) {
+      return;
+    }
+    const img = document.createElement("img");
+    img.className = "region-gallery__img";
+    img.alt = regions[index] || regions[0] || "Region";
+    appendImageWithFallback(img, sources);
+    fragment.appendChild(img);
+  });
 
-  const folderName = state.country;
-  const imgPath = `/static/maps/${folderName}/${imgFile}`;
-  regionImg.style.display = "none";
-  regionImg.src = imgPath;
-  regionImg.alt = regions[0];
-  regionImg.onerror = () => {
-    regionImg.style.display = "none";
+  regionGallery.appendChild(fragment);
+  if (regionGallery.children.length) {
+    regionGallery.style.display = "flex";
+  }
+}
+
+function appendImageWithFallback(img, sources) {
+  const candidates = Array.from(new Set(sources.filter(Boolean)));
+  if (!candidates.length) return;
+
+  img.dataset.cancelled = "false";
+  let index = 0;
+  const debugLabel = img.alt || "ukjent region";
+  const tryNext = () => {
+    if (img.dataset.cancelled === "true") {
+      return;
+    }
+    if (index >= candidates.length) {
+      console.warn(
+        "[quiz-images] Finner ingen fungerende bilde-URL for",
+        debugLabel,
+        candidates
+      );
+      img.remove();
+      if (!regionGallery.children.length) {
+        regionGallery.style.display = "none";
+      }
+      return;
+    }
+    const nextSrc = candidates[index];
+    index += 1;
+    if (nextSrc) {
+      img.src = nextSrc;
+    } else {
+      tryNext();
+    }
   };
-  regionImg.onload = () => {
-    regionImg.style.display = "block";
-  };
+
+  img.addEventListener(
+    "load",
+    () => {
+      if (img.dataset.cancelled === "true") return;
+      regionGallery.style.display = "flex";
+      console.info("[quiz-images] Lastet bilde for", debugLabel, img.src);
+    },
+    { once: true }
+  );
+  img.addEventListener("error", () => {
+    if (img.dataset.cancelled === "true") return;
+    tryNext();
+  });
+
+  tryNext();
 }
 
 registerServiceWorker();

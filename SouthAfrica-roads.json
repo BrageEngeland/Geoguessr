@@ -1,0 +1,51 @@
+{
+  "country": "South Africa",
+  "dataset": "Regional Roads (R-routes)",
+  "groups": [
+    {
+      "range": ["300–329", "360-370"],
+      "region": "Western Cape (sørvest)",
+      "notes": "Dekker Cape Town og sørvestlige kystområder."
+    },
+    {
+      "range": ["330–352", "390-410"],
+      "region": "Eastern Cape (Garden Route)",
+      "notes": "Langs sørkysten via George og Knysna."
+    },
+    {
+      "range": ["350-369","380–390"],
+      "region": "Northern Cape",
+      "notes": "Området for Upington mot grensen til Namibia."
+    },
+    {
+      "range": "451–573",
+      "region": "Gauteng og omliggende provinser",
+      "notes": "Dekker Johannesburg, Pretoria og nærliggende regioner."
+    },
+    {
+      "range": "501-511",
+      "region": "Gauteng og omliggende provinser",
+      "notes": "Dekker Johannesburg, Pretoria og nærliggende regioner."
+    },
+    {
+      "range": "510–532",
+      "region": "North West",
+      "notes": "R-veier sør for Gaborone."
+    },
+    {
+      "range": "533–546",
+      "region": "Mpumalanga",
+      "notes": "omkranset Eswatini i rundt vest-nord."
+    },
+    {
+      "range": "600–622",
+      "region": "KwaZulu-Natal",
+      "notes": "Langs østkysten og Durban-området."
+    },
+    {
+      "range": "700–730",
+      "region": "Free State",
+      "notes": "Sentrale høyland og Bloemfontein-regionen."
+    }
+  ]
+}

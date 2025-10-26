@@ -124,6 +124,7 @@ def pick_question(
         "primary_cities": entry.get("primary_cities", []),
         "difficulty": entry.get("difficulty"),
         "region_group": entry.get("region_group"),
+        "images": entry.get("images", []),
     }
 
 
@@ -146,6 +147,7 @@ def evaluate_answer(country: str, code: str, guess: str):
         "primary_cities": cities,
         "notes": entry.get("notes"),
         "region_group": entry.get("region_group"),
+        "images": entry.get("images", []),
     }
 
 
@@ -220,6 +222,7 @@ def api_lookup():
             "notes": entry.get("notes"),
             "difficulty": entry.get("difficulty"),
             "population_rank": entry.get("population_rank"),
+            "images": entry.get("images", []),
         }
     )
 
@@ -260,6 +263,10 @@ def quiz_page():
 def lookup_page():
     # Nå vil http://127.0.0.1:5050/lookup vise lookup.html
     return send_from_directory(STATIC_DIR, "lookup.html")
+
+@app.get("/stats")
+def stats_page():
+    return send_from_directory(STATIC_DIR, "stats.html")
 
 @app.get("/sw.js")
 def service_worker():

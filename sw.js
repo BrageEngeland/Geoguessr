@@ -1,6 +1,8 @@
-const CACHE_NAME = "telefonkoder-v2";
+const CACHE_NAME = "telefonkoder-v3";
 const APP_SHELL = [
   "/",
+  "/main",
+  "/lookup",
   "/pinpoint",
   "/quiz",
   "/static/lookup.css",
@@ -16,6 +18,7 @@ const APP_SHELL = [
 ];
 
 self.addEventListener("install", (event) => {
+  console.log("[SW] install event - cache version:", CACHE_NAME);
   event.waitUntil(
     caches
       .open(CACHE_NAME)
@@ -25,6 +28,7 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener('activate', event => {
+  console.log("[SW] activate event - cleaning old caches, keeping:", CACHE_NAME);
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys().then(keys =>
@@ -36,6 +40,8 @@ self.addEventListener('activate', event => {
     )
   );
 });
+
+console.log("[SW] Loaded service worker with cache", CACHE_NAME);
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(

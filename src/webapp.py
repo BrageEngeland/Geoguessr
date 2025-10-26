@@ -6,7 +6,6 @@ import random
 from functools import lru_cache
 from pathlib import Path
 from typing import Dict, List
-from flask import redirect
 from flask import Flask, abort, jsonify, request, send_from_directory
 
 from loader import available_countries, load_country_data
@@ -239,11 +238,12 @@ def api_dev_shutdown():
 
 
 @app.get("/")
-def root_redirect():
-    return redirect("/main", code=302)
+def main_screen():
+    return send_from_directory(STATIC_DIR, "main.html")
+
 
 @app.get("/main")
-def main_screen():
+def main_alias():
     return send_from_directory(STATIC_DIR, "main.html")
 
 

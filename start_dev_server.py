@@ -44,6 +44,8 @@ def open_browser_when_ready(port: int) -> None:
             webbrowser.open(url, new=2)
             return
         time.sleep(0.2)
+        
+
 
 
 def main():

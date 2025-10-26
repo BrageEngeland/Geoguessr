@@ -1,4 +1,4 @@
-const CACHE_NAME = "telefonkoder-v1";
+const CACHE_NAME = "telefonkoder-v2";
 const APP_SHELL = [
   "/",
   "/pinpoint",
@@ -21,6 +21,19 @@ self.addEventListener("install", (event) => {
       .open(CACHE_NAME)
       .then((cache) => cache.addAll(APP_SHELL))
       .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener('activate', event => {
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(keys.map(key => {
+        if (!cacheWhitelist.includes(key)) {
+          return caches.delete(key);
+        }
+      }))
+    )
   );
 });
 

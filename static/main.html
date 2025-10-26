@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <title>TeleKode • Velg modus</title>
+  <meta name="description" content="Velg mellom oppslag, pinpoint eller quiz for å utforske telefonkoder." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png" />
+  <link rel="manifest" href="/static/manifest.webmanifest" />
+  <link rel="stylesheet" href="/static/main.css" />
+</head>
+<body>
+  <div id="main-screen">
+    <h1 class="title">TeleKode</h1>
+    <p class="subtitle">Hva vil du gjøre?</p>
+    <div class="menu">
+      <button class="menu-btn" data-target="/lookup">📖 Oppslag</button>
+      <button class="menu-btn" data-target="/pinpoint">📍 Pinpoint</button>
+      <button class="menu-btn" data-target="/quiz">🧠 Quiz</button>
+    </div>
+  </div>
+
+  <script>
+    // Når en knapp trykkes -> last ny side og "fjern" main
+    document.querySelectorAll(".menu-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-target");
+        // Bytt til valgt side
+        window.location.href = target;
+        // Fjern main-screen fra historikken (bruker kan ikke gå tilbake)
+        history.replaceState(null, "", target);
+      });
+    });
+  </script>
+</body>
+</html>

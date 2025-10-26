@@ -6,7 +6,7 @@ import random
 from functools import lru_cache
 from pathlib import Path
 from typing import Dict, List
-
+from flask import redirect
 from flask import Flask, abort, jsonify, request, send_from_directory
 
 from loader import available_countries, load_country_data
@@ -239,8 +239,12 @@ def api_dev_shutdown():
 
 
 @app.get("/")
-def lookup_page():
-    return send_from_directory(STATIC_DIR, "lookup.html")
+def root_redirect():
+    return redirect("/main", code=302)
+
+@app.get("/main")
+def main_screen():
+    return send_from_directory(STATIC_DIR, "main.html")
 
 
 @app.get("/pinpoint")
@@ -252,11 +256,19 @@ def pinpoint_page():
 def quiz_page():
     return send_from_directory(STATIC_DIR, "quiz.html")
 
+@app.get("/lookup")
+def lookup_page():
+    # Nå vil http://127.0.0.1:5050/lookup vise lookup.html
+    return send_from_directory(STATIC_DIR, "lookup.html")
 
 @app.get("/sw.js")
 def service_worker():
     # Serve the service worker from the project root so it can control the scope.
     return send_from_directory(PROJECT_ROOT, "sw.js")
+
+@app.errorhandler(404)
+def not_found(e):
+    return send_from_directory(STATIC_DIR, "main.html")
 
 
 def main():

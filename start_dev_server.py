@@ -37,10 +37,10 @@ def choose_port() -> int:
 
 
 def open_browser_when_ready(port: int) -> None:
-    url = f"http://127.0.0.1:{port}/"
+    url = f"http://127.0.0.1:{port}/main"
     for _ in range(50):
         if port_is_open(port):
-            time.sleep(0.2)
+            time.sleep(0.5)
             webbrowser.open(url, new=2)
             return
         time.sleep(0.2)
@@ -60,8 +60,8 @@ def main():
 
     logging.getLogger("werkzeug").setLevel(logging.WARNING)
 
-    #flask_app.run(host="127.0.0.1", port=port, debug=True, use_reloader=False)
-    flask_app.run(host="0.0.0.0", port=port, debug=True, use_reloader=False)
+    flask_app.run(host="127.0.0.1", port=port, debug=True, use_reloader=False)
+    #flask_app.run(host="0.0.0.0", port=port, debug=True, use_reloader=False)
 
 
 if __name__ == "__main__":

@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Dict, List
 from flask import Flask, abort, jsonify, request, send_from_directory
 
+from code_utils import expand_search_keys, merge_entries, normalize_code_list
 from loader import available_countries, load_country_data
 from quiz import matches_any
 
@@ -28,14 +29,6 @@ class QuizEntry(Dict):
     regions: List[str]
 
 
-def _normalize_codes(raw_code):
-    if isinstance(raw_code, list):
-        return [str(code).strip() for code in raw_code if str(code).strip()]
-    if raw_code is None:
-        return []
-    return [str(raw_code).strip()]
-
-
 @lru_cache(maxsize=16)
 def get_country_bundle(country: str):
     try:
@@ -45,20 +38,24 @@ def get_country_bundle(country: str):
 
     raw_entries: List[QuizEntry] = data.get("codes") or []
     entries: List[QuizEntry] = []
-    index: Dict[str, QuizEntry] = {}
+    index: Dict[str, List[QuizEntry]] = {}
 
     for entry in raw_entries:
-        codes = _normalize_codes(entry.get("code"))
+        codes = normalize_code_list(entry.get("code"))
+        search_keys = expand_search_keys(codes)
         working_entry = dict(entry)
         working_entry.setdefault("primary_cities", entry.get("primary_cities", []))
         working_entry.setdefault("regions", entry.get("regions", []))
         working_entry["_codes"] = codes
+        working_entry["_search_keys"] = search_keys
         working_entry["_primary_code"] = codes[0] if codes else ""
         entries.append(working_entry)
 
         for code in codes:
             if code:
-                index[code] = working_entry
+                index.setdefault(code, []).append(working_entry)
+        for key in search_keys:
+            index.setdefault(key, []).append(working_entry)
 
     return {
         "metadata": {
@@ -68,6 +65,35 @@ def get_country_bundle(country: str):
         "entries": entries,
         "by_code": index,
     }
+
+
+def _resolve_entry(bundle, raw_code: str):
+    if not raw_code:
+        return None, None
+
+    direct_matches = bundle["by_code"].get(raw_code)
+    if direct_matches:
+        return raw_code, _pick_or_merge(direct_matches)
+
+    candidate_keys = list(expand_search_keys([raw_code]))
+    digits_only = "".join(ch for ch in raw_code if ch.isdigit())
+    if digits_only and digits_only not in candidate_keys:
+        candidate_keys.append(digits_only)
+
+    for key in candidate_keys:
+        matches = bundle["by_code"].get(key)
+        if matches:
+            return key, _pick_or_merge(matches)
+
+    return digits_only or raw_code, None
+
+
+def _pick_or_merge(entries: List[QuizEntry]):
+    if not entries:
+        return None
+    if len(entries) == 1:
+        return entries[0]
+    return merge_entries(entries)
 
 
 def pick_question(
@@ -84,10 +110,10 @@ def pick_question(
 
     # Hvis vi har fått en spesifikk kode (f.eks. fra spaced repetition)
     if force_code:
-        chosen = bundle["by_code"].get(force_code)
-        if chosen is None:
+        matches = bundle["by_code"].get(force_code)
+        if not matches:
             abort(404, description=f"Fant ikke kode {force_code} for {country}.")
-        entry = chosen
+        entry = matches[0]
     else:
         # filtrer på vanskelighet hvis valgt
         if difficulty:
@@ -130,7 +156,7 @@ def pick_question(
 
 def evaluate_answer(country: str, code: str, guess: str):
     bundle = get_country_bundle(country)
-    entry = bundle["by_code"].get(code)
+    resolved_code, entry = _resolve_entry(bundle, code)
     if entry is None:
         abort(404, description=f"Fant ikke kode {code} for {country}.")
 
@@ -193,19 +219,18 @@ def api_lookup():
     payload = request.get_json(force=True) or {}
     country = payload.get("country") or DEFAULT_COUNTRY
     raw_code = (payload.get("code") or "").strip()
-    digits = "".join(ch for ch in raw_code if ch.isdigit())
-    if not digits:
+    if not raw_code:
         abort(400, description="Oppgi en telefonkode.")
 
     bundle = get_country_bundle(country)
-    entry = bundle["by_code"].get(digits)
+    resolved_code, entry = _resolve_entry(bundle, raw_code)
     if entry is None:
         return (
             jsonify(
                 {
                     "found": False,
-                    "code": digits,
-                    "message": f"Fant ikke kode {digits} i {country}.",
+                    "code": raw_code,
+                    "message": f"Fant ikke kode {raw_code} i {country}.",
                 }
             ),
             404,
@@ -214,7 +239,7 @@ def api_lookup():
     return jsonify(
         {
             "found": True,
-            "code": digits,
+            "code": resolved_code,
             "country": bundle["metadata"]["country"],
             "country_code": bundle["metadata"]["country_code"],
             "primary_cities": entry.get("primary_cities", []),

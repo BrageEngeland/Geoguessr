@@ -1,18 +1,38 @@
 import sys
+from code_utils import expand_search_keys, merge_entries, normalize_code_list
 from loader import load_country_data, available_countries
 
 DEFAULT_COUNTRY = "Russia"
 
 
 def lookup_code(code: str, db: dict):
-    digits = "".join(ch for ch in code if ch.isdigit())
-    if not digits:
+    if not code:
         return None
 
+    search_keys = list(expand_search_keys([code]))
+    digits_only = "".join(ch for ch in code if ch.isdigit())
+    if digits_only and digits_only not in search_keys:
+        search_keys.append(digits_only)
+    if not search_keys:
+        return None
+
+    search_key_set = set(search_keys)
+
+    matches = []
     for entry in db["codes"]:
-        if entry["code"] == digits:
-            return entry
-    return None
+        codes = normalize_code_list(entry.get("code"))
+        if code in codes:
+            matches.append(entry)
+            continue
+        entry_keys = set(expand_search_keys(codes))
+        if entry_keys & search_key_set:
+            matches.append(entry)
+
+    if not matches:
+        return None
+    if len(matches) == 1:
+        return matches[0]
+    return merge_entries(matches)
 
 
 def pretty_print_result(code, entry, country_prefix=""):
